@@ -2,7 +2,7 @@
 '''
 Created on 2016-12-07
 
-@author: geqiuli
+@author: letty
 '''
 import MySQLdb  
 from openpyxl.writer.excel import ExcelWriter  
