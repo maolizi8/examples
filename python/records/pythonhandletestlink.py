@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 Testlink API Sample Python 2.x Client implementation
+http://jetmore.org/john/misc/phpdoc-testlink193-api/TestlinkAPI/TestlinkXMLRPCServer.html
 """
 import xmlrpclib
  
