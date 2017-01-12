@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>liz学习记录</title>
+		<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+		<![endif]-->
+		<link rel="stylesheet" type="text/css" href="css/loading.css" />
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			
+			body {
+				background-color: #F6F6F6;
+			}
+			
+			.container {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+			}
+			
+			.header {
+				width: 80%;
+				margin: 15px auto;
+			}
+			
+			.header>div {
+				display: inline-block;
+			}
+			
+			.title {
+				width: 150px;
+			}
+			
+			.header-r {
+				float: right;
+				max-width: 350px;
+			}
+			
+			.header-r div {
+				display: inline-block;
+			}
+			
+			.search-fm {
+				max-width: 340px;
+			}
+			
+			.search-fm form {
+				border: 4px solid #eeefed;
+				border-radius: 5px;
+				max-width: 332px;
+			}
+			
+			.search-fm input {
+				line-height: 34px;
+				height: 34px;
+				max-width: 313px;
+				border: 2px solid #C8DCE8;
+				border-radius: 5px;
+				outline: none;
+				padding-left: 15px;
+			}
+			
+			.menu-btn {
+				float: right;
+				margin-right: 3px;
+				line-height: 43px;
+				height: 43px;
+			}
+			
+			.menu-btn button {
+				/*margin-left: 2px;
+				margin-right: 2px;*/
+				margin: 6px 2px;
+				width: 40px;
+				height: 34px;
+				border: 1px solid #ccc;
+				border-radius: 4px;
+			}
+			
+			.nav {
+				height: 50px;
+				background-color: #87CEEB;
+			}
+			
+			.nav-main {
+				width: 80%;
+				margin: 0 auto;
+			}
+			
+			.nav ul {
+				list-style: none;
+			}
+			
+			.nav ul li {
+				display: inline;
+				line-height: 48px;
+			}
+			
+			.nav ul li a {
+				text-decoration: none;
+				font-size: 18px;
+				color: #fff;
+			}
+			
+			.nav ul li a:hover {
+				color: #000066;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="header">
+				<div class="title">
+					<h1>liz笔记</h1>
+				</div>
+				<div class="header-r">
+					<div class="search-fm">
+						<form action="" method="post">
+							<input type="text" id="search" placeholder="搜索……" />
+						</form>
+					</div>
+					<div class="menu-btn" style="display: none;">
+						<button>menu</button>
+					</div>
+
+				</div>
+
+			</div>
+			<div class="nav">
+				<div class="nav-main">
+					<ul class="pc-nav">
+						<li>
+							<a href="">首页</a>
+						</li>
+						<li>
+							<a href="">HTML</a>
+						</li>
+						<li>
+							<a href="">CSS</a>
+						</li>
+						<li>
+							<a href="">JAVASCRIPT</a>
+						</li>
+						<li>
+							<a href="">JQUERY</a>
+						</li>
+						<li>
+							<a href="">BOOTSTRAP</a>
+						</li>
+						<li>
+							<a href="">SQL</a>
+						</li>
+						<li>
+							<a href="">MYSQL</a>
+						</li>
+						<li>
+							<a href="">PYTHON</a>
+						</li>
+					</ul>
+					<ul class="phone-nav fade">
+						<li>
+							<a href="">首页</a>
+						</li>
+						<li>
+							<a href="">HTML</a>
+						</li>
+						<li>
+							<a href="">CSS</a>
+						</li>
+						<li>
+							<a href="">JAVASCRIPT</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="menu-aside">
+				<div class="menulist">
+				<ul>
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+				</ul>
+				</div>
+			</div>
+			<div class="">区域</div>
+			<div class="">页脚</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		window.onload = changeSearchBox;
+		window.onresize = changeSearchBox;
+
+		function changeSearchBox() {
+			var clientWidth = document.body.clientWidth;
+			if(clientWidth > 700) {
+				document.querySelector(".header-r").style.width = "350px";
+				document.querySelector(".search-fm").style.width = "340px";
+				document.querySelector("#search").style.width = "313px";
+				document.querySelector(".search-fm").style.display = "inline-block";
+				document.querySelector(".menu-btn").style.display = "none";
+			} else if(clientWidth > 510 && clientWidth <= 700) {
+				document.querySelector(".header-r").style.width = "62.5%";
+				document.querySelector(".search-fm").style.width = (document.querySelector(".header-r").offsetWidth - 10) + "px";
+				document.querySelector("#search").style.width = (document.querySelector(".header-r").offsetWidth - 37) + "px";
+				document.querySelector(".search-fm").style.display = "inline-block";
+				document.querySelector(".menu-btn").style.display = "none";
+			} else if(clientWidth > 440 && clientWidth <= 510) {
+				document.querySelector(".header-r").style.width = "200px";
+				document.querySelector(".search-fm").style.width = "140px";
+				document.querySelector(".search-fm").style.display = "inline-block";
+				document.querySelector(".menu-btn").style.display = "inline-block";
+				document.querySelector("#search").style.width = "113px";
+			} else if(clientWidth > 313 && clientWidth <= 440) {
+				document.querySelector(".header-r").style.width = "80px";
+				document.querySelector(".search-fm").style.display = "none";
+				document.querySelector(".menu-btn").style.display = "inline-block";
+			} else {
+				document.querySelector(".search-fm").style.display = "none";
+				document.querySelector(".menu-btn").style.display = "none";
+			}
+			//console.log(document.querySelector("#search").style.width);
+			var pc_nav=document.querySelector(".pc-nav");
+			var phone_nav=document.querySelector(".phone-nav");
+			if (clientWidth < 700) {
+				pc_nav.classList.add("fade");
+				phone_nav.classList.remove("fade");
+			} else{
+				pc_nav.classList.remove("fade");
+				phone_nav.classList.add("fade");
+			}
+		}
+	</script>
+
+</html>
