@@ -3,411 +3,435 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title>liz学习记录</title>
-		<!--[if lt IE 9]>
-		<script src="js/html5shiv.js"></script>
-		<![endif]-->
-		<link rel="stylesheet" type="text/css" href="css/loading.css" />
+		<title>building</title>
 		<style type="text/css">
 			* {
-				padding: 0;
+				border: none;
 				margin: 0;
+				padding: 0;
 			}
 			
 			body {
-				background-color: #F6F6F6;
-			}
-			
-			.container {
-				position: absolute;
-				top: 0;
-				left: 0;
+				font-family: "Times New Roman", Times, serif;
 				width: 100%;
 				height: 100%;
+				position: absolute;
+				min-width: 980px;
 			}
 			
-			.header {
-				width: 80%;
-				margin: 15px auto;
+			.bg1 {
+				background-image: url(imgs/build_header.jpg);
+				height: 215px;
+				width: 100%;
+				text-align: center;
+				background-repeat: no-repeat;
+				background-position: top center;
 			}
 			
-			.header>div {
+			.bg1 img {
+				margin-top: 40px;
+			}
+			
+			.bg2 {
+				height: 107px;
+				width: 100%;
+				background: url(imgs/build_menu.jpg) no-repeat top center;
+			}
+			
+			.bg2_content {
+				width: 980px;
+				margin-left: auto;
+				margin-right: auto;
+				text-align: center;
+				padding-top: 5px;
+			}
+			
+			.bg2_content a {
 				display: inline-block;
-			}
-			
-			.title {
-				width: 150px;
-			}
-			
-			.header-r {
-				float: right;
-				max-width: 350px;
-			}
-			
-			.header-r div {
-				display: inline-block;
-			}
-			
-			.search-fm {
-				max-width: 340px;
-			}
-			
-			.search-fm form {
-				border: 4px solid #eeefed;
-				border-radius: 5px;
-				max-width: 332px;
-			}
-			
-			.search-fm input {
-				line-height: 34px;
-				height: 34px;
-				max-width: 313px;
-				border: 2px solid #C8DCE8;
-				border-radius: 5px;
-				outline: none;
-				padding-left: 15px;
-			}
-			
-			.menu-btn {
-				float: right;
-				/*margin-right: 3px;*/
-				line-height: 43px;
-				height: 43px;
-			}
-			
-			.menu-btn button {
-				/*margin-left: 2px;
-				margin-right: 2px;*/
-				margin: 6px 2px;
-				width: 40px;
-				height: 34px;
-				border: 1px solid #ccc;
-				border-radius: 4px;
-			}
-			
-			.nav {
-				height: 50px;
-				background-color: #87CEEB;
-				margin-bottom: 10px;
-			}
-			
-			.nav-main {
-				width: 80%;
-				margin: 0 auto;
-			}
-			
-			.nav ul {
-				list-style: none;
-			}
-			
-			.nav ul li {
-				display: inline;
-				line-height: 48px;
-				margin-right: 10px;
-			}
-			
-			.nav ul li a {
-				text-decoration: none;
 				font-size: 18px;
+				font-weight: bold;
+				color: #fff;
+				text-decoration: none;
+			}
+			
+			.bg2_content a:hover {
+				color: yellow;
+			}
+			.bg2_content a:first-child{
+				color: yellow;
+			}
+			.a_box {
+				width: 134px;
+				height: 103px;
+				text-align: center;
+				line-height: 93px;
+				background-image: url(imgs/build_menu_bg.png);
+				text-transform: capitalize;
+			}
+			
+			.bg3 {
+				position: relative;
+				width: 100%;
+				background: url(imgs/build_content.jpg) no-repeat top center;
+				height: 428px;
+			}
+			
+			.bg3_content {
+				display: none;
+				width: 820px;
+				margin: 0 auto;
+				/*color: #bea68e;*/
+				color: #a0a7ab;
+				padding-top: 30px;
+			}
+			
+			.active {
+				display: block;
+			}
+			.bg3_content h2{
+				margin-bottom: 15px;
 				color: #fff;
 			}
+			.home_left{
+				float: left;
+				width: 55%;
+				margin-bottom: 30px;
+			}
+			.home_right{
+				float: right;
+				width: 40%;
+				margin-bottom: 30px;
+			}
 			
-			.nav ul li a:hover {
-				color: #000066;
+			.about_box{
+				width: 100%;
+				height: 300px;
+				vertical-align:text-top;
 			}
-			.aside{
+			.about_box p{
+				margin-bottom: 10px;
+			}
+			.about_img{
+				width: 238px;
+				height: 108px;
+				background-color: #1b2c35;
+				border: 1px solid #000000;
 				float: left;
-				width: 15%;
-				border: 1px solid #EFEFEF;
-				margin-left: 10%;
-				margin-right: 10px;
-				background-color: #fff;
-				font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,STHeiti,"Microsoft Yahei",sans-serif;
+				margin-right: 15px;
 			}
-			.aside ul{
+			.about_img img{
+				margin: 4px;
+			}
+			.services_left{
+				float: left;
+				width: 55%;
+			}
+			.services_right{
+				float: right;
+				width: 40%;
+			}
+			.service_list{
 				list-style: none;
+				margin-top: 20px;
 			}
-			.aside ul li{
-				border-bottom: 1px solid #EFEFEF;
-				height: 35px;
-				line-height: 35px;
-				padding-left: 20px;
-			}
-			.aside ul a{
-				color: #000000;
-				text-decoration: none;
-			}
-			.aside ul a:before{
-				content: "";
-				width: 5px;
-				height: 5px;
-			}
-			.main{
-				float: left;
-				border: 1px solid #EFEFEF;
-				background-color: #fff;
-				width: 63%;
+			.service_list li{
+				line-height: 30px;
+				height: 30px;
 				
-				font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,STHeiti,"Microsoft Yahei",sans-serif;
 			}
-			.section{
-				width: 95%;
-				margin: 10px auto;
+			.service_list li a{
+				text-decoration: none;
+				color: #a0a7ab;
+				background-image: url(imgs/icons_5.png);
+				background-repeat: no-repeat;
+				padding-left: 35px;
+				padding-top: 3.5px;
+				padding-bottom: 3px;
 			}
-			.s-content{
-				margin: 5px auto;
+			.service_list li:nth-child(1) a{
+				background-position: 0 0;
 			}
-			.s-content a.a-box{
+			.service_list li:nth-child(2) a{
+				background-position: 0 -24px;
+			}
+			.service_list li:nth-child(3) a{
+				background-position: 0 -48px;
+			}
+			.service_list li:nth-child(4) a{
+				background-position: 0 -72px;
+			}
+			.service_list li:nth-child(5) a{
+				background-position: 0 -96px;
+			}
+			.gallery_main{
+				height: 300px;
+				overflow-y:scroll;
+			}
+			.gallery_box{
+				margin-bottom: 30px;
+			}
+			.gallery_box>div{
 				display: inline-block;
-				margin:5px 5px 5px 0 ;
-				width: 30%;
-				height: 100px;
-				background-color: #F6F6F6;
-				padding: 15px 5px 0 5px;
-				border-radius: 8px;
 			}
-			.s-content a:hover{
-				background-color: #F1F1F1;
+			.gallery_img{
+				width: 288px;
+				height: 108px;
+				background-color: #1b2c35;
+				border: 1px solid #000000;
 			}
-			.a-box h3{
-				color: #87CEEB;
-				margin-bottom: 5px;
+			.gallery_img img{
+				margin: 4px;
 			}
-			.a-box span{
-				font-size: 13px;
+			.gallery_desc{
+				margin-left: 30px;
+				width: 440px;
+				/*vertical-align: top;*/
 			}
-			.footer{
-				height: 40px;
-				background-color: lightblue;
+			.gallery_desc h3{
+				margin-bottom: 10px;
+				color: #fff;
+			}
+			.gallery_desc p{
+				margin-bottom: 10px;
+				color: #a0a7ab;
+				word-wrap: break-word;
+			}
+			.gallery_desc a{
+				text-decoration: none;
+				color: #fff;
+			}
+			.gallery_desc a:hover{
+				color: yellow;
+			}
+			.contact_left{
+				width: 500px;
+				float: left;
+			}
+			.contact_left form{
+				
+			}
+			.contact_left form label,
+			.contact_left form input,
+			.contact_left form textarea
+			{
+				display: block;
+				
+			}
+			.contact_left form input,
+			.contact_left form textarea{
+				width: 400px;
+				background: #121e25;
+				border: 1px solid #000;
+			}
+			.contact_left form textarea{
+				height: 150px;
+			}
+			.contact_left form button{
+				margin-top: 20px;
+				color: #fff;
+				width: 50px;
+				height: 25px;
+				background: #121e25;
+				border: 1px solid #000;
+				margin-right: 50px;
+			}
+			.contact_right{
+				width: 300px;
+				float: right;
+			}
+			.contact_right h3{
+				color: #fff;
+				margin-bottom: 10px;
+			}
+			.contact_right p{
+				margin-bottom: 25px;
 			}
 		</style>
 	</head>
 
 	<body>
-		<div class="container">
-			<div class="header">
-				<div class="title">
-					<h1>liz笔记</h1>
-				</div>
-				<div class="header-r">
-					<div class="search-fm">
-						<form action="" method="post">
-							<input type="text" id="search" placeholder="搜索……" />
-						</form>
+		<div class="bg1">
+			<img src="imgs/build_logo.png" />
+		</div>
+		<div class="bg2">
+			<div class="bg2_content">
+				<a href="javascript:void(0)" onclick="amenuClick(this)" data-target="home">
+					<div class="a_box">
+						home
 					</div>
-					<div class="menu-btn" style="display: none;">
-						<button>menu</button>
+				</a>
+				<a href="javascript:void(0)" onclick="amenuClick(this)" data-target="about">
+					<div class="a_box">
+						about
 					</div>
-
-				</div>
-
+				</a>
+				<a href="javascript:void(0)" onclick="amenuClick(this)" data-target="services">
+					<div class="a_box">
+						services
+					</div>
+				</a>
+				<a href="javascript:void(0)" onclick="amenuClick(this)" data-target="gallery">
+					<div class="a_box">
+						gallery
+					</div>
+				</a>
+				<a href="javascript:void(0)" onclick="amenuClick(this)" data-target="contact">
+					<div class="a_box">
+						contact
+					</div>
+				</a>
 			</div>
-			<div class="nav">
-				<div class="nav-main">
-					<ul class="pc-nav">
-						<li>
-							<a href="">首页</a>
-						</li>
-						<li>
-							<a href="">HTML</a>
-						</li>
-						<li>
-							<a href="">CSS</a>
-						</li>
-						<li>
-							<a href="">JAVASCRIPT</a>
-						</li>
-						<li>
-							<a href="">JQUERY</a>
-						</li>
-						<li>
-							<a href="">BOOTSTRAP</a>
-						</li>
-						<li>
-							<a href="">SQL</a>
-						</li>
-						<li>
-							<a href="">MYSQL</a>
-						</li>
-						<li>
-							<a href="">PYTHON</a>
-						</li>
-					</ul>
-					<ul class="phone-nav fade">
-						<li>
-							<a href="">首页</a>
-						</li>
-						<li>
-							<a href="">HTML</a>
-						</li>
-						<li>
-							<a href="">CSS</a>
-						</li>
-						<li>
-							<a href="">JAVASCRIPT</a>
-						</li>
-					</ul>
+		</div>
+		<div class="bg3" id="content">
+			<div class="bg3_content active" id="home">
+				<div class="home_left">
+					<h2>Chase what gets you up in the morning</h2>
+					<p>What's the thing that lingers on your heart -- that you just can't stop daydreaming about? Do the thing you would do if you could do anything. It's called your passion. And it's what you should be doing.</p>
+				</div>
+				<div class="home_right">
+					<h2>追逐你的梦想</h2>
+					<p>什么东西徘徊在你的心间——以至于你总是在不断地去梦想它?如果你能为它做点儿事情，那就做吧。这就叫做激情。这也是你应该去做的事情。</p>
+				</div>
+				<div class="home_left">
+					<h2>Sort your problems.</h2>
+					<p>Let's face it: There's a lot of bad stuff in the world. It can be a scary place, and we've all got problems we would be a whole lot happier without. But experiment with putting your problems into perspective -- or boxes: That breakup? Missing a really important deadline at work? Hurt feelings? Losing someone close to you? Probably worth some self-pity. That stain on your shirt? Not so much. Let go of what you can. The less negative, the more room there is to be happy.</p>
+				</div>
+				<div class="home_right">
+					<h2>把问题排序</h2>
+					<p>让我们面对现实吧：世界上有很多不好的事情。它会让人感到恐慌。我们都有问题，要是没有的话，会幸福地多。但是试一试用长远的眼光来看这些问题：分手?工作时错过了重要的截止时间?受伤的感觉?失去了亲近的人?或许值得自怜自哀。衬衫上的污渍?那就不值得了。能放手就放手。负面因素越少，开心的空间就越大。</p>
 				</div>
 			</div>
-			<div class="aside">
-				<ul>
-					<a href=""><li>全部</li></a>
-					<a href=""><li>HTML/HTML5</li></a>
-					<a href=""><li>CSS/CSS3</li></a>
-					<a href=""><li>JAVASCRIPT</li></a>
-					<a href=""><li>服务器端</li></a>
-					<a href=""><li>数据库</li></a>
-					<a href=""><li>移动端</li></a>
-					<a href=""><li>开发工具</li></a>
-					<a href=""><li>XML 教程</li></a>
-				</ul>
+			<div class="bg3_content" id="about">
+				<h2>About US</h2>
+				<div class="about_box">
+					<div class="about_img">
+						<img src="imgs/build_image_03.jpg"/>
+					</div>
+				<p><b>They are willing to learn.</b>
+					When you don’t understand how something works, let an expert show you. When you let someone teach you something, you are telling the person that you respect their talent, time and that you believe he knows what he is talking about. That you respect their experience. Always be willing to learn, because there is no way in hell to know everything.</p>
+				<p><b> They are expressive.</b>
+					They are not bottled up. They feel something they verbalize it. Then be it pulling someone for not working hard or congratulating someone on their wonderful performance. This behaviour is not only restricted to work, but is applied to every aspect of their life.</p>
+				</div>
 			</div>
-			<div class="main">
-				<div class="section">
-					<h2>HTML/CSS</h2>
-					<hr />
-					<div class="s-content">
-						<a class="a-box">
-							<h3>【学习HTML】</h3>
-							<span class="box-text">
-								HTML，即超文本标记语言（Hyper Text Markup Language）
-							</span>
-						</a>
-						<a class="a-box">
-							<h3>【学习HTML】</h3>
-							<span class="box-text">
-								HTML，即超文本标记语言（Hyper Text Markup Language）
-							</span>
-						</a>
-						<a class="a-box">
-							<h3>【学习HTML】</h3>
-							<span class="box-text">
-								HTML，即超文本标记语言（Hyper Text Markup Language）
-							</span>
-						</a>
-						<a class="a-box">
-							<h3>【学习HTML】</h3>
-							<span class="box-text">
-								HTML，即超文本标记语言（Hyper Text Markup Language）
-							</span>
-						</a>
+			<div class="bg3_content" id="services">
+				<div class="services_left">
+					<h2>Service Overview</h2>
+					<div class="about_img">
+						<img src="imgs/build_image_03.jpg"/>
 					</div>
+					<p><b>You are Absolutely Unique.</b>
+					Enjoy that uniquenesss1. You do not have to pretend in order to seem more like someone else. You do not have to lie to hide the parts of you that are not like what you see in anyone else.
+					</p>
+				<p><b> They are expressive.</b>
+					They are not bottled up. They feel something they verbalize it. Then be it pulling someone for not working hard or congratulating someone on their wonderful performance. This behaviour is not only restricted to work, but is applied to every aspect of their life.
+				</p>
+				
 				</div>
-				<div class="section">
-					<h2>HTML/CSS</h2>
-					<hr />
-					<div class="s-content">
-						<a class="a-box">
-							<h3>【学习HTML】</h3>
-							<span class="box-text">
-								HTML，即超文本标记语言（Hyper Text Markup Language）
-							</span>
-						</a>
-						<a class="a-box">
-							<h3>【学习HTML】</h3>
-							<span class="box-text">
-								HTML，即超文本标记语言（Hyper Text Markup Language）
-							</span>
-						</a>
-						<a class="a-box">
-							<h3>【学习HTML】</h3>
-							<span class="box-text">
-								HTML，即超文本标记语言（Hyper Text Markup Language）
-							</span>
-						</a>
-						<a class="a-box">
-							<h3>【学习HTML】</h3>
-							<span class="box-text">
-								HTML，即超文本标记语言（Hyper Text Markup Language）
-							</span>
-						</a>
+				<div class="services_right">
+					<h2>Specialized Services</h2>
+					<p><b>You are Absolutely Unique.</b>
+					Enjoy that uniquenesss1. You do not have to pretend in order to seem more like someone else. You do not have to lie to hide the parts of you that are not like what you see in anyone else.
+					</p>
+				<ul class="service_list">
+                                <li><a href="#">Silence gives consent</a></li>
+                                <li><a href="#">Be so good, they can’t ignore you</a></li>
+                                <li><a href="#">Failure is never quite so frightening as regret</a></li>
+                                <li><a href="#">Never give up, and good luck will find you</a></li> 
+                                <li><a href="#">Get busy living, Or get busy dying</a></li>   
+                            </ul>
+				</div>
+			</div>
+			<div class="bg3_content" id="gallery">
+				<h2>Our Gallery</h2>
+				<div class="gallery_main">
+					<div class="gallery_box">
+						<div class="gallery_img">
+							<img src="imgs/image_01.jpg"/>
+						</div>
+						<div class="gallery_desc">
+							<h3>Project Title 1</h3>
+							<p>To see a world in a grain of sand. And a heaven in a wild flower</p>
+							<p><a href="">Visit &raquo;</a></p>
+						</div>
 					</div>
-				</div>
-				<div class="section">
-					<h2>HTML/CSS</h2>
-					<hr />
-					<div class="s-content">
-						<a class="a-box">
-							<h3>【学习HTML】</h3>
-							<span class="box-text">
-								HTML，即超文本标记语言（Hyper Text Markup Language）
-							</span>
-						</a>
-						<a class="a-box">
-							<h3>【学习HTML】</h3>
-							<span class="box-text">
-								HTML，即超文本标记语言（Hyper Text Markup Language）
-							</span>
-						</a>
-						<a class="a-box">
-							<h3>【学习HTML】</h3>
-							<span class="box-text">
-								HTML，即超文本标记语言（Hyper Text Markup Language）
-							</span>
-						</a>
-						<a class="a-box">
-							<h3>【学习HTML】</h3>
-							<span class="box-text">
-								HTML，即超文本标记语言（Hyper Text Markup Language）
-							</span>
-						</a>
+					<div class="gallery_box">
+						<div class="gallery_img">
+							<img src="imgs/image_02.jpg"/>
+						</div>
+						<div class="gallery_desc">
+							<h3>Project Title 2</h3>
+							<p>Hold infinity in the palm of your hand. A nd eternity in an hour.
+								把握在你手心里的就是无限,永恒也就消 融于一个时辰.</p>
+							<p><a href="">Visit &raquo;</a></p>
+						</div>
+					</div>
+					<div class="gallery_box">
+						<div class="gallery_img">
+							<img src="imgs/image_03.jpg"/>
+						</div>
+						<div class="gallery_desc">
+							<h3>Project Title 3</h3>
+							<p>A happy life in the material sense it is merely indicators from the heart, while the real feel of stability and recognized by the regime, from the faith.
+								</p>
+							<p><a href="">Visit &raquo;</a></p>
+						</div>
+					</div>
+					<div class="gallery_box">
+						<div class="gallery_img">
+							<img src="imgs/image_04.jpg"/>
+						</div>
+						<div class="gallery_desc">
+							<h3>Project Title 4</h3>
+							<p>
+								You will have it if it belongs to you,whereas you don't kvetch for it if it doesn't appear in your life.
+								命里有时钟需有 命里无时莫强求
+							</p>
+							<p><a href="">Visit &raquo;</a></p>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div style="clear: both;"></div>
-			<div class="footer">
-				<div class="exmples">
-					
+			<div class="bg3_content" id="contact">
+				<h2>Contact US</h2>
+				<div class="contact_left">
+					<form>
+						<label for="username">Name:</label>
+						<input type="text" name="username"  />
+						<label for="email">Email:</label>
+						<input type="text" name="email"  />
+						<label for="message">Message:</label>
+						<textarea name="message"></textarea>
+						<button>Send</button>
+						<button>Reset</button>
+					</form>
 				</div>
-				<div class="bottom">
-					
+				<div class="contact_right">
+					<h3>Address:</h3>
+					<p>2048 Square of Computer of Sicense and Technology in Shanghai</p>
+					<p>Tel:021-2048-91019666
+					<br />	Fax:021-2048-91019666</p>
 				</div>
 			</div>
 		</div>
 	</body>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 	<script type="text/javascript">
-		window.onload = changeSearchBox;
-		window.onresize = changeSearchBox;
-
-		function changeSearchBox() {
-			var clientWidth = document.body.clientWidth;
-			if(clientWidth > 700) {
-				document.querySelector(".header-r").style.width = "350px";
-				document.querySelector(".search-fm").style.width = "340px";
-				document.querySelector("#search").style.width = "313px";
-				document.querySelector(".search-fm").style.display = "inline-block";
-				document.querySelector(".menu-btn").style.display = "none";
-			} else if(clientWidth > 510 && clientWidth <= 700) {
-				document.querySelector(".header-r").style.width = "62.5%";
-				document.querySelector(".search-fm").style.width = (document.querySelector(".header-r").offsetWidth - 10) + "px";
-				document.querySelector("#search").style.width = (document.querySelector(".header-r").offsetWidth - 37) + "px";
-				document.querySelector(".search-fm").style.display = "inline-block";
-				document.querySelector(".menu-btn").style.display = "none";
-			} else if(clientWidth > 440 && clientWidth <= 510) {
-				document.querySelector(".header-r").style.width = "200px";
-				document.querySelector(".search-fm").style.width = "140px";
-				document.querySelector(".search-fm").style.display = "inline-block";
-				document.querySelector(".menu-btn").style.display = "inline-block";
-				document.querySelector("#search").style.width = "113px";
-			} else if(clientWidth > 313 && clientWidth <= 440) {
-				document.querySelector(".header-r").style.width = "80px";
-				document.querySelector(".search-fm").style.display = "none";
-				document.querySelector(".menu-btn").style.display = "inline-block";
-			} else {
-				document.querySelector(".search-fm").style.display = "none";
-				document.querySelector(".menu-btn").style.display = "none";
+		function amenuClick(obj) {
+			
+			console.log($(obj).attr("data-target"));
+			//var contentid=obj.innerText.toLowerCase();
+			var contentid=$(obj).attr("data-target").toLowerCase();
+			var bg2=document.querySelectorAll(".bg2_content a");
+			var bg3=document.querySelectorAll(".bg3_content");
+			var num=[0,1,2,3,4];
+			for(var i in num){
+				bg2[i].style.color="#FFFFFF";
+				bg3[i].classList.remove("active");
 			}
-			//console.log(document.querySelector("#search").style.width);
-			var pc_nav=document.querySelector(".pc-nav");
-			var phone_nav=document.querySelector(".phone-nav");
-			if (clientWidth < 700) {
-				pc_nav.classList.add("fade");
-				phone_nav.classList.remove("fade");
-			} else{
-				pc_nav.classList.remove("fade");
-				phone_nav.classList.add("fade");
-			}
+			obj.style.color="yellow";
+			document.querySelector("#"+contentid.toString()).classList.add("active");
 		}
+		
 	</script>
 
 </html>

@@ -1,0 +1,308 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+@font-face {
+	font-family:iconFont;
+	src: url("../fonts/fontawesome-webfont.woff2") format('woff')
+		,url("../fonts/fontawesome-webfont.woff") format('woff')
+		,url("../fonts/fontawesome-webfont.eot") format('embedded-opentype')
+		,url("../fonts/fontawesome-webfont.ttf") format('truetype');
+}
+body {
+	background-color: #F6F6F6;
+	min-width: 400px;
+}
+.fade{
+	display: none;
+}
+.show{
+	display: block;
+}
+.container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.header {
+	width: 80%;
+	margin: 15px auto;
+}
+
+.header>div {
+	display: inline-block;
+}
+
+.title {
+	width: 150px;
+}
+
+.header-r {
+	float: right;
+	max-width: 350px;
+}
+
+.search-fm{
+	width: 100%;
+}
+
+.search-fm form{
+	padding: 3px;
+	background-color: #eeefed;
+	display: flex;
+}
+
+#search {
+	line-height: 34px;
+	height: 34px;
+	width: 100%;
+	overflow: hidden;
+	border: 2px solid #C8DCE8;
+	border-radius: 3px;
+	outline: none;
+	padding-left: 5px;
+}
+
+.menu-btn {
+	float: right;
+	/*margin-right: 3px;*/
+	line-height: 43px;
+	height: 43px;
+	
+}
+
+.menu-btn button {
+	margin: 6px 2px;
+	width: 40px;
+	height: 34px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+.nav {
+	height: 50px;
+	background-color: #87CEEB;
+	margin-bottom: 10px;
+}
+
+.nav-main {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.nav ul {
+	list-style: none;
+}
+
+.nav ul li {
+	display: inline;
+	line-height: 48px;
+	margin-right: 10px;
+}
+
+.nav ul li a {
+	text-decoration: none;
+	font-size: 18px;
+	color: #fff;
+}
+
+.nav ul li a:hover {
+	color: #000066;
+}
+
+.aside {
+	float: left;
+	width: 15%;
+	border: 1px solid #EFEFEF;
+	margin-left: 10%;
+	margin-right: 10px;
+	background-color: #fff;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, STHeiti, "Microsoft Yahei", sans-serif;
+}
+
+.aside ul {
+	list-style: none;
+}
+
+.aside ul li {
+	border-bottom: 1px solid #EFEFEF;
+	height: 35px;
+	line-height: 35px;
+	padding-left: 10px;
+}
+
+.aside ul a{
+	color: #000000;
+	text-decoration: none;
+}
+.aside ul a:first-child li:before{
+	content: "\f0c9";
+	margin-top: 5px;
+	width: 5px;
+	height: 5px;
+	font-family:iconFont;
+}
+.aside ul a li:before {
+	content: "\f08e";
+	width: 5px;
+	height: 5px;
+	font-family:iconFont;
+}
+
+
+.main {
+	float: left;
+	border: 1px solid #EFEFEF;
+	background-color: #fff;
+	width: 63%;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, STHeiti, "Microsoft Yahei", sans-serif;
+}
+
+.section {
+	width: 95%;
+	margin: 10px auto;
+}
+.section h2:before{
+	content: "\f03a";
+	font-family:iconFont;
+}
+.s-content {
+	margin: 5px auto;
+}
+
+.s-content a.a-box {
+	display: inline-block;
+	margin: 5px 5px 5px 0;
+	width: 30%;
+	height: 100px;
+	background-color: #F6F6F6;
+	padding: 15px 5px 0 5px;
+	border-radius: 8px;
+}
+
+.s-content a:hover {
+	background-color: #F1F1F1;
+}
+
+.a-box h3 {
+	color: #87CEEB;
+	margin-bottom: 5px;
+}
+
+.a-box span {
+	font-size: 13px;
+}
+.footer {
+	border-top: 1px solid #E0DFE3;
+	margin-top: 20px;
+}
+.exmples{
+	background-color: #fff;
+	height: 250px;
+}
+.foot-box{
+	width: 220px;
+	float: left;
+	margin-top: 20px;
+	margin-left: 20px;
+	padding-left: 20px;
+	border-left: 1px solid #E0DFE3;
+}
+.foot-box ul{
+	list-style: none;
+}
+.foot-box ul li{
+	height: 25px;
+	line-height: 25px;
+	font-size: 12px;
+}
+.foot-box a{
+	text-decoration: none;
+	color: #666;
+}
+.bottom{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-top: 1px solid #E0DFE3;
+	text-align: center;
+}
+@media only screen and (min-width: 1000px) {
+	.header-r{
+		width: 350px;
+	}
+	.menu-btn{
+		display:none;
+	}
+}
+@media only screen and (min-width: 920px) and (max-width: 1000px) {
+	.header-r{
+		width: 35%;
+	}
+	.menu-btn{
+		display:none;
+	}
+}
+@media only screen and (min-width: 727px) and (max-width: 920px) {
+	.header-r{
+		width: 300px;
+	}
+	.search-fm{
+		width: 240px;
+		display: inline-block;
+	}
+	#search{
+		width:225px;
+	}
+	.menu-btn{
+		display:inline-block;
+	}
+}
+@media only screen and (min-width: 330px) and (max-width: 727px) {
+	.header-r{
+		width: 80px;
+	}
+	.search-fm{
+		display: none;
+	}
+	.menu-btn{
+		display:inline-block;
+	}
+	
+}
+@media only screen and (max-width: 330px) {
+	.search-fm{
+		display: none;
+	}
+	.menu-btn{
+		display:none;
+	}
+}
+@media only screen and (min-width:920px ) {
+	.pc-nav{
+		display: block;
+	}
+	.phone-nav{
+		display: none;
+	}
+	
+}
+@media only screen and (max-width:920px ) {
+	.pc-nav{
+		display: none;
+	}
+	.phone-nav{
+		display: block;
+	}
+	.aside{
+		display: none;
+	}
+	.main{
+		width: 80%;
+		margin-left: auto;
+		margin-right: auto;
+		float: none;
+	}
+}
