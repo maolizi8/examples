@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>滚动条</title>
+		<style type="text/css">
+			.box {
+				border: 1px solid #999966;
+				padding: 10px;
+				float: left;
+			}
+			
+			[class*="test"] {
+				width: 250px;
+				height: 250px;
+				overflow-y: scroll;
+			}
+			
+			.test0 {}
+			
+			.test1 {
+			}
+			
+			.test1::-webkit-scrollbar {
+				width: 8px;
+			}
+			
+			.test1::-webkit-scrollbar-track {
+				background-color: #808080;
+				-webkit-border-radius: 2em;
+				-moz-border-radius: 2em;
+				border-radius: 2em;
+			}
+			
+			.test1::-webkit-scrollbar-thumb {
+				background-color: #ff4400;
+				-webkit-border-radius: 2em;
+				-moz-border-radius: 2em;
+				border-radius: 2em;
+			}
+			/*定义滚动条宽高及背景，宽高分别对应横竖滚动条的尺寸*/
+			.test2::-webkit-scrollbar {
+				width: 16px;
+				height: 16px;
+				background-color: #f5f5f5;
+				
+			}
+			/*定义滚动条的轨道，内阴影及圆角*/
+			
+			.test2::-webkit-scrollbar-track {
+				-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+				border-radius: 10px;
+				background-color: #f5f5f5;
+				
+			}
+			/*定义滑块，内阴影及圆角*/
+			
+			.test2::-webkit-scrollbar-thumb {
+				/*width: 10px;*/
+				height: 20px;
+				border-radius: 10px;
+				-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+				background-color: #555;
+				
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="box">
+			<div class="test0">
+				<p><b>They are willing to learn.</b> When you don’t understand how something works, let an expert show you. When you let someone teach you something, you are telling the person that you respect their talent, time and that you believe he knows what he is talking about. That you respect their experience. Always be willing to learn, because there is no way in hell to know everything.</p>
+				<p><b>They are expressive.</b> They are not bottled up. They feel something they verbalize it. Then be it pulling someone for not working hard or congratulating someone on their wonderful performance. This behaviour is not only restricted to work, but is applied to every aspect of their life.</p>
+				<p><b> They ask for help.</b> When you need help, don’t be arrogant or shy and stop yourself. If you’re lost on the road, it is fine to ask for directions. Everyone needs a little help sometime. When you ask for help, you receive help. By doing so, you’re letting people know you’re no superhuman, that you’re willing to listen, you also need support at times…which only show you could become a great leader someday.
+				</p>
+			</div>
+		</div>
+		<div class="box">
+			<div class="test1">
+				<p><b>They are willing to learn.</b> When you don’t understand how something works, let an expert show you. When you let someone teach you something, you are telling the person that you respect their talent, time and that you believe he knows what he is talking about. That you respect their experience. Always be willing to learn, because there is no way in hell to know everything.</p>
+				<p><b>They are expressive.</b> They are not bottled up. They feel something they verbalize it. Then be it pulling someone for not working hard or congratulating someone on their wonderful performance. This behaviour is not only restricted to work, but is applied to every aspect of their life.</p>
+				<p><b> They ask for help.</b> When you need help, don’t be arrogant or shy and stop yourself. If you’re lost on the road, it is fine to ask for directions. Everyone needs a little help sometime. When you ask for help, you receive help. By doing so, you’re letting people know you’re no superhuman, that you’re willing to listen, you also need support at times…which only show you could become a great leader someday.
+				</p>
+			</div>
+		</div>
+		<div class="box">
+			<div class="test2">
+				<p><b>They are willing to learn.</b> When you don’t understand how something works, let an expert show you. When you let someone teach you something, you are telling the person that you respect their talent, time and that you believe he knows what he is talking about. That you respect their experience. Always be willing to learn, because there is no way in hell to know everything.</p>
+				<p><b>They are expressive.</b> They are not bottled up. They feel something they verbalize it. Then be it pulling someone for not working hard or congratulating someone on their wonderful performance. This behaviour is not only restricted to work, but is applied to every aspect of their life.</p>
+				<p><b> They ask for help.</b> When you need help, don’t be arrogant or shy and stop yourself. If you’re lost on the road, it is fine to ask for directions. Everyone needs a little help sometime. When you ask for help, you receive help. By doing so, you’re letting people know you’re no superhuman, that you’re willing to listen, you also need support at times…which only show you could become a great leader someday.
+				</p>
+			</div>
+		</div>
+
+	</body>
+
+</html>

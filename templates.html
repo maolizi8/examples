@@ -3,8 +3,71 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>网页模板练习</title>
+		<script src="js/jquery-2.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/comm.css"/>
+		<style type="text/css">
+			.responsive{
+				width: 25%;
+				float: left;
+				padding: 10px;
+				box-sizing: border-box;
+			}
+			.thumbnail{
+				border: 1px solid #999;
+				padding: 5px;
+			}
+			.thumbnail a{
+				text-align: center;
+			}
+			.thumbnail img{
+				width: 100%;
+			}
+			.img-box{
+				
+			}
+			.description{
+				text-transform: capitalize;
+			}
+		</style>
 	</head>
 	<body>
+		<div class="container">
+			<div class="mainbody">
+				<div class="responsive">
+					<div class="thumbnail">
+						<a href="building.html" target="_blank">
+							<div class="img-box">
+								<img src="imgs/building.jpg" alt="building" />
+							</div>
+							<div class="description">
+								building
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="responsive">
+					<div class="thumbnail">
+						<a href="" target="_blank">
+							<img src="imgs/building.jpg" alt="templates" />
+							<div class="description">
+								green field
+							</div>
+						</a>
+					</div>
+				</div>
+				
+			</div>
+		</div>
 		
 	</body>
+	<script type="text/javascript">
+		$(function(){
+			$(".container").prepend('<div class="header" id="head"><h1></h1></div><div id="nav"></div>');
+			$("#head h1").text(document.title);
+			$("#nav").load("index.html #nav");
+			$(".container").append('<div id="foot"></div>');
+			$("#foot").load("index.html #footer");
+		});
+		
+	</script>
 </html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>本地存储学习</title>
+		<link rel="stylesheet" type="text/css" href="../css/comm.css" />
+		<link rel="stylesheet" type="text/css" href="../css/popup.css" />
+		<script src="../js/jquery-2.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/layer.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.notes {
+				height: 50px;
+				line-height: 50px;
+			}
+			
+			.table {
+				border: 1px solid #333;
+				width: 100%;
+				border-collapse: collapse;
+			}
+			
+			.table tr {
+				height: 40px;
+				line-height: 40px;
+			}
+			
+			.table th,
+			.table td {
+				border: 1px solid #333;
+				text-align: center;
+				margin: 0;
+			}
+			
+		</style>
+	</head>
+
+	<body>
+		<div class="mainbody">
+			<p class="notes">内容保存至Local Storage，每次打开页面自动读取本地存储，将内容渲染至表格。</p>
+			<div>
+				<table class="table">
+					<thead>
+						<tr>
+							<th>编号</th>
+							<th>标题</th>
+							<th>内容</th>
+							<th>操作
+								<input type="button" id="addLocalData" class="btn btn-primary" value="添加内容" />
+							</th>
+						</tr>
+					</thead>
+					<tbody id="lxy">
+						<!--<tr>
+							<td>Data</td>
+							<td>Data</td>
+							<td>Data</td>
+						</tr>-->
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="backgrey fade"></div>
+		<div class="popup fade">
+			<div class="popheader">
+					<h3>添加记录</h3>
+				<span>
+					<button class="close_btn" onclick="cancelBtn()">&times;</button>
+				</span>
+				</div>
+				
+			<div class="popcontent">
+				
+				<form>
+					<div class="form-line">
+						<label for="number">编号</label>
+						<input type="text" id="fv_num" name="number" placeholder="请输入编号" />
+					</div>
+					<div class="form-line">
+						<label for="title">记录标题</label>
+						<input type="text" id="fv_title" name="title" placeholder="请输入标题" />
+					</div>
+					<div class="form-line">
+						<label for="content">记录内容</label>
+						<input type="text" id="fv_content" name="content" placeholder="请输入内容" />
+					</div>
+					<div class="form-foot">
+						<input type="button" class="btn" onclick="addRecords()" value="提交" />
+						<input type="button" class="btn" onclick="cancelBtn()" value="取消" />
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(function() {
+			$(document).on("click", "#addLocalData", function() {
+				$(".backgrey").show();
+				$(".popup").show();
+//				$(".backgrey").removeClass("fade");
+//				$(".popup").removeClass("fade");
+
+			});
+			loadRecords();
+		});
+		function cancelBtn(){
+			$(".backgrey").hide();
+			$(".popup").hide();
+//			$(".backgrey").addClass("fade");
+//			$(".popup").addClass("fade");
+		}
+		function addRecords() {
+			 if($.trim($("#fv_num").val()) == "") {
+				layer.alert("编号不能为空！");
+				return;
+			} else if(isNaN($.trim($("#fv_num").val()))) {
+				layer.alert("编号必须为纯数字！");
+				return;
+			} else if($.trim($("#fv_title").val()) == "") {
+				layer.alert("标题不能为空！");
+				return;
+			} else if($.trim($("#fv_content").val()) == "") {
+				layer.alert("内容不能为空！");
+				return;
+			} else {
+				var recordsStorage;
+				if(localStorage.recordsStorage != null) {
+					recordsStorage = JSON.parse(window.localStorage.recordsStorage);
+					console.log(recordsStorage);
+					recordsStorage.push({
+						numbers: $.trim($("#fv_num").val()),
+						title: $.trim($("#fv_title").val()),
+						content: $.trim($("#fv_content").val())
+					});
+				} else {
+					recordsStorage = [{
+						numbers: "",
+						title: "",
+						content: ""
+					}];
+					recordsStorage[0].numbers = $.trim($("#fv_num").val());
+					recordsStorage[0].title = $.trim($("#fv_title").val());
+					recordsStorage[0].content = $.trim($("#fv_content").val());
+				}
+
+				window.localStorage.recordsStorage = JSON.stringify(recordsStorage);
+				$(".backgrey").hide();
+				$(".popup").hide();
+				$("#lxy").empty();
+				loadRecords();
+			}
+		}
+
+		function loadRecords() {
+			var recordsList = JSON.parse(window.localStorage.recordsStorage);
+			console.log(recordsList);
+			var tbody = "";
+			for(var i = 0, len = recordsList.length; i < len; i++) {
+				tbody += '<tr>';
+				tbody += '<td>' + recordsList[i].numbers + '</td>';
+				tbody += '<td>' + recordsList[i].title + '</td>';
+				tbody += '<td>' + recordsList[i].content + '</td>';
+				tbody += '<td><input type="button" value="删除" class="btn" onclick="deleteRecords(' + i + ')" /></td>';
+				tbody += '</tr>';
+			}
+			$("#lxy").append(tbody);
+		}
+
+		function deleteRecords(i) {
+			layer.confirm('确定要删除？', function(index) {
+				console.log(i);
+				var recordsList = JSON.parse(window.localStorage.recordsStorage);
+				recordsList.splice(i, 1);
+				window.localStorage.recordsStorage = JSON.stringify(recordsList);
+				$("#lxy").empty();
+				loadRecords();
+				layer.close(index);
+			})
+		}
+	</script>
+
+</html>
