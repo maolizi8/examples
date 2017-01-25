@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>liz学习笔记</title>
+		<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+		<![endif]-->
+		<link rel="stylesheet" type="text/css" href="../css/comm.css" />
+		<link rel="stylesheet" type="text/css" href="../css/learn.css" />
+		<link rel="stylesheet" type="text/css" href="../css/learncss.css"/>
+		<script src="../js/jquery-2.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+
+		</style>
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="mainbody" id="m_css">
+				<div class="aside">
+					<ul class="h_aside_all">
+						<li> CSS 学习</li>
+					</ul>
+					<ul class="h_aside_list">
+						<li data-target="css_examples"> CSS 实例</li>
+						<li data-target="css_start"> CSS 简介</li>
+						<li data-target="css3_newtags"> CSS3新特性</li>
+					</ul>
+				</div>
+				<div class="main" id="css_examples">
+					<h2>CSS 实例</h2>
+					<div class="main_area">
+						<h3>CSS3 边框</h3>
+						<!--<div class="p-section">
+							使用 CSS3 border-radius 属性，你可以给任何元素制作 "圆角"。
+						</div>-->
+						<p>CSS3 圆角</p>
+						<div class="yl-section">
+							<div class="yl-box">
+								<div class="yuanjiao1"></div>
+							</div>
+							<div class="yl-box">
+								<div class="yuanjiao2"></div>
+							</div>
+							<div class="yl-box">
+								<div class="yuanjiao3"></div>
+							</div>
+							<div class="yl-box">
+								<div class="yuanjiao6"></div>
+							</div>
+						</div>
+						<p>CSS3 盒阴影</p>
+						<div class="yl-section">
+							<div class="yl-box">
+								<div class="heyinying1"></div>
+							</div>
+							<div class="yl-box">
+								<div class="heyinying2"></div>
+							</div>
+							<div class="yl-box">
+								<div class="heyinying3"></div>
+							</div>
+							<div class="yl-box">
+								<div class="heyinying4"></div>
+							</div>
+						</div>
+						<p>CSS3 边界图片</p>
+						<div class="yl-section">
+							<div class="yl-box">
+								<div class="borderimg0">
+									原图
+								</div>
+							</div>
+							<div class="yl-box">
+								<div class="borderimg1">border-image</div>
+							</div>
+							<div class="yl-box">
+								<div class="borderimg2"></div>
+							</div>
+							<div class="yl-box">
+								<div class="borderimg3"></div>
+							</div>
+							<div class="yl-box">
+								<div class="borderimg4"></div>
+							</div>
+						</div>
+					</div>
+					<div class="main_area">
+						<h3>CSS3 边框</h3>
+						<p>ju ge li zi</p>
+						<div class="eg-section">
+							<div class="eg-box">
+								ju ge li zi
+							</div>
+						</div>
+					</div>
+					<!--<div class="pagenator">
+						<button class="prepage" onclick="prePage()">&larr;上一页</button>
+						<button class="nextpage" onclick="nextpage()">下一页&rarr;</button>
+					</div>-->
+				</div>
+				<div class="main fade" id="css_start">
+					<div class="main_area">
+						<h3>CSS 简介</h3>
+						<p>CSS 指层叠样式表 (Cascading Style Sheets)</p>
+						<p><b>CSS 语法</b></p>
+						<p>CSS 规则由两个主要的部分构成：选择器，以及一条或多条声明。</p>
+						<div class="p-section">
+							selector {declaration1; declaration2; ... declarationN }
+						</div>
+						<p>每条声明由一个属性和一个值组成。</p>
+						<p>属性（property）是您希望设置的样式属性（style attribute）。每个属性有一个值。属性和值被冒号分开。</p>
+						<div class="p-section">
+							selector {property: value}
+						</div>
+						<p>例子：</p>
+						<div class="p-section">
+							h1 {color:red; font-size:14px;}
+						</div>
+						<p>以上例子的示意图：</p>
+						<div class="img-section"><img src="../imgs/css_selector.gif" /></div>
+					</div>
+					<div class="main_area">
+						<h3>多重样式将层叠为一个</h3>
+						<p>样式表允许以多种方式规定样式信息。样式可以规定在单个的 HTML 元素中，在 HTML 页的头元素中，或在一个外部的 CSS 文件中。甚至可以在同一个 HTML 文档内部引用多个外部样式表。</p>
+						<p><b>层叠次序</b></p>
+						<p><b>当同一个 HTML 元素被不止一个样式定义时，会使用哪个样式呢？</b></p>
+						<p>一般而言，所有的样式会根据下面的规则层叠于一个新的虚拟样式表中，其中数字 4 拥有最高的优先权。</p>
+						<p>
+							<ul>
+								<li> 浏览器缺省设置</li>
+								<li> 外部样式表</li>
+								<li> 内部样式表（位于
+
+									<head> 标签内部）</li>
+								<li> 内联样式（在 HTML 元素内部）</li>
+							</ul>
+						</p>
+					</div>
+
+					<div class="main_area">
+						<h3>CSS3 模块</h3>
+						<p>CSS3被拆分为"模块"。旧规范已拆分成小块，还增加了新的。</p>
+						<p>一些最重要CSS3模块如下：</p>
+						<p>
+							<ul>
+								<li> 选择器</li>
+								<li> 盒模型</li>
+								<li> 背景和边框</li>
+								<li> 文字特效</li>
+								<li> 2D/3D转换</li>
+								<li> 动画</li>
+								<li> 多列布局</li>
+								<li> 用户界面</li>
+							</ul>
+						</p>
+					</div>
+					<div class="main_area">
+						<p>默认情况下，元素的宽度与高度计算方式如下：</p>
+						<p>width(宽) + padding(内边距) + border(边框) = 元素实际宽度</p>
+						<p>height(高) + padding(内边距) + border(边框) = 元素实际高度</p>
+					</div>
+				</div>
+				<div class="main fade" id="css3_newtags">
+					<h2>CSS3 新特性</h2>
+					<div class="main_area">
+						<h3>CSS3 圆角</h3>
+						<p>在CSS3中border-radius属性被用于创建圆角：</p>
+						<div class="eg-section">
+							<h5>代码实例：</h5>
+							<div class="eg-box">
+								div 
+								<br />
+								{ <br />
+								 border:2px solid; <br /> 
+								 border-radius:25px; <br />
+								 }
+							</div>
+						</div>
+						<p>效果实例:</p>
+						<table class="eg-table">
+							<tr>
+								<td>属性举例</td>
+								<td>背景颜色为圆角</td>
+								<td>边框为圆角</td>
+								<td>背景图片为圆角</td>
+								<td>综合</td>
+							</tr>
+							<tr>
+								<td>border-radius</td>
+								<td><div class="yuanjiao1"></div></td>
+								<td><div class="yuanjiao2"></div></td>
+								<td><div class="yuanjiao3"></div></td>
+								<td>
+									<div class="yuanjiao4">
+										<div class="yuanjiao5">
+											<div class="yuanjiao3"></div>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</table>
+						
+					</div>
+					<div class="main_area">
+						<h3>CSS3 圆角</h3>
+						<p>ju ge li zi</p>
+						<div class="eg-section">
+							<div class="eg-box">
+								div { border:2px solid; border-radius:25px; }
+							</div>
+						</div>
+					</div>
+					<div class="main_area">
+						<h3>CSS3 边框</h3>
+						<p>ju ge li zi</p>
+						<div class="eg-section">
+							<div class="eg-box">
+								ju ge li zi
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			<div style="clear: both;"></div>
+		</div>
+	</body>
+	<script src="../js/learn.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/pagetransf.js" type="text/javascript" charset="utf-8"></script>
+</html>

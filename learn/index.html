@@ -3,7 +3,7 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title>liz笔记</title>
+		<title>liz学习笔记</title>
 		<!--[if lt IE 9]> <script src="js/html5shiv.js"></script> <![endif]-->
 		<link rel="stylesheet" type="text/css" href="../css/comm.css" />
 		<script src="../js/jquery-2.0.0.min.js" type="text/javascript" charset="utf-8"></script>
@@ -12,44 +12,54 @@
 	<body>
 		<div class="container">
 			<div class="header" id="header">
-				<h1>liz学习记录</h1>
+				<div class="title">
+					<h1>liz学习笔记</h1>
+				</div>
 			</div>
 			<div class="nav" id="nav">
 				<div class="nav-main">
 					<ul class="pc-nav">
+						<a href="../index.html" target="_blank">首页</a>
 						<li>
-							<a href="index.html">首页</a>
+							<a href="learn_html.html" target="_blank">HTML</a>
 						</li>
 						<li>
-							<a href="index.html" target="_blank">学习记录</a>
+							<a href="learn_css.html" target="_blank">CSS</a>
 						</li>
 						<li>
-							<a href="templates/index.html" target="_blank">网页模板练习</a>
+							<a href="learn_js.html" target="_blank">JAVASCRIPT</a>
 						</li>
 						<li>
-							<a href="index.html" target="_blank">使用工具</a>
+							<a href="learn_jquery.html" target="_blank">JQUERY</a>
 						</li>
 						<li>
-							<a href="index.html">登录</a>
+							<a href="learn_bootstrap.html" target="_blank">BOOTSTRAP</a>
+						</li>
+						<li>
+							<a href="learn_sql.html" target="_blank">SQL</a>
+						</li>
+						<li>
+							<a href="learn_mysql.html" target="_blank">MYSQL</a>
+						</li>
+						<li>
+							<a href="learn_python.html" target="_blank">PYTHON</a>
+						</li>
+					</ul>
+					<ul class="phone-nav fade">
+						<a href="../index.html" target="_blank">首页</a>
+						<li>
+							<a href="learn_html.html" target="_blank">HTML</a>
+						</li>
+						<li>
+							<a href="learn_css.html" target="_blank">CSS</a>
+						</li>
+						<li>
+							<a href="learn_js.html" target="_blank">JAVASCRIPT</a>
 						</li>
 					</ul>
 				</div>
 			</div>
 			<div class="mainbody">
-				<div class="aside">
-					<ul class="aside_all">
-						<li> 全部</li>
-					</ul>
-					<ul class="aside_list">
-						<li data-target="m_htmlcss"> HTML/CSS</li>
-						<li data-target="m_javascript"> JAVASCRIPT</li>
-						<li data-target="m_server"> 服务器端</li>
-						<li data-target="m_database"> 数据库</li>
-						<li data-target="m_xmlstudy"> XML 学习</li>
-						<li data-target="m_devtoll"> 开发工具</li>
-						<li data-target="m_webbuild"> 网站建设</li>
-					</ul>
-				</div>
 				<div class="main" id="m_all">
 					<div class="section" id="m_htmlcss">
 						<h2> HTML/CSS</h2>
@@ -217,23 +227,9 @@
 						</div>
 					</div>
 				</div>
-				<div class="bottom"> @不断学习，不断进步！ </div>
+				<div class="bottom"> 不断学习，不断进步！ </div>
 			</div>
 		</div>
 	</body>
-	<script type="text/javascript">
-	$(".aside_list li").click(function(){
-		var that=this;
-		$(".section").hide();
-		$("#"+$(that).attr("data-target")).css("display","block");
-	});
-	$(".aside_all li").click(function(){
-		console.log(this)
-		$(".section").show();
-	});
-		function chooseSection(obj){
-			
-		}
-	</script>
 
 </html>

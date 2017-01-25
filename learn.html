@@ -1,9 +1,532 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
+		<title>liz学习笔记</title>
+		<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+		<![endif]-->
+		<link rel="stylesheet" type="text/css" href="css/comm.css" />
+		<link rel="stylesheet" type="text/css" href="css/learn.css" />
+		<script src="js/jquery-2.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+
+		</style>
 	</head>
+
 	<body>
+		<div class="container">
+			<div class="header">
+				<div class="title">
+					<h1>liz学习笔记</h1>
+				</div>
+				<div class="header-r fade">
+					<button class="menu-btn" onclick="dispMenuSection()">menu</button>
+				</div>
+			</div>
+			<div class="nav">
+				<div class="nav-main">
+					<ul class="pc-nav">
+						<a href="index.html" target="_blank">首页</a>
+						<li>
+							<a href="javascript:void(0)" data-target="m_html">HTML</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)" data-target="m_css">CSS</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)" data-target="m_js">JAVASCRIPT</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)" data-target="m_jquery">JQUERY</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)" data-target="m_bootstrap">BOOTSTRAP</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)" data-target="m_sql">SQL</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)" data-target="m_mysql">MYSQL</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)" data-target="m_python">PYTHON</a>
+						</li>
+					</ul>
+					<ul class="phone-nav fade">
+						<a href="index.html" target="_blank">首页</a>
+						<li>
+							<a href="javascript:void(0)">HTML</a>
+						</li>
+						<li>
+							<a href="javascript:viod()" data-target="m_css">CSS</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)" data-target="m_js">JAVASCRIPT</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="mainbody fade" id="m_html">
+				<div class="aside">
+					<ul class="h_aside_all">
+						<li> HTML 学习</li>
+					</ul>
+					<ul class="h_aside_list">
+						<li data-target="html_start"> HTML开始</li>
+						<li data-target="html_examples"> HTML实例</li>
+						<li data-target="html5_newtags"> HTML5新元素</li>
+					</ul>
+				</div>
+				<div class="main" id="html_start">
+					<div class="main_area">
+						<h3>HTML开始</h3>
+						<p>超文本标记语言（英语：HyperText Markup Language，简称：HTML）是一种用于创建网页的标准标记语言。</p>
+						<div class="eg-section">
+							<h4>实例</h4>
+							<div class="eg-box">
+								ju ge li zi
+							</div>
+						</div>
+					</div>
+					<div class="main_area">
+						<h3>HTML开始</h3>
+						<p>超文本标记语言（英语：HyperText Markup Language，简称：HTML）是一种用于创建网页的标准标记语言。</p>
+
+					</div>
+					<div class="main_area">
+						<h3>HTML开始</h3>
+						<p>超文本标记语言（英语：HyperText Markup Language，简称：HTML）是一种用于创建网页的标准标记语言。</p>
+
+					</div>
+				</div>
+				<div class="main fade" id="html_examples">
+					<div class="main_area">
+						<h3>HTML实例</h3>
+						<p>超文本标记语言（英语：HyperText Markup Language，简称：HTML）是一种用于创建网页的标准标记语言。</p>
+						<div class="eg-section">
+							<h4>实例</h4>
+							<div class="eg-box">
+								ju ge li zi
+							</div>
+						</div>
+					</div>
+					<div class="main_area">
+						<h3>HTML实例</h3>
+						<p>超文本标记语言（英语：HyperText Markup Language，简称：HTML）是一种用于创建网页的标准标记语言。</p>
+
+					</div>
+					<div class="main_area">
+						<h3>HTML实例</h3>
+						<p>超文本标记语言（英语：HyperText Markup Language，简称：HTML）是一种用于创建网页的标准标记语言。</p>
+
+					</div>
+				</div>
+				<div class="main fade" id="html5_newtags">
+					<div class="main_area">
+						<h3>HTML5新元素</h3>
+						<p>超文本标记语言（英语：HyperText Markup Language，简称：HTML）是一种用于创建网页的标准标记语言。</p>
+						<div class="eg-section">
+							<h4>实例</h4>
+							<div class="eg-box">
+								ju ge li zi
+							</div>
+						</div>
+					</div>
+					<div class="main_area">
+						<h3>HTML5新元素</h3>
+						<p>超文本标记语言（英语：HyperText Markup Language，简称：HTML）是一种用于创建网页的标准标记语言。</p>
+
+					</div>
+					<div class="main_area">
+						<h3>HTML5新元素</h3>
+						<p>超文本标记语言（英语：HyperText Markup Language，简称：HTML）是一种用于创建网页的标准标记语言。</p>
+
+					</div>
+				</div>
+			</div>
+			<div class="mainbody" id="m_css">
+				<div class="aside">
+					<ul class="h_aside_all">
+						<li> CSS 学习</li>
+					</ul>
+					<ul class="h_aside_list">
+						<li data-target="css_examples"> CSS实例</li>
+						<li data-target="css_start"> CSS 简介</li>
+						<li data-target="css3_newtags"> CSS3</li>
+					</ul>
+				</div>
+				<div class="main" id="css_examples">
+					<h2>CSS3 边框</h2>
+					<div class="main_area">
+						<h3>CSS3 圆角</h3>
+						<p>在CSS3中border-radius属性被用于创建圆角：</p>
+						<div class="eg-section">
+							<h5>代码实例：</h5>
+							<div class="eg-box">
+								div 
+								<br />
+								{ <br />
+								 border:2px solid; <br /> 
+								 border-radius:25px; <br />
+								 }
+							</div>
+							<p>效果实例</p>
+							<div class="yuanjiao1">
+								
+							</div>
+						</div>
+					</div>
+					<div class="main_area">
+						<h3>CSS3 圆角</h3>
+						<p>ju ge li zi</p>
+						<div class="eg-section">
+							<div class="eg-box">
+								div { border:2px solid; border-radius:25px; }
+							</div>
+						</div>
+					</div>
+					<div class="main_area">
+						<h3>CSS3 边框</h3>
+						<p>ju ge li zi</p>
+						<div class="eg-section">
+							<div class="eg-box">
+								ju ge li zi
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="main fade" id="css_start">
+					<div class="main_area">
+						<h3>CSS 简介</h3>
+						<p>CSS 指层叠样式表 (Cascading Style Sheets)</p>
+						<p><b>CSS 语法</b></p>
+						<p>CSS 规则由两个主要的部分构成：选择器，以及一条或多条声明。</p>
+						<div class="p-section">
+							selector {declaration1; declaration2; ... declarationN }
+						</div>
+						<p>每条声明由一个属性和一个值组成。</p>
+						<p>属性（property）是您希望设置的样式属性（style attribute）。每个属性有一个值。属性和值被冒号分开。</p>
+						<div class="p-section">
+							selector {property: value}
+						</div>
+						<p>例子：</p>
+						<div class="p-section">
+							h1 {color:red; font-size:14px;}
+						</div>
+						<p>以上例子的示意图：</p>
+						<div class="img-section"><img src="imgs/css_selector.gif" /></div>
+					</div>
+					<div class="main_area">
+						<h3>多重样式将层叠为一个</h3>
+						<p>样式表允许以多种方式规定样式信息。样式可以规定在单个的 HTML 元素中，在 HTML 页的头元素中，或在一个外部的 CSS 文件中。甚至可以在同一个 HTML 文档内部引用多个外部样式表。</p>
+						<p><b>层叠次序</b></p>
+						<p><b>当同一个 HTML 元素被不止一个样式定义时，会使用哪个样式呢？</b></p>
+						<p>一般而言，所有的样式会根据下面的规则层叠于一个新的虚拟样式表中，其中数字 4 拥有最高的优先权。</p>
+						<p>
+							<ul>
+								<li> 浏览器缺省设置</li>
+								<li> 外部样式表</li>
+								<li> 内部样式表（位于
+
+									<head> 标签内部）</li>
+								<li> 内联样式（在 HTML 元素内部）</li>
+							</ul>
+						</p>
+					</div>
+
+					<div class="main_area">
+						<h3>CSS3 模块</h3>
+						<p>CSS3被拆分为"模块"。旧规范已拆分成小块，还增加了新的。</p>
+						<p>一些最重要CSS3模块如下：</p>
+						<p>
+							<ul>
+								<li> 选择器</li>
+								<li> 盒模型</li>
+								<li> 背景和边框</li>
+								<li> 文字特效</li>
+								<li> 2D/3D转换</li>
+								<li> 动画</li>
+								<li> 多列布局</li>
+								<li> 用户界面</li>
+							</ul>
+						</p>
+					</div>
+				</div>
+				<div class="main fade" id="css3_newtags">
+					<h2>CSS3 新特性</h2>
+					<div class="main_area">
+						<h3>CSS3 新特性</h3>
+						<p>在CSS3中border-radius属性被用于创建圆角：</p>
+						<div class="eg-section">
+							<h5>代码实例：</h5>
+							<div class="eg-box">
+								div 
+								<br />
+								{ <br />
+								 border:2px solid; <br /> 
+								 border-radius:25px; <br />
+								 }
+							</div>
+							<p>效果实例</p>
+							<div class="yuanjiao1">
+								
+							</div>
+						</div>
+					</div>
+					<div class="main_area">
+						<h3>CSS3 圆角</h3>
+						<p>ju ge li zi</p>
+						<div class="eg-section">
+							<div class="eg-box">
+								div { border:2px solid; border-radius:25px; }
+							</div>
+						</div>
+					</div>
+					<div class="main_area">
+						<h3>CSS3 边框</h3>
+						<p>ju ge li zi</p>
+						<div class="eg-section">
+							<div class="eg-box">
+								ju ge li zi
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<div class="mainbody fade" id="m_js">
+				<div class="aside">
+					<ul class="h_aside_all">
+						<li> JS 学习</li>
+					</ul>
+					<ul class="h_aside_list">
+						<li data-target="css_start"> JS</li>
+						<li data-target="css_examples"> JS实例</li>
+						<li data-target="css3_newtags"> JS</li>
+					</ul>
+				</div>
+				<div class="main">
+					<div class="main_area" id="css_start">
+						<h3>JavaScript 开始</h3>
+						<p>JavaScript </p>
+						<div class="eg-section">
+							<div class="eg-box">
+								ju ge li zi
+							</div>
+						</div>
+					</div>
+					<div class="main_area" id="css_examples">
+						<h3>JavaScript 开始</h3>
+						<p>JavaScript</p>
+
+					</div>
+					<div class="main_area" id="css3_newtags">
+						<h3>JavaScript开始</h3>
+						<p>JavaScript</p>
+
+					</div>
+				</div>
+			</div>
+			<div class="mainbody fade" id="m_jquery">
+				<div class="aside">
+					<ul class="h_aside_all">
+						<li> jQuery 学习</li>
+					</ul>
+					<ul class="h_aside_list">
+						<li data-target="css_start"> jQuery开始</li>
+						<li data-target="css_examples"> jQuery实例</li>
+						<li data-target="css3_newtags"> jQuery</li>
+					</ul>
+				</div>
+				<div class="main">
+					<div class="main_area" id="css_start">
+						<h3>jQuery 开始</h3>
+						<p>CSS 指层叠样式表 (Cascading Style Sheets)</p>
+						<div class="eg-section">
+							<div class="eg-box">
+								ju ge li zi
+							</div>
+						</div>
+					</div>
+					<div class="main_area" id="css_examples">
+						<h3>jQuery 开始</h3>
+						<p>CSS 规则由两个主要的部分构成：选择器，以及一条或多条声明:</p>
+
+					</div>
+					<div class="main_area" id="css3_newtags">
+						<h3>jQuery开始</h3>
+						<p>超文本标记语言（英语：HyperText Markup Language，简称：HTML）是一种用于创建网页的标准标记语言。</p>
+
+					</div>
+				</div>
+			</div>
+			<div class="mainbody fade" id="m_bootstrap">
+				<div class="aside">
+					<ul class="h_aside_all">
+						<li> Bootstrap 学习</li>
+					</ul>
+					<ul class="h_aside_list">
+						<li data-target="css_start"> Bootstrap开始</li>
+						<li data-target="css_examples"> Bootstrap实例</li>
+						<li data-target="css3_newtags"> Bootstrap</li>
+					</ul>
+				</div>
+				<div class="main">
+					<div class="main_area" id="css_start">
+						<h3>Bootstrap 开始</h3>
+						<p>Bootstrap</p>
+						<div class="eg-section">
+							<div class="eg-box">
+								ju ge li zi
+							</div>
+						</div>
+					</div>
+					<div class="main_area" id="css_examples">
+						<h3>Bootstrap 开始</h3>
+						<p>CSS 规则由两个主要的部分构成：选择器，以及一条或多条声明:</p>
+
+					</div>
+					<div class="main_area" id="css3_newtags">
+						<h3>Bootstrap开始</h3>
+						<p>超文本标记语言（英语：HyperText Markup Language，简称：HTML）是一种用于创建网页的标准标记语言。</p>
+
+					</div>
+				</div>
+			</div>
+			<div class="mainbody fade" id="m_sql">
+				<div class="aside">
+					<ul class="h_aside_all">
+						<li> SQL 学习</li>
+					</ul>
+					<ul class="h_aside_list">
+						<li data-target="css_start"> SQL开始</li>
+						<li data-target="css_examples"> SQL实例</li>
+						<li data-target="css3_newtags"> SQL</li>
+					</ul>
+				</div>
+				<div class="main">
+					<div class="main_area" id="css_start">
+						<h3>SQL 开始</h3>
+						<p>CSS 指层叠样式表 (Cascading Style Sheets)</p>
+						<div class="eg-section">
+							<div class="eg-box">
+								ju ge li zi
+							</div>
+						</div>
+					</div>
+					<div class="main_area" id="css_examples">
+						<h3>SQL 开始</h3>
+						<p>CSS 规则由两个主要的部分构成：选择器，以及一条或多条声明:</p>
+
+					</div>
+					<div class="main_area" id="css3_newtags">
+						<h3>SQL 开始</h3>
+						<p>超文本标记语言（英语：HyperText Markup Language，简称：HTML）是一种用于创建网页的标准标记语言。</p>
+
+					</div>
+				</div>
+			</div>
+			<div class="mainbody fade" id="m_mysql">
+				<div class="aside">
+					<ul class="h_aside_all">
+						<li> MySQL 学习</li>
+					</ul>
+					<ul class="h_aside_list">
+						<li data-target="css_start"> CSS开始</li>
+						<li data-target="css_examples"> CSS实例</li>
+						<li data-target="css3_newtags"> CSS3</li>
+					</ul>
+				</div>
+				<div class="main">
+					<div class="main_area" id="css_start">
+						<h3>MySQL 开始</h3>
+						<p>CSS 指层叠样式表 (Cascading Style Sheets)</p>
+						<div class="eg-section">
+							<div class="eg-box">
+								ju ge li zi
+							</div>
+						</div>
+					</div>
+					<div class="main_area" id="css_examples">
+						<h3>MySQL 开始</h3>
+						<p>CSS 规则由两个主要的部分构成：选择器，以及一条或多条声明:</p>
+
+					</div>
+					<div class="main_area" id="css3_newtags">
+						<h3>MySQL 开始</h3>
+						<p>超文本标记语言（英语：HyperText Markup Language，简称：HTML）是一种用于创建网页的标准标记语言。</p>
+
+					</div>
+				</div>
+			</div>
+			<div class="mainbody fade" id="m_python">
+				<div class="aside">
+					<ul class="h_aside_all">
+						<li> Python 学习</li>
+					</ul>
+					<ul class="h_aside_list">
+						<li data-target="css_start"> Python开始</li>
+						<li data-target="css_examples"> Python实例</li>
+						<li data-target="css3_newtags"> Python</li>
+					</ul>
+				</div>
+				<div class="main">
+					<div class="main_area" id="css_start">
+						<h3>Python 开始</h3>
+						<p>CSS 指层叠样式表 (Cascading Style Sheets)</p>
+						<div class="eg-section">
+							<div class="eg-box">
+								ju ge li zi
+							</div>
+						</div>
+					</div>
+					<div class="main_area" id="css_examples">
+						<h3>Python 开始</h3>
+						<p>CSS 规则由两个主要的部分构成：选择器，以及一条或多条声明:</p>
+
+					</div>
+					<div class="main_area" id="css3_newtags">
+						<h3>Python 开始</h3>
+						<p>超文本标记语言（英语：HyperText Markup Language，简称：HTML）是一种用于创建网页的标准标记语言。</p>
+
+					</div>
+				</div>
+			</div>
+			<div style="clear: both;"></div>
+
+		</div>
 	</body>
+	<script type="text/javascript">
+		$(function() {
+			$(".container").append('<div id="foot"></div>');
+			$("#foot").load("index.html #footer");
+		});
+		$(".h_aside_list li").click(function() {
+			var that = this;
+			$(".h_aside_list li").css({
+				"background-color": "#fff",
+				"color": "#000"
+			});
+			$(this).css({
+				"background-color": "cornflowerblue",
+				"color": "#fff"
+			});
+		});
+
+		function toggleMainbody(obj) {
+			alert(obj);
+		}
+		$(".nav-main ul li a").on("click", function() {
+			$(".mainbody").hide();
+			$("#" + $(this).attr("data-target")).show();
+		});
+		$(".h_aside_list li").on("click", function() {
+			//console.log($(this).parent().parent().parent());
+			$(this).parent().parent().parent().children("div.main").css("display","none");
+			$("#" + $(this).attr("data-target")).css("display","block");
+		});
+	</script>
+
 </html>

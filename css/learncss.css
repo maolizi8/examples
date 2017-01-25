@@ -1,0 +1,122 @@
+.yuanjiao1{
+	width: 150px;
+	height: 150px;
+	background-color: lightblue;
+	border-radius: 10px;
+	margin: auto;
+}
+.yuanjiao2{
+	width: 150px;
+	height:150px;
+	border-radius: 10px;
+	border: 1px solid #0000FF;
+	margin: auto;
+}
+.yuanjiao3{
+	width: 150px;
+	height: 150px;
+	background-image: url(../imgs/build_image_01.jpg);
+	border-radius: 10px;
+	margin: auto;
+}
+.yuanjiao4{
+	padding: 5px;
+	border-radius: 10px;
+	border: 1px solid #0000FF;
+	margin: auto;
+}
+.yuanjiao5{
+	padding: 5px;
+	background-color: lightblue;
+	border-radius: 10px;
+	margin: auto;
+}
+.yuanjiao6{
+	width: 150px;
+	height: 150px;
+	background-color: lightblue;
+	border-radius: 50%;
+	margin: auto;
+}
+.yuanjiao7{
+	width: 150px;
+	height: 150px;
+	background-color: lightblue;
+	border-top-left-radius:30px;
+	margin: auto;
+}
+.yuanjiao8{
+	width: 150px;
+	height: 150px;
+	background-color: lightblue;
+	border-top-right-radius: 50%;
+	margin: auto;
+}
+.heyinying1{
+	width: 150px;
+	height: 150px;
+	background-color: lightblue;
+	box-shadow: 10px 10px 5px #888888;
+	margin: auto;
+}
+.heyinying2{
+	width: 150px;
+	height: 150px;
+	background-color: lightblue;
+	box-shadow: 0 0 10px 10px #888888;
+	margin: auto;
+}
+.heyinying3{
+	width: 150px;
+	height: 150px;
+	background-color: lightblue;
+	box-shadow: -5px 0 5px -5px green, 
+	0 -5px 5px -5px blue, 
+	0 5px 5px -5px red, 
+	5px 0 5px -5px yellow;
+}
+.heyinying4{
+	width: 150px;
+	height: 150px;
+	background-color: lightblue;
+	box-shadow: -5px 0 5px green,
+	0 -5px 5px blue, 
+	0 5px 5px red, 
+	5px 0 5px yellow;
+}
+.borderimg0{
+	width: 150px;
+	height: 150px;
+	padding-top: 40px;
+	background-image:url(../imgs/border.png); 
+	background-repeat: no-repeat;
+	background-size:100px 100px;
+	text-align: center;
+}
+.borderimg1{
+	border:15px solid transparent;
+	width: 70px;
+	height: 70px;
+	-webkit-border-image:url(../imgs/border.png) 30 30 round; 
+	border-image:url(../imgs/border.png) 30 30 round;
+}
+.borderimg2{
+	border:15px solid transparent;
+	/*width:250px;
+	padding:10px 20px;*/
+	width: 100px;
+	height: 100px;
+	-webkit-border-image:url(../imgs/border.png) 30 30 stretch; 
+	border-image:url(../imgs/border.png) 30 30 stretch;
+}
+.borderimg3{
+	border:15px solid transparent;
+	width: 100px;
+	height: 100px;
+	/*padding:10px 20px;*/
+	border-image-source:url(../imgs/border.png);
+	border-image-slice: 50%;
+	/*border-image-width:30 30;
+	border-image-outset:30 30;*/
+	border-image-repeat:round;
+}
