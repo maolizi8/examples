@@ -131,3 +131,200 @@
 	border-image-outset:30 30;*/
 	border-image-repeat:round;
 }
+[class*="transf-"]{
+	width: 140px;
+	height: 140px;
+	/*background-color: lightblue;*/
+	background-image: url(../imgs/fangzi.png);
+	margin: auto;
+}
+.transf-two1:hover{
+	-webkit-transform: rotate(60deg);
+	-ms-transform: rotate(60deg);
+	transform: rotate(60deg);
+}
+.transf-two2:hover{
+	-webkit-transform: translate(10px,-20px);
+	-ms-transform: translate(10px,-20px);
+	transform: translate(10px,-20px);
+}
+.transf-two3:hover{
+	-webkit-transform:scale(1.5,0.5);
+	-ms-transform:scale(1.5,0.5);
+	transform: scale(1.5,0.5);
+}
+.transf-two4:hover{
+	-webkit-transform: skew(30deg,20deg);
+	-ms-transform: skew(30deg,20deg);
+	transform: skew(30deg,20deg);
+}
+.transf-two5:hover{
+	-webkit-transform: matrix(0.866,0.5,-0.5,0.866,0,0);
+	-ms-transform: matrix(0.866,0.5,-0.5,0.866,0,0);
+	transform: matrix(0.866,0.5,-0.5,0.866,0,0);
+}
+[class*="transf-three"]{
+	background-image: url(../imgs/yezishu.png);
+}
+.transf-three1:hover{
+	-webkit-transform: rotateX(60deg);
+	transform: rotateX(60deg);
+	
+}
+.transf-three2:hover{
+	-webkit-transform: rotateY(60deg);
+	transform: rotateY(60deg);
+	
+}
+
+[class*="guodu"]{
+	width: 140px;
+	height: 140px;
+	background-image: url(../imgs/yezishu.png);
+}
+.guodu1{
+	transition: width 2s,height 2s;
+}
+.guodu1:hover{
+	height: 110px;
+	width: 130px;
+}
+.guodu2{
+	transition: transform 2s;
+}
+.guodu2:hover{
+	-webkit-transform: rotate(360deg) scale(1.5,0.5);
+	transform: rotate(360deg) scale(1.5,0.5);
+}
+.guodu3{
+	transition: transform 2s;
+}
+.guodu3:hover{
+	-webkit-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+	
+}
+
+.animate1{
+	width: 140px;
+	height: 140px;
+	background-color: lightblue;
+	margin: auto;
+	border-radius: 50%;
+	animation:myanim1 5s infinite;
+	-webkit-animation:myanim1 5s infinite;
+}
+@-webkit-keyframes myanim1{
+	from{background-color: lightblue;width: 140px;height: 140px;}
+	to{background-color: lightpink;width: 0px;height: 0px;
+	}
+}
+@keyframes myanim1{
+	from{background-color: lightblue;width: 140px;height: 140px;}
+	to{background-color: lightpink;width: 0px;height: 0px;
+	}
+}
+.animate2{
+	position:relative;
+	width: 20px;
+	height: 20px;
+	/*margin-left: 0;*/
+	background-color: lightblue;
+	animation:myanim2 6s linear infinite;
+	-webkit-animation:myanim2 6s linear infinite;
+	animation-direction:alternate;
+	-webkit-animation-direction:alternate;
+}
+@-webkit-keyframes myanim2{
+	0%{
+		background-color: lightblue;
+		left: 0;
+		top:0;
+	}
+	25%{
+		background-color: red;
+		left: 120px;
+		top:0;
+		height: 20px;
+		border-radius: 50%;
+		}
+	50%{
+		background-color: yellow;
+		left: 120px;
+		top:120px;
+		height: 40px;
+		border-radius: 50%;
+	}
+	75%{
+		background-color: green;
+		left: 0;
+		top:120px;
+		height: 20px;
+		border-radius: 50%;
+	}
+	100%{
+		background-color: lightblue;
+		left: 0;
+		top:0;
+	}
+}
+@keyframes myanim2{
+	0%{
+		background-color: lightblue;
+		left: 0;
+		top:0;
+	}
+	25%{
+		background-color: red;
+		left: 120px;
+		top:0;
+		height: 20px;
+		border-radius: 50%;
+		}
+	50%{
+		background-color: yellow;
+		left: 120px;
+		top:120px;
+		height: 40px;
+		border-radius: 50%;
+	}
+	75%{
+		background-color: green;
+		left: 0;
+		top:120px;
+		height: 20px;
+		border-radius: 50%;
+	}
+	100%{
+		background-color: lightblue;
+		left: 0;
+		top:0;
+	}
+}
+.animate3{
+	position:relative;
+	width: 40px;
+	height: 40px;
+	margin-left: 0;
+	background-color: lightblue;
+	animation:myanim3 2s linear infinite;
+	-webkit-animation:myanim3 2s linear infinite;
+	animation-direction:alternate;
+	-webkit-animation-direction:alternate;
+}
+@-webkit-keyframes myanim3{
+	from{
+		background-color: lightblue;left: 0;top:50px;
+	}
+	to{
+		background-color: red;left: 100px;top:50px
+		}
+}
+@keyframes myanim3{
+	from{
+		background-color: lightblue;left: 0;top:50px;
+	}
+	to{
+		background-color: red;left: 100px;top:50px;
+		}
+}

@@ -1,0 +1,41 @@
+body{
+	min-width: 760px;
+}
+.header,
+.nav-main,
+.mainbody,
+.foot_box,
+.bottom{
+	width: 980px;
+	margin: 0 auto;
+}
+
+.main,
+.box_right{
+	width: 760px;
+}
+@media only screen and (max-width:980px) {
+	.pc-nav {
+		display: none;
+	}
+	.phone-nav {
+		display: block;
+	}
+	.aside {
+		display: none;
+	}
+	.header-r {
+		display: block;
+	}
+	.header,
+	.nav-main,
+	.mainbody,
+	.foot_box,
+	.bottom{
+		width: 760px;
+		margin: 0 auto;
+	}
+	.box_left {
+		display: none;
+	}
+}

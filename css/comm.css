@@ -10,7 +10,6 @@
 
 body {
 	background-color: #F6F6F6;
-	min-width: 760px;
 	/*font-family: verdana, arial, sans-serif;*/
 }
 
@@ -30,14 +29,14 @@ body {
 	height: 100%;
 }
 
-.header,
+/*.header,
 .nav-main,
 .mainbody,
 .foot_box,
-.bottom {
+.bottom{
 	width: 980px;
 	margin: 0 auto;
-}
+}*/
 
 .header {
 	height: 70px;
@@ -46,10 +45,6 @@ body {
 
 .title {
 	float: left;
-}
-
-.header-r {
-	float: right;
 }
 
 .menu-btn {
@@ -72,8 +67,7 @@ body {
 }
 
 .nav-main {
-	/*width: 980px;
-	margin: 0 auto;*/
+	
 }
 
 .nav ul {
@@ -106,12 +100,14 @@ body {
 	margin: 0 auto;*/
 	min-height: 500px;
 }
-
-.aside {
-	float: left;
+.aside,
+.box_left{
 	width: 200px;
-	border: 1px solid #eaeaea;
+	float: left;
 	margin-right: 10px;
+}
+.aside {
+	border: 1px solid #eaeaea;
 	background-color: #fff;
 }
 
@@ -154,11 +150,15 @@ body {
 	font-family: iconFont;
 }
 
+/*.main,
+.box_right{
+	width: 760px;
+}*/
 .main {
 	float: left;
 	border: 1px solid #eaeaea;
 	background-color: #fff;
-	width: 760px;
+	
 }
 
 .section {
@@ -246,14 +246,13 @@ body {
 }
 
 .box_left {
-	float: left;
+	/*float: left;
 	width: 200px;
-	margin-right: 10px;
+	margin-right: 10px;*/
 }
 
 .box_right {
 	float: left;
-	width: 760px;
 }
 
 .foot_box a {
@@ -275,12 +274,13 @@ body {
 	text-align: center;
 	font-weight: bold;
 	font-size: 13px;
+	margin-top: 0;
 }
 .bottom:before {
 	content: "\f251";
 	font-family: iconFont;
 }
-@media only screen and (max-width:980px) {
+/*@media only screen and (max-width:980px) {
 	.pc-nav {
 		display: none;
 	}
@@ -297,14 +297,14 @@ body {
 	.nav-main,
 	.mainbody,
 	.foot_box,
-	.bottom {
+	.bottom{
 		width: 760px;
 		margin: 0 auto;
 	}
 	.box_left {
 		display: none;
 	}
-}
+}*/
 
 .row:after {
 	content: "";

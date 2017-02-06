@@ -1,3 +1,49 @@
+body{
+	min-width: 1010px;
+}
+.header,
+.nav-main,
+.mainbody,
+.foot_box,
+.bottom {
+	width: 1180px;
+	margin: 0 auto;
+}
+.header-r {
+	float: right;
+}
+.main,
+.box_right{
+	width: 960px;
+}
+@media only screen and (max-width:1010px) {
+	.pc-nav {
+		display: none;
+	}
+	.phone-nav {
+		display: block;
+	}
+	.aside {
+		display: none;
+	}
+	.header-r {
+		display: block;
+	}
+	.header,
+	.nav-main,
+	.mainbody,
+	.foot_box,
+	.bottom {
+		width: 960px;
+		margin: 0 auto;
+	}
+	
+	.box_left {
+		display: none;
+	}
+}
+
+
 .header h1 a{
 	text-decoration: none;
 	color: #003300;
@@ -86,6 +132,11 @@
 }
 .yl-box div{
 	box-sizing: border-box;
+}
+.yl-inner{
+	width: 140px;
+	height: 140px;
+	margin: auto;
 }
 .yl-desc{
 	text-align: center;
