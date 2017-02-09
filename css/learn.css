@@ -89,11 +89,11 @@ body{
 .main_area p{
 	line-height: 30px;
 }
-.main_area ul{
+.ul_llist ul{
 	list-style:none;
 	padding-left: 20px;
 }
-.main_area ul li:before{
+.ul_llist ul li:before{
 	content: "\f111 ";
 	font-family: iconFont;
 	color: #C3C3C3;
@@ -130,6 +130,10 @@ body{
 	/*width: 200px;
 	height: 200px;*/
 }
+/*.yl-box:hover{
+	border: 1px solid #777;
+	box-shadow: 0 0 5px 5px #DEDEDE;
+}*/
 .yl-box div{
 	box-sizing: border-box;
 }

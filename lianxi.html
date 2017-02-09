@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>练习用</title>
+		<style type="text/css">
+			.gql{
+				/*position: relative;
+				left: 0;
+				top: 0;*/
+				width: 200px;
+				height: 200px;
+				border: 1px solid red;
+			}
+			.lxy{
+				position: relative;
+				left: 20px;
+				top: 20px;
+				/*margin: 20px auto;*/
+				width: 160px;
+				height: 160px;
+				background-color: white;
+				border:1px solid #999 ;
+				border-radius: 50%;
+				z-index: 9;
+				/*animation: donghua 2s linear infinite;*/
+			}
+			[class*="kedu"]{
+				position: absolute;
+				
+				background: black;
+			}
+			.kedu1{
+				left: 80px;
+				top: 0px;
+				width: 1px;
+				height: 10px;
+			}
+			.kedu2{
+				left: 80px;
+				top: 150px;
+				width: 1px;
+				height: 10px;
+			}
+			.kedu3{
+				left: 150px;
+				top: 80px;
+				width: 10px;
+				height: 1px;
+			}
+			.kedu4{
+				left: 0px;
+				top: 80px;
+				width: 10px;
+				height: 1px;
+			}
+			[class*="lxl"]{
+				position: absolute;
+				top: 76px;
+				width: 0;
+				height: 0;
+				border-bottom: 4px solid  transparent;
+				border-top: 4px solid  transparent;
+				border-radius: 50%;
+				animation: donghua linear infinite;
+			}
+			.lxl1{
+				animation-duration: 6s;
+				border-right: 80px solid red;
+				border-left: 80px solid  transparent;
+				left: 0px;
+				z-index: 10;
+			}
+			.lxl2{
+				left: 20px;
+				animation-duration: 3s;
+				border-right: 60px solid blue;
+				border-left: 60px solid  transparent;
+				z-index: 11;
+			}
+			.lxl3{
+				left: 40px;
+				animation-duration: 1.5s;
+				border-right: 40px solid peru;
+				border-left: 40px solid  transparent;
+				z-index: 12;
+			}
+			.lxl4{
+				animation-duration: 0s;
+				border-right: 80px solid red;
+				border-left: 80px solid  transparent;
+				left: 0px;
+				z-index: 13;
+			}
+			.zhongxin{
+				position: absolute;
+				top: 76px;
+				left: 76px;
+				width: 0;
+				height: 0;
+				border-radius: 50%;
+				border: 4px solid black;
+				z-index: 13;
+			}
+			@keyframes donghua{
+				from{transform: rotate(0deg);}
+				to{transform: rotate(360deg);}
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="gql">
+			<div class="lxy">
+				<div class="kedu1"></div>
+				<div class="kedu2"></div>
+				<div class="kedu3"></div>
+				<div class="kedu4"></div>
+				
+				<div class="lxl1"></div>
+				<div class="lxl2"></div>
+				<div class="lxl3"></div>
+				<div class="zhongxin"></div>
+			</div>
+		</div>
+		<div class="gql">
+			<div class="lxy">
+				<div class="lxl4"></div>
+			</div>
+		</div>
+	</body>
+</html>
