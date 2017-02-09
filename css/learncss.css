@@ -262,10 +262,9 @@
 }
 
 .kedu1 {
-	left: 70px;
-	top: 0px;
 	width: 1px;
 	height: 10px;
+	transform:translate3d(67px,129px,0) ;
 }
 
 .kedu2 {
