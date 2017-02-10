@@ -1,35 +1,18 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
+		<meta name="keywords" content="HTML, CSS, JavaScript">
+		<meta name="description" content="geqiuli learn HTML, CSS, JS, etc.">
+		<meta name="author" content="geqiuli">
+		<!--[if lt IE 9]> <script src="js/html5shiv.js"></script> <![endif]-->
 		<title>网页模板练习</title>
 		<script src="../js/jquery-2.0.0.min.js" type="text/javascript" charset="utf-8"></script>
-		<link rel="stylesheet" type="text/css" href="../css/comm.css"/>
-		<style type="text/css">
-			.responsive{
-				width: 25%;
-				float: left;
-				padding: 10px;
-				box-sizing: border-box;
-			}
-			.thumbnail{
-				border: 1px solid #999;
-				padding: 5px;
-			}
-			.thumbnail a{
-				text-align: center;
-			}
-			.thumbnail img{
-				width: 100%;
-			}
-			.img-box{
-				
-			}
-			.description{
-				text-transform: capitalize;
-			}
-		</style>
+		<link rel="stylesheet" type="text/css" href="../css/comm.css" />
+		<link rel="stylesheet" type="text/css" href="../css/exindex.css" />
 	</head>
+
 	<body>
 		<div class="container">
 			<div class="header" id="header">
@@ -37,9 +20,9 @@
 			</div>
 			<div class="nav" id="nav">
 				<div class="nav-main">
-					<ul class="pc-nav">
+					<ul>
 						<li>
-							<a href="../index.html">首页</a>
+							<a href="../index.html" target="_blank">首页</a>
 						</li>
 						<li>
 							<a href="../learn/index.html" target="_blank">学习记录</a>
@@ -48,10 +31,10 @@
 							<a href="index.html" target="_blank">网页模板练习</a>
 						</li>
 						<li>
-							<a href="index.html" target="_blank">使用工具</a>
+							<a href="../index.html" target="_blank">使用工具</a>
 						</li>
 						<li>
-							<a href="index.html">登录</a>
+							<a href="../index.html">登录</a>
 						</li>
 					</ul>
 				</div>
@@ -61,7 +44,31 @@
 					<div class="thumbnail">
 						<a href="building.html" target="_blank">
 							<div class="img-box">
-								<img src="../imgs/building.jpg" alt="building" />
+								<img src="../imgs/building4.png" alt="building" />
+							</div>
+							<div class="description">
+								建筑背景的网页模板
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="responsive">
+					<div class="thumbnail">
+						<a href="jianpan.html" target="_blank">
+							<div class="img-box">
+								<img src="../imgs/jianpan2.jpg" alt="jianpan" />
+							</div>
+							<div class="description">
+								纯CSS打造银色键盘
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="responsive">
+					<div class="thumbnail">
+						<a href="building.html" target="_blank">
+							<div class="img-box">
+								<img src="../imgs/building4.png" alt="building" />
 							</div>
 							<div class="description">
 								building
@@ -72,7 +79,7 @@
 				<div class="responsive">
 					<div class="thumbnail">
 						<a href="" target="_blank">
-							<img src="../imgs/building.jpg" alt="templates" />
+							<img src="../imgs/building4.png" alt="templates" />
 							<div class="description">
 								green field
 							</div>
@@ -83,7 +90,7 @@
 					<div class="thumbnail">
 						<a href="" target="_blank">
 							<div class="img-box">
-								<img src="../imgs/building.jpg" alt="building" />
+								<img src="../imgs/building4.png" alt="building" />
 							</div>
 							<div class="description">
 								building
@@ -95,7 +102,7 @@
 					<div class="thumbnail">
 						<a href="" target="_blank">
 							<div class="img-box">
-								<img src="../imgs/building.jpg" alt="building" />
+								<img src="../imgs/building4.png" alt="building" />
 							</div>
 							<div class="description">
 								building
@@ -107,7 +114,7 @@
 					<div class="thumbnail">
 						<a href="" target="_blank">
 							<div class="img-box">
-								<img src="../imgs/building.jpg" alt="building" />
+								<img src="../imgs/building4.png" alt="building" />
 							</div>
 							<div class="description">
 								building
@@ -116,18 +123,17 @@
 					</div>
 				</div>
 			</div>
+			<div style="clear: both;">
+
+			</div>
 		</div>
-		
+
 	</body>
 	<script type="text/javascript">
-		$(function(){
-//			console.log(document.title);
-//			$(".container").prepend('<div id="head"></div><div id="nav"></div>');
-//			$("#head").load("../index.html #header");
-//			$("#nav").load("../index.html #nav");
+		$(function() {
 			$(".container").append('<div id="foot"></div>');
 			$("#foot").load("../index.html #footer");
 		});
-		
 	</script>
+
 </html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="keywords" content="HTML, CSS, JavaScript">
+		<meta name="description" content="geqiuli learn HTML, CSS, JS, etc.">
+		<meta name="author" content="geqiuli">
+		<!--[if lt IE 9]> <script src="js/html5shiv.js"></script> <![endif]-->
+		<title>抽奖</title>
+		<script src="../js/jquery-2.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="../css/comm.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/exindex.css"/>
+	</head>
+	<body>
+		<div class="container">
+			<div class="mainbody">
+			</div>
+			<div style="clear: both;"></div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(function(){
+			$(".container").prepend('<div id="nav"></div>');
+			$("#nav").load("index.html #nav");
+		});
+		
+	</script>
+</html>

@@ -403,9 +403,13 @@ body {
 	border: 1px solid #999;
 	padding: 5px;
 }
-
+.thumbnail:hover{
+	border: 1px solid #000;
+}
 .thumbnail a {
 	text-align: center;
+	text-decoration: none;
+	color: #333;
 }
 
 .thumbnail img {
@@ -416,4 +420,6 @@ body {
 
 .description {
 	text-transform: capitalize;
+	height: 30px;
+	line-height: 30px;
 }

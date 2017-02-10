@@ -3,12 +3,13 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title>练习用</title>
+		<meta name="keywords" content="HTML, CSS, JavaScript">
+		<meta name="description" content="geqiuli learn HTML, CSS, JS, etc.">
+		<meta name="author" content="geqiuli">
+		<title>liz练习</title>
+		<!--[if lt IE 9]> <script src="js/html5shiv.js"></script> <![endif]-->
 		<style type="text/css">
 			.gql {
-				/*position: relative;
-				left: 0;
-				top: 0;*/
 				width: 200px;
 				height: 200px;
 				border: 1px solid red;
@@ -18,14 +19,12 @@
 				position: relative;
 				left: 20px;
 				top: 20px;
-				/*margin: 20px auto;*/
 				width: 160px;
 				height: 160px;
 				background-color: white;
-				border: 1px solid #999;
+				border: 10px solid #999;
 				border-radius: 50%;
 				z-index: 9;
-				/*animation: donghua 2s linear infinite;*/
 			}
 			
 			[class*="kedu"] {
@@ -34,14 +33,14 @@
 			}
 			
 			.kedu1 {
-				left: 80px;
+				left: 79.5px;
 				top: 0px;
 				width: 1px;
 				height: 10px;
 			}
 			
 			.kedu2 {
-				left: 80px;
+				left: 79.5px;
 				top: 150px;
 				width: 1px;
 				height: 10px;
@@ -49,69 +48,66 @@
 			
 			.kedu3 {
 				left: 150px;
-				top: 80px;
+				top: 79.5px;
 				width: 10px;
 				height: 1px;
 			}
 			
 			.kedu4 {
 				left: 0px;
-				top: 80px;
+				top: 79.5px;
 				width: 10px;
 				height: 1px;
 			}
 			
 			[class*="lxl"] {
 				position: absolute;
-				top: 76px;
-				width: 0;
-				height: 0;
-				border-bottom: 4px solid transparent;
-				border-top: 4px solid transparent;
-				border-radius: 50%;
 				animation: donghua linear infinite;
+				/*transform-origin: bottom;
+				transform: rotate(270deg);*/
 			}
 			
 			.lxl1 {
+				transform-origin: 1px 70px 0;
 				animation-duration: 6s;
-				border-right: 80px solid red;
-				border-left: 80px solid transparent;
-				left: 0px;
+				top: 10px;
+				left: 79px;
+				width: 2px;
+				height: 80px;
+				background: red;
 				z-index: 10;
 			}
 			
 			.lxl2 {
-				left: 20px;
-				animation-duration: 3s;
-				border-right: 60px solid blue;
-				border-left: 60px solid transparent;
+				transform-origin: 2px 50px 0;
+				animation-duration: 36s;
+				top: 30px;
+				left: 78px;
+				width: 4px;
+				height: 60px;
+				background: blue;
 				z-index: 11;
 			}
 			
 			.lxl3 {
-				left: 40px;
-				animation-duration: 1.5s;
-				border-right: 40px solid peru;
-				border-left: 40px solid transparent;
+				transform-origin: 2px 30px 0;
+				animation-duration: 216s;
+				top: 50px;
+				left: 77px;
+				width: 6px;
+				height: 40px;
+				background: purple;
 				z-index: 12;
 			}
-			
-			.lxl4 {
-				animation-duration: 0s;
-				border-right: 80px solid red;
-				border-left: 80px solid transparent;
-				left: 0px;
-				z-index: 13;
-			}
-			
 			.zhongxin {
 				position: absolute;
 				top: 76px;
 				left: 76px;
-				width: 0;
-				height: 0;
+				width: 2px;
+				height: 2px;
+				background: white;
 				border-radius: 50%;
-				border: 4px solid black;
+				border: 3px solid black;
 				z-index: 13;
 			}
 			
@@ -123,6 +119,51 @@
 					transform: rotate(360deg);
 				}
 			}
+/*[class*="lxl"] {
+	position: absolute;
+	top: 65px;
+	width: 0;
+	height: 0;
+	border-bottom: 4px solid transparent;
+	border-top: 4px solid transparent;
+	border-radius: 50%;
+	animation: donghua linear infinite;
+}
+
+.lxl1 {
+	animation-duration: 12s;
+	border-right: 65px solid red;
+	border-left: 65px solid transparent;
+	left: 4px;
+	z-index: 10;
+}
+
+.lxl2 {
+	left: 19px;
+	animation-duration: 3s;
+	border-right: 50px solid blue;
+	border-left: 50px solid transparent;
+	z-index: 11;
+}
+
+.lxl3 {
+	left: 39px;
+	animation-duration: 1.5s;
+	border-right: 30px solid peru;
+	border-left: 30px solid transparent;
+	z-index: 12;
+}
+
+.zhongxin {
+	position: absolute;
+	top: 65px;
+	left: 65px;
+	width: 0;
+	height: 0;
+	border-radius: 50%;
+	border: 4px solid black;
+	z-index: 13;
+}*/
 			
 			.shuxian {
 				position: absolute;
@@ -134,25 +175,60 @@
 				transform-origin: bottom;
 			}
 			
-			.shuxian:after{
-				content:"。" ;
+			.shuxian:after {
+				content: "。";
 				position: absolute;
 				width: 36px;
 				height: 1px;
 				background: blue;
 				color: blue;
-				
+			}
+			
+			.dian {
+				width: 2px;
+				height: 2px;
+				background: white;
+				border-radius: 50%;
+				border: 3px solid black;
+			}
+			[class*="kexian"]{
+				position: absolute;
+				width: 1px;
+				height: 74px;
+				left: 80px;
+				top: 6px;
+				background: transparent;
+				transform-origin: bottom;
+				z-index: 20;
+			}
+			[class*="kexian"]:after{
+				content: "";
+				position: absolute;
+				width: 1px;
+				height: 6px;
+				left: 0px;
+				top: -6px;
+				background: #333;
+				transform-origin: bottom;
+				z-index: 21;
+			}
+			.kexian2:after{
+				height: 12px;
+				background: black;
+			}
+			.kexian3:after{
+				height: 9px;
+				background: black;
 			}
 		</style>
 	</head>
 
 	<body id="bd">
 		<div class="gql">
-			<div class="lxy" id="zhong">
-				<!--<div class="shuxian"></div>
-				<div class="shuxian1"></div>-->
+			<div class="lxy" id="clock">
 			</div>
 		</div>
+		
 		<div class="gql">
 			<div class="lxy">
 				<div class="kedu1"></div>
@@ -166,19 +242,46 @@
 				<div class="zhongxin"></div>
 			</div>
 		</div>
-
+		<div class="gql">
+			<div class="lxy" id="zhong">
+			</div>
+		</div>
 	</body>
 	<script type="text/javascript">
-		var dushu = 6;
-		 var i = 60;
-	     var div;
-		while(i > 0) {
-		    div = document.createElement("div");
-			div.classList.add("shuxian");
-			div.style.transform = "rotate("+dushu*i+"deg)";
-			document.getElementById("zhong").appendChild(div);
-			i--;
+	var ds=6;
+	var num=60;
+	while (num>0){
+		var div=document.createElement("div");
+		
+		var clock=document.getElementById("clock");
+		if (ds*num%90==0) {
+			div.classList.add("kexian2");
+		}else if (ds*num%90!=0 && ds*num%30==0) {
+			div.classList.add("kexian3");
+		}else{
+			div.classList.add("kexian1");
 		}
+		
+		div.style.transform="rotate("+ds*num+"deg)";
+		clock.appendChild(div);
+		num--;
+	}
+	
+	
+	
+	
+	
+	
+//		var dushu = 6;
+//		var i = 60;
+//		var div;
+//		while(i > 0) {
+//			div = document.createElement("div");
+//			div.classList.add("shuxian");
+//			div.style.transform = "rotate(" + dushu * i + "deg)";
+//			document.getElementById("zhong").appendChild(div);
+//			i--;
+//		}
 	</script>
 
 </html>
