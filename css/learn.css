@@ -130,10 +130,10 @@ body{
 	/*width: 200px;
 	height: 200px;*/
 }
-/*.yl-box:hover{
+.yl-box:hover{
 	border: 1px solid #777;
-	box-shadow: 0 0 5px 5px #DEDEDE;
-}*/
+	/*box-shadow: 0 0 5px 5px #DEDEDE;*/
+}
 .yl-box>div{
 	box-sizing: border-box;
 }
