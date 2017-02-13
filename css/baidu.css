@@ -1,0 +1,389 @@
+*{
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: arial,"times new roman",sans-serif;	
+}
+.container{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	min-width: 780px;	
+	min-height: 600px;
+}
+.header{
+	font-size: 13px;
+	height: 35px;
+	padding-top: 20px;
+}
+.topmenu{
+	list-style: none;
+	float: right;
+}
+ul.topmenu li{
+	display: inline;
+	margin-right: 15px;
+}
+ul.topmenu li a{
+	color: black;
+	font-weight: bold;
+}
+ul.topmenu li:nth-child(7) a,
+ul.topmenu li:nth-child(8) a{
+	font-weight: 500;
+}
+ul.topmenu li:last-child a{
+	padding: 5px;
+	background: #38f;
+	color: white;
+	text-decoration: none;
+	font-weight: 500;
+}
+.settings{
+	font-size: 12px;
+	position: absolute;
+	right:72px;
+	top: 35px;
+	width: 80px;
+	display: none;
+}
+.settings em,.settings i{
+	position: absolute;
+	right: 32px;
+	width: 0;
+	height: 0;
+	border: 5px solid transparent;
+}
+.settings em{
+	top: -1px;
+	z-index: 15;
+	border-bottom-color: #d8d8d8;
+}
+.settings i{
+	top: 0;
+	z-index: 16;
+	border-bottom-color: #fff;
+}
+.set-list{
+	position: absolute;
+	top: 9px;
+	right: 0;
+	z-index: 14;
+	border: 1px solid #d1d1d1;
+	box-shadow: 2px 2px 2px #d1d1d1;
+	text-align: center;
+}
+.set-list ul{
+	list-style: none;
+}
+.set-list ul a{
+	color: #666;
+	text-decoration: none;
+	height: 25px;
+	line-height: 25px;
+	width: 78px;
+	padding: 6px 11px;
+}
+.set-list ul a:hover{
+	background-color: #38f;
+	color: white;
+}
+
+.right-side{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 90px;
+	height: 100%;
+	background: #f9f9f9;
+	border-left:1px solid #e7e7e7;
+	text-align: center;
+	color: #666;
+	font-size: 12px;
+	display: none;
+}
+.right-side ul{
+	list-style: none;
+	padding-top:19px ;
+}
+.right-side ul a li{
+	line-height: 25px;
+	height: 60px;
+	width: 70px;
+	margin: 5px auto;
+	border-bottom: 1px solid #f0f0f0;
+}
+.right-side ul a:last-child{
+	text-decoration: underline;
+}
+.right-side ul a:hover{
+	text-decoration: underline;
+}
+.moreprod{
+	line-height: 25px;
+	height: 30px;
+	width: 70px;
+	margin: 0 auto;
+	border-bottom: 1px solid #f0f0f0;
+}
+.right-side a{
+	color: #666;
+	text-decoration: none;
+}
+[class*="licon-"]{
+	height: 36px;
+	width: 36px;
+	margin: 0 auto;
+	background: url(../imgs/bd-icons2.png) no-repeat;
+	
+}
+.licon-yinyue{
+	width: 40px;
+	background-position: -72px 0;
+}
+.licon-tupian{
+	width: 36px;
+	background-position: -113px 0;
+}
+.licon-zhidao{
+	background-position: -36px 0;
+}
+.licon-wenku{
+	background-position: -144px 0;
+}
+.licon-fengyun{
+	background-position: -180px 0;
+}
+.main{
+	height: 350px;
+}
+.bdimg{
+	width: 270px;
+	height: 130px;
+	margin: 0 auto;
+	background: url(../imgs/bd_yuanxiao.png) no-repeat ;
+}
+
+.search{
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 600px;
+	/*height: 40px;*/
+	margin: 20px auto 0 auto;
+}
+.search input{
+	display: block;
+	float: left;
+}
+.search-box{
+	width: 490px;
+	height: 35px;
+	border: 1px solid #999;
+	padding-left: 10px;
+}
+
+
+.camera{
+	position: absolute;
+	left: 475px;
+	top: 10px;
+	width: 18px;
+	height: 18px;
+	background: url(../imgs/camera.png) no-repeat;
+	background-position: 0 0;
+}
+.camera:hover{
+	background-position: 0 -20px;
+}
+.search-btn{
+	margin-left: 0;
+	width: 98px;
+	height: 37px;
+	background: #38f;
+	border: 1px solid #38f;
+	color: white;
+	cursor: pointer;
+}
+.search-btn:hover{
+	background: #317ef3;
+	border: 1px solid #2868c8;
+}
+.search-btn:active{
+	background: #3075dc;
+	border: 1px solid #2964bb;
+}
+.camera-load{
+	display: none;
+	position: absolute;
+	top:205px;
+	left: 50%;
+	transform: translate(-50%,0);
+	width: 598px;
+	height: 230px;
+	border: 1px solid #38f;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 16px;
+	background-color: white;
+}
+.load_photo{
+	margin: 0;
+	padding: 0;
+}
+.load_photo input.search-box{
+	border: none;
+	border-bottom:1px solid #999;
+	outline: none;
+}
+.load_photo input.search-btn{
+	height: 36px;
+}
+.load_photo i{
+	position: absolute;
+	top:10px;
+	right: 40px;
+	content: "";
+	width: 18px;
+	height: 18px;
+	background:url(../imgs/camera_white.png) no-repeat;
+	background-position: 0 0;
+	
+	}
+.tuoye_tp{
+	width: 530px;
+	height: 80px;
+	margin: 50px auto 10px auto;
+	padding-top: 10px;
+	background: #fafafa;
+	color: #999;
+}
+
+.tuoye_tp i{
+	font-size: 48px;
+	color: #E8E8E8;
+}
+.load_tp{
+	width: 120px;
+	height: 30px;
+	line-height: 30px;
+	border: 1px solid #C3C3C3;
+	margin: 0 auto;
+	padding: 8px 15px;
+}
+.load_tp:hover{
+	border: 1px solid #38f;
+}
+.load_tp i{
+	color:#38f;
+	font-size: 10px;
+	font-weight: bold;
+	padding: 0px 3px;
+	border: 2px dotted #38f;
+}
+.close-btn{
+	width: 30px;
+	height: 30px;
+	font-size: 28px;
+	background: white;
+	color: #999;
+	float: right;
+	margin-right: 10px;
+	outline: none;
+}
+.close-btn:hover{
+	color: #38f;
+}
+.searchlist{
+	width: 600px;
+	margin: 0 auto;
+	font-size: 12px;
+}
+.searchlist ul{
+	width: 500px;
+	list-style: none;
+	border-bottom: 1px solid #999;
+	border-left: 1px solid #999;
+	border-right: 1px solid #999;
+	border-top:none;
+	margin: 0;
+	padding: 0;
+}
+.searchlist ul li{
+	padding-left:10px;
+	line-height: 20px;
+}
+.searchlist ul li:hover{
+	background: #EFEFEF;
+}
+
+.bottom{
+	height: 30px;
+	text-align: center;
+	font-size: 13px;
+	color: #999;
+}
+.erweima{
+	width: 60px;
+	height: 60px;
+	margin: 0 auto;
+	background: url(../imgs/bd_erweima.png) no-repeat ;
+	background-size: contain;
+}
+.jiacu{
+	height: 30px;
+	line-height: 30px;
+	color: #666;
+	font-weight: bold;
+}
+.links{
+	height: 25px;
+	line-height: 25px;
+	margin-top: 20px;
+}
+.bottom a{
+	color: #999;
+}
+.links a{
+	margin-left: 20px;
+}
+.links a:first-child{
+	margin-left: 0;
+}
+.notes{
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 25px;
+	line-height: 25px;
+	width: 550px;
+	margin: 0 auto;
+	text-align: left;
+}
+.zhenghao{
+	margin-right: 20px;
+}
+.zhenghao:after{
+	content: "";
+	position: absolute;
+	left: 331px;
+	top: 0;
+	width: 18px;
+	height: 20px;
+	background: url(../imgs/bd_icon.png) no-repeat;
+	background-position: 0 0;
+}
+.beianhao:after{
+	content: "";
+	position: absolute;
+	left: 549px;
+	top: 0;
+	width: 18px;
+	height: 20px;
+	background: url(../imgs/bd_icon.png) no-repeat;
+	background-position: -25px 0;
+}
