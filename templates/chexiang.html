@@ -54,6 +54,7 @@
 			</div>
 		</div>
 	</body>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 	<script type="text/javascript">
 		var list = {
 			"A": ["鞍山", "安庆", "安阳", "安顺", "安康", "阿克苏"],
@@ -113,15 +114,34 @@
 		function avoid(){
 			return;
 		}
+		
 		function selectCities(){
-			var lc_letter=this.innerText.toLowerCase();
-			var scrollTop = document.getElementById("lc-cities").scrollTop || window.pageYOffset || document.body.scrollTop;
-			var oHeight=document.body.scrollHeight==0?document.documentElement.scrollHeight:document.body.scrollHeight;
-var oTop=document.body.scrollTop==0?document.documentElement.scrollTop:document.body.scrollTop;
-			//document.querySelector("#city_"+lc_letter).scrollTop=0;
-			console.log(scrollTop);
-			//console.log(document.body.scrollTop);
+			$("#lc-cities").scrollTop($("#lc-cities").scrollTop() + $("#city_" + $(this).html().toLowerCase()).position().top - 89);
 		};
+		document.getElementById("lc-cities").onscroll=function(){
+//			console.log($(".lc-cities").offset().top);
+//			console.log($(".lc-cities").position().top);
+//			console.log($(".lc-cities").scrollTop());
+//			console.log($("#city_c").position().top);
+//			console.log($("#city_c").style.top);
+			var scrollTop = document.getElementById("lc-cities").scrollTop;
+			var top=document.getElementById("city_c").style.top;
+			var offsetTop=document.getElementById("city_c").offsetTop;
+			var clientHeght=document.getElementById("city_c").clientHeight;
+			var clientTop=document.getElementById("city_c").clientTop;
+			console.log("scrollTop="+scrollTop);
+			console.log("top="+top);
+			console.log("offsetTop="+offsetTop);
+			console.log("clientHeght="+clientHeght);
+			console.log("clientTop="+clientTop);
+//			var offsetTop=document.getElementById("city_c").offsetTop;
+//			var clientHeight=document.getElementById("city_c").offsetTop;
+			var top=document.getElementById("city_c").style.top;
+//			console.log("scrollTop="+scrollTop);
+			console.log("top="+top);
+//			console.log("offsetTop="+offsetTop);
+			//console.log(document.body.scrollTop);
+		}
 	</script>
 
 </html>
