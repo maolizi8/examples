@@ -421,6 +421,11 @@
 //			$(this).css("display", "none")
 //			$("[data-target='" + $(this).attr("id").toString() + "']").removeClass("hd_nav_hover");
 //		});
+$("[class*='pc_img']").hover(function(){
+	$("[class*='pc_img']").css("animation-play-state","paused");
+},function(){
+	$("[class*='pc_img']").css("animation-play-state","running");
+})
 	</script>
 
 </html>
