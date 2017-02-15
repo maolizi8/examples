@@ -153,171 +153,172 @@
 
 	<!--js 写法-->
 	<script type="text/javascript">
-		//		var a1, a2, text1, text2,text3, div1, div2, div3;
-		//		window.onload = function() {
-		//			for(key in list) {
-		//				a1 = document.createElement("a");
-		//				a1.href = "javascript:void(0)";
-		//				a1.onclick=selectCities;
-		//				text1 = document.createTextNode(key.toString());
-		//				a1.appendChild(text1);
-		//				document.querySelector("#lc_leters").appendChild(a1);
-		//				
-		//				div1 = document.createElement("div");
-		//				div2 = document.createElement("div");
-		//				div3 = document.createElement("div");
-		//				div1.classList.add("lc_section");
-		//				div2.classList.add("letter");
-		//				div3.classList.add("lc_names");
-		//				for(var i = 0, len = list[key].length; i < len; i++) {
-		//					a2 = document.createElement("a");
-		//					a2.href = "javascript:void(0)";
-		//					text2 = document.createTextNode(list[key][i].toString());
-		//					a2.appendChild(text2);
-		//					a2.onclick=changeCityname;
-		//					div3.appendChild(a2);
-		//				}
-		//				text3= document.createTextNode(key.toString());
-		//				div2.appendChild(text3);
-		//				div1.appendChild(div2);
-		//				div1.appendChild(div3);
-		//				div1.id="city_"+key.toString().toLowerCase();
-		//				document.querySelector("#lc_cities").appendChild(div1);
-		//			}
-		//		}
-		//		
-		//		function selectCities(){
-		//			console.log(this.innerText);
-		//			var letter=this.innerText.toLowerCase();
-		//			var lc_cities=document.getElementById("lc_cities");
-		//			var offsetTop=document.getElementById("city_"+letter).offsetTop;
-		//			var scrollTop=offsetTop-lc_cities.offsetTop;
-		//			lc_cities.scrollTop=scrollTop;
-		//		};
-		//		function changeCityname(){
-		//			document.getElementById("lc_name").innerText=this.innerText;
-		//		}
-		//		
-		//		var hd_location=document.querySelector("#hd_location");
-		//		hd_location.addEventListener("mouseover",location_disp);
-		//		hd_location.addEventListener("mouseout",location_hide);
-		//		var lc_choices=document.querySelector(".lc_choices");
-		//		lc_choices.addEventListener("mouseover",location_disp);
-		//		lc_choices.addEventListener("mouseout",location_hide);
-		//		var icon_location=document.querySelector(".icon_location");
-		//		function location_disp(){
-		//			hd_location.classList.add("hd_location_hover");
-		//			icon_location.classList.add("icon_location_hover");
-		//			lc_choices.style.display="block";
-		//		}
-		//		function location_hide(){
-		//			hd_location.classList.remove("hd_location_hover");
-		//			icon_location.classList.remove("icon_location_hover");
-		//			lc_choices.style.display="none";
-		//		}
-		//		
-		//		var hd_nav_list=document.querySelectorAll(".hd_nav");
-		//		var nav_down_list=document.querySelectorAll(".nav_down");
-		//		for(var i=0;i<hd_nav_list.length;i++) {
-		//			hd_nav_list[i].addEventListener("mouseover",hd_nav_disp);
-		//			hd_nav_list[i].addEventListener("mouseout",hd_nav_hide);
-		//		}
-		//		for(var i=0;i<nav_down_list.length;i++) {
-		//			nav_down_list[i].addEventListener("mouseover",hd_nav_down_disp);
-		//			nav_down_list[i].addEventListener("mouseout",hd_nav_down_hide);
-		//		}
-		//		function hd_nav_disp () {
-		//			var nav_id=this.attributes.getNamedItem("data-target").textContent;
-		//			this.classList.add("hd_nav_hover");
-		//			document.querySelector("#"+nav_id).style.display="block";
-		//			console.log();
-		//		}
-		//		function hd_nav_hide () {
-		//			var nav_id=this.attributes.getNamedItem("data-target").textContent;
-		//			this.classList.remove("hd_nav_hover");
-		//			document.querySelector("#"+nav_id).style.display="none";
-		//		}
-		//		function hd_nav_down_disp () {
-		//			var nav_id=this.attributes.getNamedItem("id").textContent;
-		//			this.style.display="block";
-		//			for(var i=0;i<hd_nav_list.length;i++) {
-		//				var hd_nav_find=hd_nav_list[i].attributes.getNamedItem("data-target").textContent;
-		//				if (hd_nav_find==nav_id) {
-		//					hd_nav_list[i].classList.add("hd_nav_hover");
-		//				}
-		//			}
-		//			console.log();
-		//		}
-		//		function hd_nav_down_hide () {
-		//			var nav_id=this.attributes.getNamedItem("id").textContent;
-		//			this.style.display="none";
-		//			for(var i=0;i<hd_nav_list.length;i++) {
-		//				var hd_nav_find=hd_nav_list[i].attributes.getNamedItem("data-target").textContent;
-		//				if (hd_nav_find==nav_id) {
-		//					hd_nav_list[i].classList.remove("hd_nav_hover");
-		//				}
-		//			}
-		//		}
+				var a1, a2, text1, text2,text3, div1, div2, div3;
+				window.onload = function() {
+					for(key in list) {
+						a1 = document.createElement("a");
+						a1.href = "javascript:void(0)";
+						a1.onclick=selectCities;
+						text1 = document.createTextNode(key.toString());
+						a1.appendChild(text1);
+						document.querySelector("#lc_leters").appendChild(a1);
+						
+						div1 = document.createElement("div");
+						div2 = document.createElement("div");
+						div3 = document.createElement("div");
+						div1.classList.add("lc_section");
+						div2.classList.add("letter");
+						div3.classList.add("lc_names");
+						for(var i = 0, len = list[key].length; i < len; i++) {
+							a2 = document.createElement("a");
+							a2.href = "javascript:void(0)";
+							text2 = document.createTextNode(list[key][i].toString());
+							a2.appendChild(text2);
+							a2.onclick=changeCityname;
+							div3.appendChild(a2);
+						}
+						text3= document.createTextNode(key.toString());
+						div2.appendChild(text3);
+						div1.appendChild(div2);
+						div1.appendChild(div3);
+						div1.id="city_"+key.toString().toLowerCase();
+						document.querySelector("#lc_cities").appendChild(div1);
+					}
+				}
+				
+				function selectCities(){
+					console.log(this.innerText);
+					var letter=this.innerText.toLowerCase();
+					var lc_cities=document.getElementById("lc_cities");
+					var offsetTop=document.getElementById("city_"+letter).offsetTop;
+					var scrollTop=offsetTop-lc_cities.offsetTop;
+					lc_cities.scrollTop=scrollTop;
+					document.body.scrollTop=scrollTop;
+				}
+				function changeCityname(){
+					document.getElementById("lc_name").innerText=this.innerText;
+				}
+				
+				var hd_location=document.querySelector("#hd_location");
+				hd_location.addEventListener("mouseover",location_disp);
+				hd_location.addEventListener("mouseout",location_hide);
+				var lc_choices=document.querySelector(".lc_choices");
+				lc_choices.addEventListener("mouseover",location_disp);
+				lc_choices.addEventListener("mouseout",location_hide);
+				var icon_location=document.querySelector(".icon_location");
+				function location_disp(){
+					hd_location.classList.add("hd_location_hover");
+					icon_location.classList.add("icon_location_hover");
+					lc_choices.style.display="block";
+				}
+				function location_hide(){
+					hd_location.classList.remove("hd_location_hover");
+					icon_location.classList.remove("icon_location_hover");
+					lc_choices.style.display="none";
+				}
+				
+				var hd_nav_list=document.querySelectorAll(".hd_nav");
+				var nav_down_list=document.querySelectorAll(".nav_down");
+				for(var i=0;i<hd_nav_list.length;i++) {
+					hd_nav_list[i].addEventListener("mouseover",hd_nav_disp);
+					hd_nav_list[i].addEventListener("mouseout",hd_nav_hide);
+				}
+				for(var i=0;i<nav_down_list.length;i++) {
+					nav_down_list[i].addEventListener("mouseover",hd_nav_down_disp);
+					nav_down_list[i].addEventListener("mouseout",hd_nav_down_hide);
+				}
+				function hd_nav_disp () {
+					var nav_id=this.attributes.getNamedItem("data-target").textContent;
+					this.classList.add("hd_nav_hover");
+					document.querySelector("#"+nav_id).style.display="block";
+					console.log();
+				}
+				function hd_nav_hide () {
+					var nav_id=this.attributes.getNamedItem("data-target").textContent;
+					this.classList.remove("hd_nav_hover");
+					document.querySelector("#"+nav_id).style.display="none";
+				}
+				function hd_nav_down_disp () {
+					var nav_id=this.attributes.getNamedItem("id").textContent;
+					this.style.display="block";
+					for(var i=0;i<hd_nav_list.length;i++) {
+						var hd_nav_find=hd_nav_list[i].attributes.getNamedItem("data-target").textContent;
+						if (hd_nav_find==nav_id) {
+							hd_nav_list[i].classList.add("hd_nav_hover");
+						}
+					}
+					console.log();
+				}
+				function hd_nav_down_hide () {
+					var nav_id=this.attributes.getNamedItem("id").textContent;
+					this.style.display="none";
+					for(var i=0;i<hd_nav_list.length;i++) {
+						var hd_nav_find=hd_nav_list[i].attributes.getNamedItem("data-target").textContent;
+						if (hd_nav_find==nav_id) {
+							hd_nav_list[i].classList.remove("hd_nav_hover");
+						}
+					}
+				}
 	</script>
 
 	<!--jquery 写法	-->
 	<script type="text/javascript">
-		var a1, a2, div1, div2, div3;
-		window.onload = function() {
-			for(key in list) {
-				a1 = $("<a></a>").attr("href", "javascript:void(0)").text(key.toString()).click(selectCities);
-				$("#lc_leters").append(a1);
-				div1 = $("<div></div>").attr({
-					"class": "lc_section",
-					"id": "city_" + key.toString().toLowerCase()
-				});
-				div2 = $("<div></div>").attr("class", "letter");
-				div3 = $("<div></div>").attr("class", "lc_names");
-				for(var i = 0, len = list[key].length; i < len; i++) {
-					a2 = $("<a></a>").attr("href", "javascript:void(0)").text(list[key][i].toString()).click(changeCityname);
-					div3.append(a2);
-				}
-				div2.text(key.toString());
-				div1.append(div2).append(div3);
-				$("#lc_cities").append(div1);
-			}
-		}
-
-		function selectCities() {
-			$("#lc_cities").scrollTop($("#lc_cities").scrollTop() + $("#city_" + $(this).html().toLowerCase()).position().top - $("#lc_cities").position().top);
-		};
-
-		function changeCityname() {
-			$("#lc_name").text($(this).text());
-		}
-		$("#hd_location").hover(location_disp, location_hide);
-		$(".lc_choices").hover(location_disp, location_hide);
-
-		function location_disp() {
-			$("#hd_location").addClass("hd_location_hover");
-			$(".icon_location").addClass("icon_location_hover");
-			$(".lc_choices").css("display", "block");
-		}
-
-		function location_hide() {
-			$("#hd_location").removeClass("hd_location_hover");
-			$(".icon_location").removeClass("icon_location_hover");
-			$(".lc_choices").css("display", "none");
-		}
-		$(".hd_nav").hover(function() {
-			$(this).addClass("hd_nav_hover");
-			$("#" + $(this).attr("data-target").toString()).css("display", "block");
-		}, function() {
-			$(this).removeClass("hd_nav_hover");
-			$("#" + $(this).attr("data-target").toString()).css("display", "none");
-		});
-		$(".nav_down").hover(function() {
-			$(this).css("display", "block");
-			$("[data-target='" + $(this).attr("id").toString() + "']").addClass("hd_nav_hover");
-		}, function() {
-			$(this).css("display", "none")
-			$("[data-target='" + $(this).attr("id").toString() + "']").removeClass("hd_nav_hover");
-		});
+//		var a1, a2, div1, div2, div3;
+//		window.onload = function() {
+//			for(key in list) {
+//				a1 = $("<a></a>").attr("href", "javascript:void(0)").text(key.toString()).click(selectCities);
+//				$("#lc_leters").append(a1);
+//				div1 = $("<div></div>").attr({
+//					"class": "lc_section",
+//					"id": "city_" + key.toString().toLowerCase()
+//				});
+//				div2 = $("<div></div>").attr("class", "letter");
+//				div3 = $("<div></div>").attr("class", "lc_names");
+//				for(var i = 0, len = list[key].length; i < len; i++) {
+//					a2 = $("<a></a>").attr("href", "javascript:void(0)").text(list[key][i].toString()).click(changeCityname);
+//					div3.append(a2);
+//				}
+//				div2.text(key.toString());
+//				div1.append(div2).append(div3);
+//				$("#lc_cities").append(div1);
+//			}
+//		}
+//
+//		function selectCities() {
+//			$("#lc_cities").scrollTop($("#lc_cities").scrollTop() + $("#city_" + $(this).html().toLowerCase()).position().top - $("#lc_cities").position().top);
+//		};
+//
+//		function changeCityname() {
+//			$("#lc_name").text($(this).text());
+//		}
+//		$("#hd_location").hover(location_disp, location_hide);
+//		$(".lc_choices").hover(location_disp, location_hide);
+//
+//		function location_disp() {
+//			$("#hd_location").addClass("hd_location_hover");
+//			$(".icon_location").addClass("icon_location_hover");
+//			$(".lc_choices").css("display", "block");
+//		}
+//
+//		function location_hide() {
+//			$("#hd_location").removeClass("hd_location_hover");
+//			$(".icon_location").removeClass("icon_location_hover");
+//			$(".lc_choices").css("display", "none");
+//		}
+//		$(".hd_nav").hover(function() {
+//			$(this).addClass("hd_nav_hover");
+//			$("#" + $(this).attr("data-target").toString()).css("display", "block");
+//		}, function() {
+//			$(this).removeClass("hd_nav_hover");
+//			$("#" + $(this).attr("data-target").toString()).css("display", "none");
+//		});
+//		$(".nav_down").hover(function() {
+//			$(this).css("display", "block");
+//			$("[data-target='" + $(this).attr("id").toString() + "']").addClass("hd_nav_hover");
+//		}, function() {
+//			$(this).css("display", "none")
+//			$("[data-target='" + $(this).attr("id").toString() + "']").removeClass("hd_nav_hover");
+//		});
 	</script>
 
 </html>
