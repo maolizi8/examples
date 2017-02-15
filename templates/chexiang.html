@@ -301,7 +301,6 @@
 				}
 				
 				function selectCities(){
-					console.log(this.innerText);
 					var letter=this.innerText.toLowerCase();
 					var lc_cities=document.getElementById("lc_cities");
 					var offsetTop=document.getElementById("city_"+letter).offsetTop;
@@ -354,23 +353,12 @@
 				function hd_nav_down_disp () {
 					var nav_id=this.attributes.getNamedItem("id").textContent;
 					this.style.display="block";
-					for(var i=0;i<hd_nav_list.length;i++) {
-						var hd_nav_find=hd_nav_list[i].attributes.getNamedItem("data-target").textContent;
-						if (hd_nav_find==nav_id) {
-							hd_nav_list[i].classList.add("hd_nav_hover");
-						}
-					}
-					console.log();
+					document.querySelector("[data-target='"+nav_id+"']").classList.add("hd_nav_hover");
 				}
 				function hd_nav_down_hide () {
 					var nav_id=this.attributes.getNamedItem("id").textContent;
 					this.style.display="none";
-					for(var i=0;i<hd_nav_list.length;i++) {
-						var hd_nav_find=hd_nav_list[i].attributes.getNamedItem("data-target").textContent;
-						if (hd_nav_find==nav_id) {
-							hd_nav_list[i].classList.remove("hd_nav_hover");
-						}
-					}
+					document.querySelector("[data-target='"+nav_id+"']").classList.remove("hd_nav_hover");
 				}
 	</script>
 
