@@ -1,12 +1,12 @@
-body{
-	min-width: 1010px;
+body {
+	min-width: 1200px;
 }
 .header,
 .nav-main,
 .mainbody,
 .foot_box,
-.bottom {
-	width: 1180px;
+.bottom_main {
+	width: 1200px;
 	margin: 0 auto;
 }
 .header-r {
@@ -16,7 +16,11 @@ body{
 .box_right{
 	width: 960px;
 }
-@media only screen and (max-width:1010px) {
+
+@media only screen and (max-width: 960px) {
+	body {
+		min-width: 1000px;
+	}
 	.pc-nav {
 		display: none;
 	}
@@ -33,7 +37,7 @@ body{
 	.nav-main,
 	.mainbody,
 	.foot_box,
-	.bottom {
+	.bottom_main {
 		width: 960px;
 		margin: 0 auto;
 	}
@@ -42,7 +46,6 @@ body{
 		display: none;
 	}
 }
-
 
 .header h1 a{
 	text-decoration: none;
@@ -77,7 +80,7 @@ body{
 	color: lightseagreen;
 }
 .main_area{
-	width: 95%;
+	width: 912px;
 	margin: 10px auto;
 	padding-bottom: 5px;
 	border-bottom: 1px solid #C3C3C3;
@@ -169,4 +172,34 @@ body{
 	border: 1px solid #999966;
 	padding: 5px;
 	text-align: center;
+}
+.smail_face{
+	padding-left: 20px;
+}
+.smail_face:after{
+	content: "\0f118  ";
+	width: 15px;
+	height: 15px;
+	color: #FF1493;
+	font-family: iconFont;
+}
+.jindutiao{
+	margin: 20px 0;
+	width: 910px;
+	height: 10px;
+	border: 1px solid #C3C3C3;
+}
+.jindutiao_sub{
+	width: 910px;
+	height: 10px;
+	background: lightblue;
+	animation: jindutolong 5s infinite;
+}
+@-webkit-keyframes jindutolong{
+	from{width: 0;}
+	to{width: 910px;}
+}
+@keyframes jindutolong{
+	from{width: 0;}
+	to{width: 910px;}
 }

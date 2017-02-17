@@ -937,7 +937,7 @@ body{
 
 .custome_services{
 	position: fixed;
-	bottom: 200px;
+	bottom: 150px;
 	right: 0;
 }
 
@@ -957,7 +957,7 @@ body{
 	display: none;
 	font-size: 12px;
 	position: fixed;
-	bottom: 200px;
+	bottom: 150px;
 	right: 30px;
 	color: white;
 	background: #03A9F4;
