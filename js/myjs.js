@@ -17,6 +17,11 @@ var linkHead3=document.createElement("link");
 linkHead1.href="../imgs/me.ico";
 linkHead1.type="image/x-icon";
 linkHead1.rel="shortcut icon";
+linkHead2.rel="stylesheet";
+linkHead2.type="text/css";
+linkHead2.href="css/exindex.css";
+document.getElementsByTagName('head')[0].appendChild(linkHead1);
+document.getElementsByTagName('head')[0].appendChild(linkHead2);
 function getScrollTop() {
 		var scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
 		return scrollTop;
