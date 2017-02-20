@@ -68,6 +68,8 @@ body{
 .clear{
 	clear: both;
 }
+
+/*头部部分样式*/
 .header{
 	height: 30px;
 	font-size: 13px;
@@ -345,7 +347,7 @@ body{
 	color: #03a9f4;
 }
 
-
+/*中间部分样式 middle*/
 .middle{
 	/*height: 700px;*/
 }
@@ -520,6 +522,104 @@ body{
 .mn_down_section_three i.icon_to_right{
 	top:340px;
 }
+.mn_down_section_detal1,.mn_down_section_detal2{
+	position: absolute;
+	top: 0;
+	left: 220px;
+	z-index: 10;
+	background: white;
+	border-right: 1px solid #2E2D3C;
+	color: #333;
+	width: 618px;
+	height: 402px;
+	display: none;
+}
+
+.mn_down_section_detal1:before,
+.mn_down_section_detal2:before{
+	content: "";
+	display: block;
+	width: 0;
+	height: 0;
+	border-top: 5px solid transparent;
+	border-left: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	border-right: 5px solid #fff;
+	position: absolute;
+	left: -10px;
+}
+.mn_down_section_detal1:before{
+	top: 33px;
+}
+.mn_down_section_detal2:before{
+	top: 338px;
+}
+.mn_detail_left,.mn_detail_right{
+	float: left;
+	height: 402px;
+}
+.mn_detail_left{
+	width: 370px;
+	margin:0 15px;
+}
+.mn_detail_box{
+	margin-top: 15px;
+}
+.mn_detail_box h3{
+	font-weight: bold;
+	line-height: 40px;
+}
+.mn_detail_box ul{
+	border-top: 1px solid #e3e3e3
+}
+.mn_detail_box ul li{
+	margin-top: 10px;
+	padding:0 15px;
+	display: inline-block;
+	/*width: 80px;*/
+	height: 20px;
+	line-height: 20px;
+	border-right: 1px solid #e3e3e3;
+}
+.mn_detail_box ul li:first-child{
+	padding-left: 0;
+}
+.mn_detail_box ul li:last-child{
+	border: none;
+}
+.mn_down_section_detal1 a,
+.mn_down_section_detal2 a{
+	color: #333;
+	font-size: 13px;
+	font-weight: 500;
+}
+.mn_down_section_detal1 a:hover,
+.mn_down_section_detal2 a:hover{
+	color: #03A9F4;
+	text-decoration: none;
+}
+.mn_detail_right{
+	width: 200px;
+	text-align: center;
+}
+.mn_detail_right a{
+	display: block;
+}
+.mn_detail_right h3{
+	font-size: 16px;
+	line-height: 35px;
+	font-weight: bold;
+}
+.mn_detail_right img{
+	width: 222px;
+	height: 148px;
+}
+.mn_detail_right hr{
+	height: 1px;
+	border: none;
+	border-top:1px solid #e3e3e3;
+}
+/*"有惊无险区域"*/
 .menu_down_server{
 	right: 10px;
 	background: rgba(255,255,255,.8);
@@ -592,6 +692,7 @@ body{
 	color: #03A9F4;
 }
 
+/*轮播图*/
 .md_picture_show{
 	position: relative;
 	width: 100%;
@@ -615,6 +716,7 @@ body{
 	height: 432px;
 	width: 100%;
 }
+
 .pc_a_img{
 	height: 432px;
 	width: 100%;
@@ -668,6 +770,50 @@ body{
 	100%{-webkit-transform: translate3d(-200%,0,0);}
 	
 }
+.pcimg_jindu{
+	position: absolute;
+	z-index: ;
+	top: 380px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color:transparent;
+}
+.pcimg_jindutiao{
+	float: left;
+	margin-left: 5px;
+	width: 25px;
+	height: 5px;
+	background: #EFEFEF;
+}
+[class*="pcimg_jindu_sub"]{
+	width: 0;
+	height: 5px;
+	background: #c90c41;
+	animation: jindutiao 2s linear infinite;
+}
+.pcimg_jindu_sub1{
+	-webkit-animation-delay: -0.6s;
+	animation-delay: -0.6s;
+}
+.pcimg_jindu_sub2{
+	-webkit-animation-delay: 1.4s;
+	animation-delay: 1.4s;
+}
+.pcimg_jindu_sub3{
+	-webkit-animation-delay: 3.4s;
+	animation-delay: 3.4s;
+}
+@keyframes jindutiao{
+	0%{width: 0;}
+	30%{width: 0;}
+	100%{width: 25px;}
+}
+@-webkit-keyframes jindutiao{
+	0%{width: 0;}
+	30%{width: 0;}
+	100%{width: 25px;}
+}
+/*图片廊*/
 .car_show{
 	display: block;
 	float: left;
@@ -745,8 +891,10 @@ body{
 	background: #03a9f4;
 }
 
+/*中间部分，包含：买新车、买卖二手车、车知道*/
 .middle_bkcolor{
 	background-color: #F2F2F2;
+	padding-bottom: 40px;
 }
 .middle_bkcolor h3{
 	line-height: 25px;
@@ -788,6 +936,8 @@ body{
 	color: #999;
 	text-decoration: line-through;
 }
+
+/*买卖二手车*/
 .mdcar_leftside,.mdcar_rightside{
 	float: left;
 }
@@ -798,11 +948,11 @@ body{
 	margin-right: 10px;
 	color: #2C2C2C;
 }
-.leftside_top{
+.nc_leftside_top{
 	padding: 10px 0;
 	border-bottom: 1px dashed #F2F2F2;
 }
-.leftside_top span{
+.nc_leftside_top span{
 	/*display: inline-block;*/
 }
 .lg_font{
@@ -815,13 +965,13 @@ body{
 	margin: 40px 10px 0;
 	vertical-align: bottom;
 }
-.leftside_top strong{
+.nc_leftside_top strong{
 	color: #03A9F4;
 }
-.leftside_middle{
+.nc_leftside_middle{
 	padding-top: 15px;
 }
-.leftside_middle>div{
+.nc_leftside_middle>div{
 	float: left;
 }
 .icon_steps{
@@ -864,32 +1014,31 @@ body{
 	background: url(../imgs/cx_imgs/used_car_icon.png) no-repeat;
 }
 
-.leftside_bottom{
+.nc_leftside_bottom{
 	margin-top: 40px;
 }
-.leftside_bottom h4{
-	line-height: 50px;
+.nc_leftside_bottom h4{
+	line-height: 55px;
 	font-weight: 500;
 }
-.leftside_bottom p{
+.nc_leftside_bottom p{
 	color: #999;
-	margin-bottom: 25px;
+	margin-bottom: 40px;
 }
-.leftside_bottom a{
+.nc_leftside_bottom a{
 	color: white;
 	background: #368df8;
 	padding: 10px 25px;
 	border-radius: 4px;
 	text-decoration: none;
-	
 }
-.leftside_bottom a:hover{
+.nc_leftside_bottom a:hover{
 	background: #03A9F4;
 }
 .mdcar_rightside{
 	
 }
-.rightside_top{
+.nc_rightside_top{
 	height: 65px;
 	width: 630px;
 	background: white;
@@ -930,7 +1079,7 @@ body{
 .rightside_row a:hover{
 	color: #03A9F4;
 }
-.rightside_main{
+.nc_rightside_main{
 	margin-top: 10px;
 	display: flex;
 	justify-content:space-between;
@@ -993,22 +1142,277 @@ body{
 	border-right: 10px solid white;
 }
 
-
+.mduc_leftside,.mduc_rightside{
+	float: left;
+}
+.mduc_leftside{
+	padding: 15px 15px 25px 15px;
+	background: white;
+	width: 400px;
+	height: 370px;
+	margin-right: 10px;
+	color: #999;
+}
+.mduc_leftside h3{
+	line-height: 40px;
+	font-weight: bold;
+}
+.blog_list{
+	border-top: 1px dashed #C2C2C2;
+	padding-top: 15px;
+	margin-top: 5px;
+}
 .blog_list ul{
-	list-style: decimal;
+	list-style: none;
+	font-size: 13px;
 }
 .blog_list ul li{
 	color: #999;
+	line-height: 30px;
 }
 .blog_list ul li a{
 	color: #333;
 	text-decoration: none;
 }
-.bottom{
-	height: 30px;
-	background: papayawhip;
+.blog_list ul li a:hover{
+	color: #03A9F4;
+}
+.blog_list ul li span,.blog_list ul li a{
+	display: inline-block;
+}
+.blog_number{
+	font-size: 17px;
+}
+.blog_category{
+	margin: 0 10px;
+}
+.mduc_rightside{
+	
+}
+.mduc_blog_section{
+	background: white;
+	width: 650px;
+	height: 200px;
+	vertical-align: text-top;
+}
+.mduc_blog_section:first-child{
+	margin-bottom: 10px;
+}
+.ucblog_img,.ucblog_desc{
+	float: left;
+}
+.ucblog_img{
+	width: 230px;
+	height: 200px;
+}
+.ucblog_img img{
+	width: 216px;
+	height: 200px;
+}
+.ucblog_desc{
+	margin-left: 10px;
+	padding-top: 15px;
+	width: 380px;
+	height: 185px;
+	color: #999;
+	max-width: 380px;
+	text-overflow: ellipsis;
+}
+.ucblog_desc a{
+	color: #999;
+	text-decoration: none;
+}
+.ucblog_desc a:hover{
+	color: #03A9F4;
+}
+.ucblog_desc h2{
+	font-size: 20px;
+	line-height: 50px;
+}
+.ucblog_desc p{
+	font-size: 13px;
+	line-height: 20px;
+}
+.ucblog_desc_p a:before{
+	content: "\00a0\00a0\00a0\00a0";
+}
+.ucblog_desc p:last-child{
+	margin-top: 15px;
 }
 
+
+
+/*底部样式*/
+.bottom_bkcolor{
+	height: 300px;
+	background: papayawhip;
+	background: #333;
+}
+.btbk_main{
+	color: #E4E4E4;
+	height: 270px;
+	position: relative;
+}
+.btbk_bg_desc{
+	height: 100px;
+	line-height: 100px;
+	font-size: 20px;
+	border-bottom: 1px solid #3d3d3d;
+	color: #666;
+}
+.btbk_bg_desc ul{
+	list-style: none;
+}
+.btbk_bg_desc ul li{
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+	width: 270px;
+	border-right: 1px solid #3d3d3d;
+	text-align: center;
+}
+.btbk_bg_desc ul li:last-child{
+	border: none;
+}
+[class*="bt_icon"]{
+	position: absolute;
+	top: 37px;
+	width: 25px;
+	height: 25px;
+	background: url(../imgs/cx_imgs/cx-footer-icons.png) no-repeat;
+	
+}
+.bt_icon_one{
+	left: 65px;
+	background-position: 0 0;
+}
+.bt_icon_two{
+	left: 345px;
+	background-position: 0 -117px;
+}
+.bt_icon_three{
+	left: 620px;
+	background-position: 0 -31px;
+}
+.bt_icon_four{
+	left: 885px;
+	background-position: 0 -60px;
+}
+
+.btbk_links{
+	margin-top: 15px;
+}
+.btlink_section{
+	float: left;
+	width: 170px;
+	margin-right: 10px;
+}
+.btlink_section a{
+	color: #E4E4E4;
+	text-decoration: none;
+}
+.btlink_section h4{
+	line-height: 40px;
+}
+.btlink_section ul{
+	font-size: 12px;
+}
+.btlink_section ul li{
+	height: 23px;
+	line-height: 23px;
+}
+.service_phone{
+	font-size: 22px;
+}
+.btlink_section_imgs{
+	float: right;
+}
+.bt_erweima{
+	float: left;
+	width: 120px;
+	height: 150px;
+	text-align: center;
+	margin-right: 15px;
+}
+.bt_erweima img{
+	width: 120px;
+	height: 120px;
+}
+.bt_erweima p{
+	font-size: 13px;
+	height: 30px;
+	line-height: 30px;
+	color: #999;
+}
+
+.bt_main{
+	margin-top: 20px;
+	border-bottom: 1px solid #E6E6E6;
+}
+.bt_links_section{
+	margin-bottom: 20px;
+}
+.bt_links_section:after{
+	content: "";
+	clear: both;
+	display: block;
+}
+.bt_category,.bt_links_list{
+	float: left;
+}
+.bt_category{
+	width: 100px;
+	vertical-align: top;
+	font-size: 12px;
+	color: #999;
+	padding-top: 5px;
+}
+.bt_links_list{
+	width: 1000px;
+}
+.bt_links_list a{
+	line-height: 25px;
+	text-decoration: none;
+	color: #999;
+	font-size: 12px;
+	padding: 0 5px;
+	display: block;
+	float: left;
+	margin-right: 10px;
+}
+.bt_links_list a:hover{
+	color: #03A9F4;
+}
+.bt_links_list span{
+	display: inline-block;
+	margin-right: 20px;
+}
+.bt_links_list span img{
+	height: 34px;
+}
+
+
+.bt_footer{
+	margin: 15px auto;
+	text-align: center;
+	font-size: 12px;
+	color: #999;
+	position: relative;
+}
+.bt_footer p{
+	line-height: 25px;
+}
+.bt_foot_cion{
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	top: 30px;
+	left: 445px;
+	background: url(../imgs/cx_imgs/cx-footer-icons.png) no-repeat;
+	background-position: 0 -95px;
+}
+
+/*右侧客服按钮*/
 .custome_services{
 	position: fixed;
 	bottom: 150px;
