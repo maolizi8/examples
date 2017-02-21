@@ -49,6 +49,13 @@ table {
 body{
 	font-family: arial,"microsoft yahei",verdana,sans-serif;
 }
+
+.icon {
+	font-family: iconFont;
+	src: url("../fonts/fontawesome-webfont.woff2") format('woff'), url("../fonts/fontawesome-webfont.woff") format('woff'), url("../fonts/fontawesome-webfont.eot") format('embedded-opentype'), url("../fonts/fontawesome-webfont.ttf") format('truetype');
+}
+.icon:before {content: attr(data-icon);}
+
 @font-face {
 	font-family: iconFont;
 	src: url("../fonts/fontawesome-webfont.woff2") format('woff'), url("../fonts/fontawesome-webfont.woff") format('woff'), url("../fonts/fontawesome-webfont.eot") format('embedded-opentype'), url("../fonts/fontawesome-webfont.ttf") format('truetype');
@@ -619,6 +626,7 @@ body{
 	border: none;
 	border-top:1px solid #e3e3e3;
 }
+
 /*"有惊无险区域"*/
 .menu_down_server{
 	right: 10px;
@@ -781,7 +789,7 @@ body{
 .pcimg_jindutiao{
 	float: left;
 	margin-left: 5px;
-	width: 25px;
+	width: 30px;
 	height: 5px;
 	background: #EFEFEF;
 }
@@ -789,30 +797,31 @@ body{
 	width: 0;
 	height: 5px;
 	background: #c90c41;
-	animation: jindutiao 2s linear infinite;
+	animation: jindutiao 6s linear infinite;
 }
 .pcimg_jindu_sub1{
+	-webkit-animation-delay: -4.6s;
+	animation-delay: -4.6s;
+}
+.pcimg_jindu_sub2{
+	-webkit-animation-delay: -2.6s;
+	animation-delay: -2.6s;
+}
+.pcimg_jindu_sub3{
 	-webkit-animation-delay: -0.6s;
 	animation-delay: -0.6s;
 }
-.pcimg_jindu_sub2{
-	-webkit-animation-delay: 1.4s;
-	animation-delay: 1.4s;
-}
-.pcimg_jindu_sub3{
-	-webkit-animation-delay: 3.4s;
-	animation-delay: 3.4s;
-}
 @keyframes jindutiao{
 	0%{width: 0;}
-	30%{width: 0;}
-	100%{width: 25px;}
+	76.66%{width: 0;}
+	100%{width: 30px;}
 }
 @-webkit-keyframes jindutiao{
 	0%{width: 0;}
-	30%{width: 0;}
-	100%{width: 25px;}
+	76.66%{width: 0;}
+	100%{width: 30px;}
 }
+
 /*图片廊*/
 .car_show{
 	display: block;
@@ -1426,6 +1435,7 @@ body{
 	background-position: 0 -52px;
 	border-bottom-left-radius: 3px;
 	border-top-left-radius: 3px;
+	cursor: pointer;
 }
 .icon_cust_sv_hover{
 	background: #03A9F4 url(../imgs/cx_imgs/sidebar.png) no-repeat;
@@ -1439,7 +1449,48 @@ body{
 	right: 30px;
 	color: white;
 	background: #03A9F4;
-	padding: 9.5px 15px;
+	padding: 11.5px 15px;
 	border-bottom-left-radius: 3px;
 	border-top-left-radius: 3px;
+}
+
+/*返回顶部按钮*/
+.tothetop{
+	display: none;
+	position: fixed;
+	bottom: 50px;
+	right: 0;
+}
+.icon_tothetop{
+	width: 35px;
+	height: 35px;
+	line-height: 35px;
+	font-size: 30px;
+	text-align: center;
+	color: white;
+	border-bottom-left-radius: 3px;
+	border-top-left-radius: 3px;
+	background: #2C2C2C;
+	cursor: pointer;
+}
+.icon_tothetop:before{
+	content: "\0F106";
+	font-family: iconFont;
+}
+.icon_tothetop_hover{
+	background: #03A9F4;
+}
+
+.icon_tothetop_desc{
+	display: none;
+	font-size: 12px;
+	position: fixed;
+	bottom: 50px;
+	right: 30px;
+	color: white;
+	background: #03A9F4;
+	padding: 11.5px 15px;
+	border-bottom-left-radius: 3px;
+	border-top-left-radius: 3px;
+	transition: all 2s;
 }
