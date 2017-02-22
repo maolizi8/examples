@@ -130,6 +130,8 @@ function hd_nav_down_hide() {
 /*js 写法 end*/
 
 /*jquery 写法*/
+
+/*将城市拼音的首字母、城市名称渲染至下方浮动块中*/
 //var a1, a2, div1, div2, div3;
 //window.onload = function() {
 //	for(key in list) {
@@ -186,6 +188,8 @@ function hd_nav_down_hide() {
 //	$(this).css("display", "none")
 //	$("[data-target='" + $(this).attr("id").toString() + "']").removeClass("hd_nav_hover");
 //});
+
+/* 鼠标移动到轮播图时，动画暂停*/
 $("[class*='pc_img']").hover(function() {
 	$("[class*='pc_img']").css("animation-play-state", "paused");
 	$('[class*="pcimg_jindu_sub"]').css("animation-play-state", "paused");
@@ -200,8 +204,7 @@ $('[class*="pcimg_jindu_sub"]').hover(function() {
 	$("[class*='pc_img']").css("animation-play-state", "running");
 	$('[class*="pcimg_jindu_sub"]').css("animation-play-state", "running");
 });
-
-
+/* 鼠标移动到轮播图的进度条时，动画暂停*/
 $(".mn_down_section_one").hover(mn_detail_disp, mn_detail_hide);
 $(".mn_down_section_three").hover(mn_detail_disp, mn_detail_hide);
 $(".mn_down_section_detal1").hover(mn_ondetail_disp, mn_ondetail_hide);
@@ -211,21 +214,18 @@ function mn_detail_disp() {
 	var detailTarget = $(this).attr("data-target");
 	$("." + detailTarget).css("display", "block");
 }
-
 function mn_detail_hide() {
 	var detailTarget = $(this).attr("data-target");
 	$("." + detailTarget).css("display", "none");
 }
-
 function mn_ondetail_disp() {
 	$(this).css("display", "block");
 }
-
 function mn_ondetail_hide() {
 	$(this).css("display", "none");
 }
 
-
+/*客服热线弹出框*/
 $(".icon_cust_sv").hover(icon_cust_disp, icon_cust_hide);
 $(".icon_cust_desc").hover(icon_cust_disp, icon_cust_hide);
 function icon_cust_disp() {
@@ -236,7 +236,24 @@ function icon_cust_hide() {
 	$(".icon_cust_sv").removeClass("icon_cust_sv_hover");
 	$(".icon_cust_desc").css("display", "none");
 }
+$(".icon_cust_sv").click(function(obj){
+	var event=window.event||obj;
+	event.stopPropagation();
+	$(".custome_sv_popup").css("display", "block");
+});
+$(".custome_sv_popup").click(function(obj){
+	var event=window.event||obj;
+	event.stopPropagation();
+	event.stopPropagation();
+});
+$(".close_btn").click(function(){
+	$(".custome_sv_popup").css("display", "none");
+});
+$("body").click(function(){
+	$(".custome_sv_popup").css("display", "none");
+});
 
+/* 回到顶部按钮*/
 $(window).scroll(function(){
 	if ($(window).scrollTop()>700) {
 		$('.tothetop').css("display", "block");
@@ -244,10 +261,9 @@ $(window).scroll(function(){
 		$('.tothetop').css("display", "none");
 	}
 });
-
 $(".icon_tothetop").click(function(){
 	$(window).scrollTop(0);
-})
+});
 $(".icon_tothetop").hover(icon_totop_disp, icon_totop_hide);
 $(".icon_tothetop_desc").hover(icon_totop_disp, icon_totop_hide);
 function icon_totop_disp() {
@@ -258,4 +274,6 @@ function icon_totop_hide() {
 	$(".icon_tothetop").removeClass("icon_tothetop_hover");
 	$(".icon_tothetop_desc").css("display", "none");
 }
+
+
 /*jquery 写法 end*/

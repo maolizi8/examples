@@ -1,106 +1,71 @@
-<!DOCTYPE html>
-<html lang="zh-cn">
-<head>
-<meta charset="UTF-8">
-<title>Drawing sector</title>
-<link href="imgs/me.ico" type="image/x-icon" rel="shortcut icon">
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>test</title>
+		<meta name="author" content="geqiuli" />
+		<style type="text/css">
+			.box{
+				width: 100px;
+				height: 100px;
+				border: 1px solid red;
+				float: left;
+			}
+			.circle{
+				width: 100px;
+				height: 100px;
+				background: lightblue;
+				border-radius: 50%;
+			}
+			.juzhongqian {
+      width:50px;height:30px;
+      background-color:red;
+      margin: -15px 0 0 -25px;
+ }
+			.juzhong {
+      width:50px;height:30px;
+      margin: -15px 0 0 -25px;
+      position:relative;
+      background-color:red;
+      left:50%;
+      top:50%;
+ }
+		</style>
+	</head>
+	<body>
+	<div class="box">
+		<div class="juzhongqian">
 		
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-<style>
-    #turntable{
-        position: relative;
-    }
-    #canvas{
-        border: 1px solid #000;
-        -webkit-transform: all 6s ease;
-        transition: all 6s ease;
-    }
-    #btn{
-        position: absolute;
-        left: 120px;
-        top: 120px;
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        background-color: #fff;
-        line-height: 60px;
-        text-align: center;
-    }
-    #btn:after{
-        position: absolute;
-        display: block;
-        content: '';
-        left: 10px;
-        top: -32px;
-        width: 0;
-        height: 0;
-        overflow: hidden;
-        border-width: 20px;
-        border-style: solid;
-        border-color: transparent;
-        border-bottom-color: #fff; 
-    }
-</style>
-</head>
-<body>
-	<div id="turntable">
-        <canvas id="canvas" width="300" height="300">抱歉！浏览器不支持。</canvas>
-        <a id="btn" href="javascript:avoid(0);">抽奖</a>
-        
-    </div>
-    <script>
-        window.addEventListener('load', function(){
-            var num = 6;   // 奖品数量
-            if (num % 2 !== 0){
-                alert('请配置偶数奖项');
-            }
-            var canvas = document.getElementById('canvas');
-            var btn = document.getElementById('btn');
-            if(!canvas.getContext){
-                alert('抱歉！浏览器不支持。');
-                return;
-            }
-            // 获取绘图上下文
-            var ctx = canvas.getContext('2d');
-            for (var i = 0; i < num; i++) {
-                // 保存当前状态
-                ctx.save();
-                // 开始一条新路径
-                ctx.beginPath();
-                // 位移到圆心，下面需要围绕圆心旋转
-                ctx.translate(150, 150);
-                // 从(0, 0)坐标开始定义一条新的子路径
-                ctx.moveTo(0, 0);
-                // 旋转弧度,需将角度转换为弧度,使用 degrees * Math.PI/180 公式进行计算。
-                ctx.rotate((360 / num * i + 360 / num / 2) * Math.PI/180);
-                // 绘制圆弧
-                ctx.arc(0, 0, 150, 0,  2 * Math.PI / num, false);
-                if (i % 2 == 0) {
-                    ctx.fillStyle = '#ffb820';
-                }else{
-                    ctx.fillStyle = '#ffcb3f';
-                }
-                // 填充扇形
-                ctx.fill();
-                // 绘制边框
-                ctx.lineWidth = 0.5;
-                ctx.strokeStyle = '#f48d24';
-                ctx.stroke();
-
-                // 文字
-                ctx.fillStyle = '#fff';
-                ctx.font="16px sans-serif";
-                ctx.fillText(i + 1, 100, 60);
-
-                // 恢复前一个状态
-                ctx.restore();
-            }
-
-            // 抽奖
-            btn.onclick = function(){
-                canvas.style.transform = 'rotate(1820deg)'; 
-            }
-        }, false);
-    </script>
-</body>
+		</div>
+		<div class="circle">
+			
+		</div>
+	</div>
+	<div class="box">
+		<div class="juzhong">
+		
+		</div>
+		<div class="circle">
+			
+		</div>
+	</div>
+	
+		<div class="box">
+			<div class="circle">
+				
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		document.querySelector(".circle").addEventListener("click",circleClick);
+		document.querySelector(".box").addEventListener("click",circleBox);
+		function circleClick () {
+			event.stopPropagation()
+			alert("circle");
+		}
+		function circleBox () {
+			event.stopPropagation()
+			alert("box");
+		}
+	</script>
 </html>

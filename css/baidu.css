@@ -158,14 +158,20 @@ ul.topmenu li:last-child a{
 .licon-fengyun{
 	background-position: -180px 0;
 }
-.main{
-	height: 350px;
+
+.main{height: 450px;}
+@media only screen and (min-height: 900px){
+	.main{height: 450px;}
 }
+@media only screen (max-height: 900px) {
+	.main{height: 350px;}
+}
+
 .bdimg{
 	width: 270px;
 	height: 130px;
 	margin: 0 auto;
-	background: url(../imgs/baidu/bd_yuanxiao.png) no-repeat ;
+	background:url(../imgs/baidu/bd_yuanxiao.png) no-repeat ;
 }
 
 .search{
@@ -360,7 +366,7 @@ ul.topmenu li:last-child a{
 	left: 0;
 	height: 25px;
 	line-height: 25px;
-	width: 550px;
+	width: 700px;
 	margin: 0 auto;
 	text-align: left;
 }
