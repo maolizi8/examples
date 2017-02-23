@@ -32,6 +32,24 @@ body {
 
 .title {
 	float: left;
+	width: 400px;
+	height: 70px;
+	line-height: 70px;
+}
+.title a{
+	color: #333;
+	text-decoration: none;
+}
+.title a.liz_index{
+	font-size: 32px;
+	font-weight: bold;
+}
+.title a.liz_menu{
+	font-size: 20px;
+	padding-left: 20px;
+}
+.title a:hover{
+	color: #03A9F4;
 }
 
 .menu-btn {

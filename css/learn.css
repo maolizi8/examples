@@ -11,6 +11,8 @@ body {
 }
 .header-r {
 	float: right;
+	height: 70px;
+	line-height: 70px;
 }
 .main,
 .box_right{
@@ -66,13 +68,17 @@ body {
 .aside ul.h_aside_all li {
 	background-color: #f2f2f2;
 }
-.aside ul.h_aside_list li:first-child{
+/*.aside ul.h_aside_list li:first-child{
 	background-color: cornflowerblue;
 	color: #fff;
-}
+}*/
 .aside ul.h_aside_list li:hover {
 	font-weight: bold;
 	cursor: pointer;
+}
+.li_active{
+	background-color: cornflowerblue;
+	color: #fff;
 }
 .main h2{
 	line-height: 50px;
@@ -91,6 +97,9 @@ body {
 }
 .main_area p{
 	line-height: 30px;
+}
+.ul_llist{
+	margin-bottom: 10px;
 }
 .ul_llist ul{
 	list-style:none;
@@ -116,6 +125,9 @@ body {
 	border: 1px solid #C9C5C5;
 	background-color: #FFFFFF;
 	padding: 5px;
+}
+.eg-box img{
+	margin: 0 auto;
 }
 .yl-section{
 	margin-top: 5px;
