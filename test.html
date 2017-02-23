@@ -1,71 +1,81 @@
 <!doctype html>
 <html>
+
 	<head>
-		<meta charset="utf-8"/>
+		<meta charset="utf-8" />
 		<title>test</title>
 		<meta name="author" content="geqiuli" />
 		<style type="text/css">
-			.box{
+			.box {
 				width: 100px;
 				height: 100px;
 				border: 1px solid red;
 				float: left;
 			}
-			.circle{
+			
+			.circle {
 				width: 100px;
 				height: 100px;
 				background: lightblue;
 				border-radius: 50%;
 			}
+			
 			.juzhongqian {
-      width:50px;height:30px;
-      background-color:red;
-      margin: -15px 0 0 -25px;
- }
+				width: 50px;
+				height: 30px;
+				background-color: red;
+				margin: -15px 0 0 -25px;
+			}
+			
 			.juzhong {
-      width:50px;height:30px;
-      margin: -15px 0 0 -25px;
-      position:relative;
-      background-color:red;
-      left:50%;
-      top:50%;
- }
+				width: 50px;
+				height: 30px;
+				margin: -15px 0 0 -25px;
+				position: relative;
+				background-color: red;
+				left: 50%;
+				top: 50%;
+			}
 		</style>
 	</head>
+
 	<body>
-	<div class="box">
-		<div class="juzhongqian">
-		
-		</div>
-		<div class="circle">
-			
-		</div>
-	</div>
-	<div class="box">
-		<div class="juzhong">
-		
-		</div>
-		<div class="circle">
-			
-		</div>
-	</div>
-	
 		<div class="box">
+			<div class="juzhongqian">
+
+			</div>
 			<div class="circle">
-				
+
 			</div>
 		</div>
+		<div class="box">
+			<div class="juzhong">
+
+			</div>
+			<div class="circle">
+
+			</div>
+		</div>
+
+		<div class="box">
+			<div class="circle">
+
+			</div>
+		</div>
+		
 	</body>
 	<script type="text/javascript">
-		document.querySelector(".circle").addEventListener("click",circleClick);
-		document.querySelector(".box").addEventListener("click",circleBox);
-		function circleClick () {
-			event.stopPropagation()
-			alert("circle");
+		document.querySelector(".circle").addEventListener("click", circleClick);
+		document.querySelector(".box").addEventListener("click", circleBox);
+
+		function circleClick() {
+			event.stopPropagation() alert("circle");
 		}
-		function circleBox () {
-			event.stopPropagation()
-			alert("box");
+
+		function circleBox() {
+			event.stopPropagation() alert("box");
 		}
+
 	</script>
+
 </html>
