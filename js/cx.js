@@ -61,10 +61,10 @@ window.onload = function() {
 
 function selectCities() {
 	var letter = this.innerText.toLowerCase();
-	var lc_cities = document.getElementById("lc_cities");
+	var lcCities = document.getElementById("lc_cities");
 	var offsetTop = document.getElementById("city_" + letter).offsetTop;
-	var scrollTop = offsetTop - lc_cities.offsetTop;
-	lc_cities.scrollTop = scrollTop;
+	var scrollTop = offsetTop - lcCities.offsetTop;
+	lcCities.scrollTop = scrollTop;
 }
 
 function changeCityname() {

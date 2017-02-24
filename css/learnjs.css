@@ -1,4 +1,137 @@
-/*.eg-box{
-	text-align: center;
+.zhongbiao {
+	padding: 0;
+	width: 242px;
+	height: 242px;
+	border: 1px solid #C3C3C3;
+	background: -webkit-linear-gradient(right bottom,#c3c3c3,#ffffff);
+	background: -o-linear-gradient(right bottom,#c3c3c3,#ffffff);
+	background: -moz-linear-gradient(right bottom,#c3c3c3,#ffffff);
+	background: linear-gradient(right bottom,#c3c3c3,#ffffff);
+	border-radius: 50%;
+	box-shadow: -3px 0 3px #E2E2E2, 0 -3px 3px #E2E2E2, 0 3px 3px #E2E2E2, 3px 0 3px #E2E2E2;
+	
+}
+.zb_inner{
+	position: relative;
+	left: 6px;
+	top: 6px;
+	padding: 0;
+	width: 230px;
+	height: 230px;
+	border-radius: 50%;
+	border: 1px solid #C3C3C3;
+	background-color: white;
+}
+[class*="zhizhen"] {
+	position: absolute;
+	/*animation: donghua linear infinite;*/
+}
+
+.zhizhen1 {
+	/*animation-duration: 60s;*/
+	transform-origin: 1px 100px 0;
+	top: 15px;
+	left: 114px;
+	width: 2px;
+	height: 115px;
+	background: #101010;
+	z-index: 10;
+}
+
+.zhizhen2 {
+	/*animation-duration: 3600s;*/
+	transform-origin: 2px 70px 0;
+	top: 45px;
+	left: 113px;
+	width: 4px;
+	height: 80px;
+	background: #444444;
+	z-index: 11;
+}
+
+.zhizhen3 {
+	/*animation-duration: 43200s;*/
+	transform-origin: 3px 50px 0;
+	top: 65px;
+	left: 112px;
+	width: 6px;
+	height: 60px;
+	background: #696969;
+	z-index: 12;
+}
+.zhongxin {
+	position: absolute;
+	top: 110px;
+	left: 110px;
+	width: 4px;
+	height: 4px;
+	background: white;
+	border-radius: 50%;
+	border: 3px solid black;
+	z-index: 13;
+}
+/*@-webkit-keyframes donghua {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes donghua {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
 }*/
 
+[class*="kexian"] {
+	position: absolute;
+	width: 1px;
+	height: 112px;
+	left:114.5px;
+	top: 3px;
+	background: transparent;
+	transform-origin: bottom;
+	z-index: 9;
+}
+
+[class*="kexian"]:after {
+	content: "";
+	position: absolute;
+	width: 1px;
+	height: 3px;
+	left: 0px;
+	top: -3px;
+	background: #2e2e2e;
+	transform-origin: bottom;
+	z-index: 10;
+}
+
+.kexian2:after {
+	height: 13px;
+	width: 2px;
+	left:-0.5px;
+	background: #2e2e2e;
+}
+
+.kexian3:after {
+	height: 8px;
+	background: #2e2e2e;
+}
+.zb_num{
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	background: #000A28;
+	color: white;
+	text-align: center;
+	font-size: 28px;
+}
+.zb_hour{
+	
+}
