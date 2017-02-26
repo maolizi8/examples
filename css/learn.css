@@ -121,6 +121,9 @@ body {
 	color: #006699;
 	line-height: 30px;
 }
+.eg-section p{
+	font-size: 12px;
+}
 .eg-box{
 	border: 1px solid #C9C5C5;
 	background-color: #FFFFFF;

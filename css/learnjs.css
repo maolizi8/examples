@@ -124,14 +124,86 @@
 }
 .zb_num{
 	display: inline-block;
-	width: 30px;
-	height: 30px;
-	line-height: 30px;
+}
+.zb_date{
+	margin-right: 10px;
+}
+.zb_hour,.zb_minute,.zb_second{
+	width: 45px;
+	height: 45px;
+	line-height: 45px;
 	background: #000A28;
 	color: white;
 	text-align: center;
 	font-size: 28px;
 }
-.zb_hour{
-	
+
+/*幻灯片 循环显示图片*/
+.imgs_slide{
+	width: 900px;
+	height: 506px;
+	position: relative;
+}
+.imgs_list{
+	width: 900px;
+	height: 506px;
+	overflow: hidden;
+}
+/*[class*="imgs_box"]*/
+.imgs_box img{
+	width: 900px;
+	height: 506px;
+	transition: all 0.4s;
+}
+.imgs_box:hover img{
+	transform: scale(1.1,1.1);
+}
+
+.yuandian_btn{
+	position: absolute;
+	left: 50%;
+	bottom: 10px;
+	transform: translateX(-50%);
+}
+.yuandian{
+	width: 15px;
+	height: 15px;
+	background: #C2C2C2;
+	border-radius: 50%;
+	display: block;
+	float: left;
+	margin: 5px;
+}
+.yuandian:hover{
+	background: #3D3D3D;
+}
+.yd_active{
+	background: #3D3D3D;
+}
+.prebtn,.nextbtn{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 40px;
+	font-weight: bold;
+	font-family: "times new roman";
+	width: 40px;
+	height: 45px;
+	line-height: 40px;
+	text-align: center;
+	color: white;
+	background: #C3C3C3;
+}
+.prebtn{
+	left: 0;
+	border-bottom-right-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.nextbtn{
+	right: 0;
+	border-bottom-left-radius: 5px;
+	border-top-left-radius: 5px;
+}
+.prebtn:hover,.nextbtn:hover{
+	background: #3D3D3D;
 }
