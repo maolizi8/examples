@@ -24,11 +24,9 @@
 }
 [class*="zhizhen"] {
 	position: absolute;
-	/*animation: donghua linear infinite;*/
 }
 
 .zhizhen1 {
-	/*animation-duration: 60s;*/
 	transform-origin: 1px 100px 0;
 	top: 15px;
 	left: 114px;
@@ -39,7 +37,6 @@
 }
 
 .zhizhen2 {
-	/*animation-duration: 3600s;*/
 	transform-origin: 2px 70px 0;
 	top: 45px;
 	left: 113px;
@@ -50,7 +47,6 @@
 }
 
 .zhizhen3 {
-	/*animation-duration: 43200s;*/
 	transform-origin: 3px 50px 0;
 	top: 65px;
 	left: 112px;
@@ -70,23 +66,6 @@
 	border: 3px solid black;
 	z-index: 13;
 }
-/*@-webkit-keyframes donghua {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
-}
-
-@keyframes donghua {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
-}*/
 
 [class*="kexian"] {
 	position: absolute;
@@ -180,6 +159,9 @@
 .yd_active{
 	background: #3D3D3D;
 }
+.imgs_slide span{
+	cursor: pointer;
+}
 .prebtn,.nextbtn{
 	position: absolute;
 	top: 50%;
@@ -206,4 +188,79 @@
 }
 .prebtn:hover,.nextbtn:hover{
 	background: #3D3D3D;
+}
+
+/* 搜索框的自动提示*/
+.searchauto{
+	width: 900px;
+	min-height: 265px;
+	position: relative;
+	margin: 5px 0;
+}
+.searchauto form{
+	height: 42px;
+}
+.searchauto input{
+	display: block;
+	float: left;
+}
+.search_input{
+	height: 40px;
+	line-height: 40px;
+	width: 780px;
+	border: 1px solid #C1C1C1;
+	padding-left: 10px;
+}
+
+.search_btn{
+	height: 42px;
+	line-height: 42px;
+	width: 100px;
+	background: #03A9F4;
+	color: white;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+.search_list{
+	position: absolute;
+	top: 42px;
+	left: 0;
+	background: white;
+	list-style: none;
+	width: 790px;
+	border:1px solid #C1C1C1;
+	border-top: none;
+	box-shadow: 5px 0 5px #E0E0E0,0 5px 5px #E0E0E0;
+}
+.search_list li{
+	padding-left: 10px;
+	height: 25px;
+	line-height: 25px;
+}
+.search_list li:hover{
+	background: #EFEFEF;
+}
+.search_btn:hover{
+	background: #002DFF;
+}
+.search_result{
+	width: 890px;
+	border:1px solid #C1C1C1;
+	border-collapse: collapse;
+}
+.search_result th{
+	background: #D0D0D0;
+}
+.search_result th,.search_result td{
+	border-top:1px solid #C1C1C1;
+	height: 30px;
+	line-height: 30px;
+	padding-left: 5px;
+	text-align: left;
+}
+.smfont{
+	font-size: 11px;
+	color: #666;
+	margin-left: 10px;
 }

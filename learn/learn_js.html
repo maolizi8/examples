@@ -115,7 +115,30 @@ function shiJianTransform(){
 					</div>
 					<div class="main_area">
 						<h3>搜索框自动提示</h3>
-						<p>实现一个搜索框的提示功能，类似百度搜索。</p>
+						<p>实现一个搜索框的自动提示功能，类似百度搜索。</p>
+						<div class="searchauto">
+							<form class="" name="searchnameform">
+								<input type="text" name="englishname" id="search_input" class="search_input" />
+								<input type="button" value="搜索" class="search_btn" />
+							</form>
+							<ul class="search_list fade">
+								
+							</ul>
+							<p>搜索结果<span class="smfont">只显示前5条结果</span></p>
+							<table class="search_result fade" id="search_list">
+								<tr>
+									<th>English</th>
+									<th>Chinese</th>
+									<th>Meaning</th>
+								</tr>
+								<tbody id="search_tbody"></tbody>
+							</table>
+						</div>
+						
+					</div>
+					<div class="main_area">
+						<h3>实例</h3>
+						<p>我的练习</p>
 					</div>
 				</div>
 				<div class="main fade" id="info_dom">
