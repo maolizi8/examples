@@ -1,0 +1,13 @@
+#dado_box1,#dado_box2{
+	width: 160px;
+	height: 160px;
+	border: 1px solid #999;
+	padding: 5px;
+	float: left;
+	margin-right: 10px;
+}
+#dado_box1 img,#dado_box2 img{
+	width: 150px;
+	height: 150px;
+	margin: 5px;
+}
