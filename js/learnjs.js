@@ -520,9 +520,7 @@ function searchInputText() {
 function searNameMeaning() {
 	event.stopPropagation();
 	var searchText = searchInput.value.toLowerCase();
-	//document.forms["searchnameform"]["englishname"].value;
 
-	console.log(searchText);
 	search_tbody.innerHTML = "";
 	var searchTBTr = "";
 	var j = 0;
@@ -584,7 +582,6 @@ function startNewGuess() {
 	guessResult.innerHTML = "";
 	guessList.innerHTML = "";
 	randomNum = Math.trunc(Math.random() * 100);
-	//console.log(randomNum);
 	jiShu = 1;
 }
 

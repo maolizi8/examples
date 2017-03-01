@@ -1,0 +1,29 @@
+.sfq_section{
+	width: 900px;
+	height: 400px;
+	position: relative;
+}
+.sfq_box{
+	position: absolute;
+	top: 0;
+	border: 1px solid #000000;
+}
+.sfq_box:nth-child(1){
+	left: 0;
+	z-index: 2;
+}
+.sfq_box:nth-child(2){
+	left: 100px;
+	z-index: 3;
+}
+.sfq_box:nth-child(3){
+	left: 200px;
+	z-index: 4;
+}
+.sfq_img img{
+	width: 500px;
+	height: 300px;
+}
+.sfq_desc{
+	
+}
