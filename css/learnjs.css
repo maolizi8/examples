@@ -221,6 +221,7 @@
 	border: none;
 	outline: none;
 	cursor: pointer;
+	font-size: 14px;
 }
 .search_list{
 	position: absolute;
@@ -263,4 +264,71 @@
 	font-size: 11px;
 	color: #666;
 	margin-left: 10px;
+}
+
+/*猜数字游戏*/
+.guess_box{
+	margin-top: 10px;
+	width: 900px;
+	min-height: 200px;
+}
+.guess_box input[type=button]{
+	height: 42px;
+	line-height: 42px;
+	width: 100px;
+	background: #03A9F4;
+	color: white;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	font-size: 14px;
+}
+.guessform input,.guessform label{
+	display: block;
+	float: left;
+}
+.guessform label{
+	height: 40px;
+	line-height: 40px;
+	width: 180px;
+}
+.guessform input[type=text]{
+	height: 40px;
+	line-height: 40px;
+	width: 580px;
+	border: 1px solid #C1C1C1;
+	padding-left: 10px;
+}
+.guessform:after{
+	content: "";
+	display: block;
+	clear: both;
+	
+}
+#guessinput:disabled{
+	background: #EFEFEF;
+	cursor: not-allowed;
+}
+#submitguess:disabled{
+	background: #C3C3C3;
+	cursor: not-allowed;
+}
+.guess_list{
+	margin-top: 10px;
+}
+.guess_value{
+	font-weight: bold;
+	margin-left: 10px;
+}
+.result_wrong,.result_right{
+	width: 890px;
+	color: white;
+	padding-left: 10px;
+	margin: 5px 0;
+}
+.result_wrong{
+	background: red;
+}
+.result_right{
+	background: green;
 }

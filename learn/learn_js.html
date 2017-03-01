@@ -137,8 +137,26 @@ function shiJianTransform(){
 						
 					</div>
 					<div class="main_area">
-						<h3>实例</h3>
-						<p>我的练习</p>
+						<h3>猜数字游戏</h3>
+						<p>&emsp;&emsp;开始游戏后，系统将自动在1~100以内随机选择一个数,看看你能不能在10轮以内猜出这个数字。
+							每一轮都会告诉玩家正确或者错误。 如果出错了，则提示数字是低了还是高了，并且还会打印出之前猜的数字是什么。</p>
+						<div class="guess_box">
+							<input type="button" class="start_btn" name="start_btn" id="start_btn" value="开始游戏" />
+							<form name="guess_form" class="guessform fade">
+								<label for="">输入猜测的数字：</label>
+								<input type="text" name="guessinput" id="guessinput" value="" />
+								<input type="button" id="submitguess" value="提交" />
+							</form>
+							<div class="guess_list"></div>
+							<div class="guess_result">
+								<p class="result_wrong fade">错误</p>
+								<p class="wrong_high fade">上次猜的偏高了</p>
+								<p class="wrong_low fade">上次猜的偏低了</p>
+								<p class="result_right fade">恭喜你，猜对啦！</p>
+								<p class="result_wrong fade">!!!游戏结束！</p>
+							</div>
+							<input type="button" class="restart_btn fade" id="" value="重新开始" />
+						</div>
 					</div>
 				</div>
 				<div class="main fade" id="info_dom">
