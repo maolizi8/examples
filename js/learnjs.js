@@ -583,7 +583,7 @@ function startNewGuess() {
 	guessInput.value = "";
 	guessResult.innerHTML = "";
 	guessList.innerHTML = "";
-	randomNum = Math.round(Math.random() * 100);
+	randomNum = Math.trunc(Math.random() * 100);
 	//console.log(randomNum);
 	jiShu = 1;
 }
