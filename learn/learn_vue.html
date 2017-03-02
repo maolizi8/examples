@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="keywords" content="HTML, CSS, JavaScript">
+		<meta name="description" content="geqiuli learn HTML, CSS, JS, etc.">
+		<meta name="author" content="geqiuli">
+		<title>liz学习笔记</title>
+		<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+		<![endif]-->
+		<link href="../imgs/me.ico" type="image/x-icon" rel="shortcut icon">
+		<link rel="stylesheet" type="text/css" href="../css/comm.css" />
+		<link rel="stylesheet" type="text/css" href="../css/learn.css" />
+		<script src="../js/jquery-2.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="mainbody">
+				<div class="aside">
+					<ul class="h_aside_all">
+						<li> Vue 学习</li>
+					</ul>
+					<ul class="h_aside_list">
+						<li data-target="examples" class="li_active"> Vue 实例</li>
+						<li data-target="start_info"> Vue 笔记</li>
+					</ul>
+				</div>
+				<div class="main" id="examples">
+					<h2>Vue 实例</h2>
+					<div class="main_area">
+						<h3>Vue 学习</h3>
+						<p></p>
+						<div id="app-4" class="ul_llist">
+							<ul>
+								<li v-for="todo in todos">
+									{{ todo.text }}
+								</li>
+							</ul>
+
+							<p>{{ message }}</p>
+							<input v-model="message">
+						</div>
+						<div id="app-7" class="ul_llist">
+							<ul>
+								<!-- Now we provide each todo-item with the todo object    -->
+								<!-- it's representing, so that its content can be dynamic -->
+								<todo-item v-for="item in groceryList" v-bind:todo="item"></todo-item>
+							</ul>
+						</div>
+					</div>
+					<div class="main_area">
+						<h3>shili</h3>
+						<p>shili</p>
+					</div>
+				</div>
+				<div class="main fade" id="start_info">
+					<h2>Vue 简介</h2>
+					<div class="main_area">
+						<h3>Vue.js 是什么</h3>
+						<p>&emsp;&emsp; Vue.js（读音 /vjuː/, 类似于 view） 是一套构建用户界面的 渐进式框架。与其他重量级框架不同的是，Vue 采用自底向上增量开发的设计。
+							Vue 的核心库只关注视图层，并且非常容易学习，非常容易与其它库或已有项目整合。
+							另一方面，Vue 完全有能力驱动采用单文件组件和 Vue 生态系统支持的库开发的复杂单页应用。</p>
+						<p>Vue.js 的目标是通过尽可能简单的 API 实现<b>响应的数据绑定</b>和<b>组合的视图组件</b>。</p>
+					</div>
+					<div class="main_area">
+						<h3>声明式渲染</h3>
+						<p>Vue.js 的核心是一个允许你采用简洁的模板语法来声明式的将数据渲染进 DOM 的系统：</p>
+						<p class="p-section">
+							&lt;div id="app"&gt;{{ message }}&lt;/div&gt;
+						</p>
+						<div class="eg-section">
+							<pre>
+var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue!'
+  }
+})								
+							</pre>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../js/learn.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/pagetransf.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var app4 = new Vue({
+			el: '#app-4',
+			data: {
+				message: 'Hello Vue!',
+				todos: [{
+					text: 'Learn JavaScript'
+				}, {
+					text: 'Learn Vue'
+				}, {
+					text: 'Build something awesome'
+				}]
+			}
+		})
+		Vue.component('todo-item', {
+			props: ['todo'],
+			template: '<li>{{ todo.text }}</li>'
+		})
+		var app7 = new Vue({
+			el: '#app-7',
+			data: {
+				groceryList: [{
+					text: 'Vegetables'
+				}, {
+					text: 'Cheese'
+				}, {
+					text: 'Whatever else humans are supposed to eat'
+				}]
+			}
+		})
+	</script>
+
+</html>

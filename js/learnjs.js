@@ -581,7 +581,8 @@ function startNewGuess() {
 	guessInput.value = "";
 	guessResult.innerHTML = "";
 	guessList.innerHTML = "";
-	randomNum = Math.trunc(Math.random() * 100);
+	randomNum = Math.floor(Math.random() * 100)+1;
+	//Math.trunc(Math.random() * 100)
 	jiShu = 1;
 }
 
@@ -598,6 +599,7 @@ submitGuessBtn.addEventListener("click", function() {
 	}
 	guessRiOrWr(guessValue);
 	jiShu++;
+	guessInput.value = "";
 })
 
 function guessOver() {

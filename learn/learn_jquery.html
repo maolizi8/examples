@@ -33,30 +33,106 @@
 				<div class="main" id="examples">
 					<h2> Jquery 实例</h2>
 					<div class="main_area">
-						<h3>实例</h3>
+						<h3>Jquery实现横向手风琴 图片切换</h3>
 						<div class="sfq_section">
-							<div class="sfq_box">
+							<div class="sfq_box sfq_active" data-target="scenery1">
 								<div class="sfq_img">
-									<img src="../imgs/fengjing/timg1.jpg"/>
+									<img src="../imgs/learn_jquery/guilin.jpg"/>
 								</div>
 								<div class="sfq_desc">
-									图片1
+									<div class="sfq_title">
+										桂林
+									</div>
+									<div class="sfq_details fade" id="scenery1">
+										<div class="sfq_keywords">
+											桂林山水甲天下
+										</div>
+										<div class="sfq_links">
+											<a href="">热点</a>
+											<a href="">推荐</a>
+											<a href="">更多</a>
+										</div>
+									</div>
 								</div>
 							</div>
-							<div class="sfq_box">
+							<div class="sfq_box" data-target="scenery2">
 								<div class="sfq_img">
-									<img src="../imgs/fengjing/timg2.jpg"/>
+									<img src="../imgs/learn_jquery/timg8.jpg"/>
 								</div>
 								<div class="sfq_desc">
-									图片2
+									<div class="sfq_title">
+										风景2
+									</div>
+									<div class="sfq_details fade" id="scenery2">
+										<div class="sfq_keywords">
+											风景美如画
+										</div>
+										<div class="sfq_links">
+											<a href="">热点</a>
+											<a href="">推荐</a>
+											<a href="">更多</a>
+										</div>
+									</div>
 								</div>
 							</div>
-							<div class="sfq_box">
+							<div class="sfq_box" data-target="scenery3">
 								<div class="sfq_img">
-									<img src="../imgs/fengjing/timg3.jpg"/>
+									<img src="../imgs/learn_jquery/timg9.jpg"/>
 								</div>
 								<div class="sfq_desc">
-									图片3
+									<div class="sfq_title">
+										风景3
+									</div>
+									<div class="sfq_details fade" id="scenery3">
+										<div class="sfq_keywords">
+											风景美如画
+										</div>
+										<div class="sfq_links">
+											<a href="">热点</a>
+											<a href="">推荐</a>
+											<a href="">更多</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="sfq_box" data-target="scenery4">
+								<div class="sfq_img">
+									<img src="../imgs/learn_jquery/timg10.jpg"/>
+								</div>
+								<div class="sfq_desc">
+									<div class="sfq_title">
+										风景4
+									</div>
+									<div class="sfq_details fade" id="scenery4">
+										<div class="sfq_keywords">
+											风景美如画
+										</div>
+										<div class="sfq_links">
+											<a href="">热点</a>
+											<a href="">推荐</a>
+											<a href="">更多</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="sfq_box sfq_last" data-target="scenery5">
+								<div class="sfq_img">
+									<img src="../imgs/learn_jquery/timg11.jpg"/>
+								</div>
+								<div class="sfq_desc">
+									<div class="sfq_title">
+										风景5
+									</div>
+									<div class="sfq_details fade" id="scenery5">
+										<div class="sfq_keywords">
+											风景美如画
+										</div>
+										<div class="sfq_links">
+											<a href="">热点</a>
+											<a href="">推荐</a>
+											<a href="">更多</a>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -95,4 +171,18 @@
 	</body>
 	<script src="../js/learn.js" type="text/javascript" charset="utf-8"></script>
 	<script src="../js/pagetransf.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+	var t;
+		$(".sfq_box").hover(function(){
+			clearTimeout(t);
+			var that=this;
+			$(this).stop().stop().animate({width:"500px"},500).siblings().stop().animate({width:"100px"},500);
+//			$(".sfq_box").removeClass("sfq_active");
+//			$(that).addClass("sfq_active");
+			$(".sfq_details").hide();
+			$("#"+$(that).attr("data-target")).show();
+		},function(){
+			$(".sfq_details").hide();
+		})
+	</script>
 </html>
