@@ -34,6 +34,7 @@
 					<h2> Jquery 实例</h2>
 					<div class="main_area">
 						<h3>Jquery实现横向手风琴 图片切换</h3>
+						<p>第一种方法，有些小bug</p>
 						<div class="sfq_section">
 							<div class="sfq_box sfq_active" data-target="scenery1">
 								<div class="sfq_img">
@@ -137,6 +138,53 @@
 							</div>
 						</div>
 					</div>
+					<div class="main_area">
+						<h3>Jquery实现横向手风琴 图片切换</h3>
+						<p>第二种方法</p>
+						<div class="fq_section">
+							<div class="fq_box">
+								<div class="fq_img">
+									<img src="../imgs/learn_jquery/guilin.jpg"/>
+								</div>
+								<div class="fq_desc">
+									风景1
+								</div>
+							</div>
+							<div class="fq_box fq_transf">
+								<div class="fq_img">
+									<img src="../imgs/learn_jquery/timg8.jpg"/>
+								</div>
+								<div class="fq_desc">
+									风景2
+								</div>
+							</div>
+							<div class="fq_box fq_transf">
+								<div class="fq_img">
+									<img src="../imgs/learn_jquery/timg9.jpg"/>
+								</div>
+								<div class="fq_desc">
+									风景3
+								</div>
+							</div>
+							<div class="fq_box fq_transf">
+								<div class="fq_img">
+									<img src="../imgs/learn_jquery/timg10.jpg"/>
+								</div>
+								<div class="fq_desc">
+									风景4
+								</div>
+							</div>
+							<div class="fq_box fq_transf">
+								<div class="fq_img">
+									<img src="../imgs/learn_jquery/timg11.jpg"/>
+								</div>
+								<div class="fq_desc">
+									风景5
+								</div>
+							</div>
+							
+						</div>
+					</div>
 				</div>
 				<div class="main fade" id="start_info">
 					<h2>jQuery </h2>
@@ -172,17 +220,32 @@
 	<script src="../js/learn.js" type="text/javascript" charset="utf-8"></script>
 	<script src="../js/pagetransf.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
-	var t;
+		//手风琴切换图片的第一种方法
 		$(".sfq_box").hover(function(){
-			clearTimeout(t);
 			var that=this;
 			$(this).stop().stop().animate({width:"500px"},500).siblings().stop().animate({width:"100px"},500);
-//			$(".sfq_box").removeClass("sfq_active");
-//			$(that).addClass("sfq_active");
+			//$(".sfq_box").removeClass("sfq_active");
+			//$(that).addClass("sfq_active");
 			$(".sfq_details").hide();
 			$("#"+$(that).attr("data-target")).show();
 		},function(){
 			$(".sfq_details").hide();
+		});
+		
+		//手风琴切换图片的第二种方法
+		$(".fq_transf").hover(function(){
+			var that=$(this);
+			var curr= that.index();
+			var len=$(".fq_transf").length;
+			that.prev().hover(function(){
+				that.removeClass("fq_active");
+			})
+			for(var i=curr;i<len;i++){
+				$($(".fq_transf")[i]).removeClass("fq_active");
+			}
+			for(var i=curr-1;i>=0;i--){
+				$($(".fq_transf")[i]).addClass("fq_active");
+			}
 		})
 	</script>
 </html>
