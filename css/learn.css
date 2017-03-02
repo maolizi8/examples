@@ -169,6 +169,19 @@ body {
 	border: 1px solid #C9C5C5;
 	padding: 5px;
 }
+.notes-box{
+	background-color: #fff5cc;
+	border: 1px solid #ffe273;
+	padding-left: 10px;
+	line-height: 30px;
+}
+.notes-box:before{
+	content: "\F05A  ";
+	font-family: iconFont;
+	color: #F08080;
+	font-size: 30px;
+	line-height: 30px;
+}
 .img-section{
 	margin-top: 15px;
 	padding: 10px;
@@ -218,3 +231,4 @@ body {
 	from{width: 0;}
 	to{width: 910px;}
 }
+
