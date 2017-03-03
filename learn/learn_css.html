@@ -14,7 +14,6 @@
 		<link rel="stylesheet" type="text/css" href="../css/comm.css" />
 		<link rel="stylesheet" type="text/css" href="../css/learn.css" />
 		<link rel="stylesheet" type="text/css" href="../css/learncss.css" />
-		<script src="../js/jquery-2.0.0.min.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 
 	<body>
@@ -27,7 +26,6 @@
 					<ul class="h_aside_list">
 						<li data-target="css_examples" class="li_active"> CSS 实例</li>
 						<li data-target="css_start"> CSS 笔记</li>
-						<li data-target="css3_newtags"> CSS3新特性</li>
 					</ul>
 				</div>
 				<div class="main" id="css_examples">
@@ -458,7 +456,42 @@
 							</ul>
 						</div>
 					</div>
-
+					<div class="main_area">
+						<h3>CSS 盒子模型(Box Model)</h3>
+						<p>所有HTML元素可以看作盒子，在CSS中，"box model"这一术语是用来设计和布局时使用。</p>
+						<p>CSS盒模型本质上是一个盒子，封装周围的HTML元素，它包括：边距，边框，填充，和实际内容。</p>
+						<p>盒模型允许我们在其它元素和周围元素边框之间的空间放置元素。</p>
+						<div class="eg-section">
+							<h5>下面的图片说明了盒子模型(Box Model)：</h5>
+							<div class="eg-box">
+								<img src="../imgs/box-model.gif" />
+							</div>
+						</div>
+						<p>不同部分的说明：</p>
+						<div class="ul_llist">
+							<ul>
+								<li>Margin(外边距) - 清除边框外的区域，外边距是透明的。</li>
+								<li>Border(边框) - 围绕在内边距和内容外的边框。</li>
+								<li>Padding(内边距) - 清除内容周围的区域，内边距是透明的。</li>
+								<li>Content(内容) - 盒子的内容，显示文本和图像。</li>
+							</ul>
+						</div>
+						<h4>最终元素的总宽度计算公式是这样的：</h4>
+						<p>总元素的宽度=宽度+左填充+右填充+左边框+右边框+左边距+右边距</p>
+						<p>元素的总高度最终计算公式是这样的：</p>
+						<p>总元素的高度=高度+顶部填充+底部填充+上边框+下边框+上边距+下边距</p>
+					</div>
+					<div class="main_area">
+						<h3>浏览器的兼容性问题</h3>
+						<p>一旦为页面设置了恰当的 DTD，大多数浏览器都会按照上面的图示来呈现内容。
+							然而 IE5 和6的呈现却是不正确的。
+							根据 W3C的规范，元素内容占据的空间是由width属性设置的，而内容周围的 padding 和 border 值是另外计算的。
+							不幸的是，IE5.X 和 6 在怪异模式中使用自己的非标准模型。这些浏览器的 width 属性不是内容的宽度，而是内容、内边距和边框的宽度的总和。</p>
+						<p>虽然有方法解决这个问题。但是目前最好的解决方案是回避这个问题。
+							也就是，不要给元素添加具有指定宽度的内边距，而是尝试将内边距或外边距添加到元素的父元素和子元素</p>
+						<p>IE8 及更早IE版本不支持 填充的宽度和边框的宽度属性设。</p>
+						<p>解决IE8及更早版本不兼容问题可以在HTML页面声明 <!DOCTYPE html>即可。</p>
+					</div>
 					<div class="main_area">
 						<h3>CSS3 模块</h3>
 						<p>CSS3被拆分为"模块"。旧规范已拆分成小块，还增加了新的。</p>
@@ -482,58 +515,11 @@
 						<p>height(高) + padding(内边距) + border(边框) = 元素实际高度</p>
 					</div>
 				</div>
-				<div class="main fade" id="css3_newtags">
-					<h2>CSS3 新特性</h2>
-					<div class="main_area">
-						<h3>CSS3 圆角</h3>
-						<p>在CSS3中border-radius属性被用于创建圆角：</p>
-						<div class="eg-section">
-							<h5>代码实例：</h5>
-							<div class="eg-box">
-<pre>
-div{
-    border:1px solid blue;
-    border-radius:10px;
-    width:100px;
-    height:100px;
-}
-</pre>
-							</div>
-						</div>
-						<p>效果实例:</p>
-						<table class="eg-table">
-							<tr>
-								<td>属性举例</td>
-								<td>背景颜色为圆角</td>
-								<td>边框为圆角</td>
-								<td>背景图片为圆角</td>
-								<td>圆环</td>
-							</tr>
-							<tr>
-								<td>border-radius</td>
-								<td>
-									<div class="yl-inner yuanjiao1"></div>
-								</td>
-								<td>
-									<div class="yl-inner yuanjiao2"></div>
-								</td>
-								<td>
-									<div class="yl-inner yuanjiao3"></div>
-								</td>
-								<td>
-									<div class="yl-inner yuanjiao5"></div>
-								</td>
-							</tr>
-						</table>
-					</div>
-					
-				</div>
 
 			</div>
 			<div style="clear: both;"></div>
 		</div>
 	</body>
+	<script src="../js/jquery-2.0.0.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="../js/learn.js" type="text/javascript" charset="utf-8"></script>
-	<script src="../js/pagetransf.js" type="text/javascript" charset="utf-8"></script>
-
 </html>

@@ -175,13 +175,13 @@ body {
 	padding-left: 10px;
 	line-height: 30px;
 }
-.notes-box:before{
+/*.notes-box:before{
 	content: "\F05A  ";
 	font-family: iconFont;
 	color: #F08080;
 	font-size: 30px;
 	line-height: 30px;
-}
+}*/
 .img-section{
 	margin-top: 15px;
 	padding: 10px;
@@ -192,7 +192,7 @@ body {
 	border-collapse: collapse;
 	width: 100%;
 }
-.eg-table tr td:first-child{
+.eg-tbtitle tr td:first-child{
 	text-align: left;
 }
 .eg-table th,
@@ -200,6 +200,10 @@ body {
 	border: 1px solid #999966;
 	padding: 5px;
 	text-align: center;
+}
+.pre-content{
+	width: 100%;
+	min-height: 500px;
 }
 .smail_face{
 	padding-left: 20px;
@@ -211,6 +215,20 @@ body {
 	color: #FF1493;
 	font-family: iconFont;
 }
+.def-btn{
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	color: white;
+	background: #03A9F4;
+	border: none;
+	outline: none;
+}
+.def-btn:hover{
+	background: #0000FF;
+}
+
+
 .jindutiao{
 	margin: 20px 0;
 	width: 910px;

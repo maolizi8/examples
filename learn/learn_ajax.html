@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="keywords" content="HTML, CSS, JavaScript">
+		<meta name="description" content="geqiuli learn HTML, CSS, JS, etc.">
+		<meta name="author" content="geqiuli">
+		<title>liz学习笔记</title>
+		<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+		<![endif]-->
+		<link href="../imgs/me.ico" type="image/x-icon" rel="shortcut icon">
+		<link rel="stylesheet" type="text/css" href="../css/comm.css" />
+		<link rel="stylesheet" type="text/css" href="../css/learn.css" />
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="mainbody" id="m_mysql">
+				<div class="aside">
+					<ul class="h_aside_all">
+						<li> AJAX 学习</li>
+					</ul>
+					<ul class="h_aside_list">
+						<li data-target="examples" class="li_active"> Ajax 实例</li>
+						<li data-target="start_info"> Ajax 笔记</li>
+					</ul>
+				</div>
+				<div class="main" id="examples">
+					<h2>Ajax 实例</h2>
+					<div class="main_area">
+						<h3>在 HTML 页面中显示 XML 数据</h3>
+						<p>在下面的实例中，我们打开一个 XML 文件（"catalog.xml"），然后遍历每个 CD 元素，并显示部分元素的值。</p>
+						<p>点击每一行会给出更多详细信息。</p>
+						<div class="yl-section" id="dispxmldetail">
+							
+						</div>
+						<div class="pre-content">
+							<table class="eg-table">
+							<tr>
+								<th>TITLE</th>
+								<th>ARTIST</th>
+							</tr>
+							<tbody id="ajax_tbody">
+								
+							</tbody>
+						</table>
+						</div>
+					</div>
+				</div>
+				<div class="main fade" id="start_info">
+					<h2>AJAX 简介</h2>
+					<div class="main_area">
+						<p>AJAX = Asynchronous JavaScript and XML（异步的 JavaScript 和 XML）。</p>
+						<p>AJAX 是一种在无需重新加载整个网页的情况下，能够更新部分网页的技术。</p>
+					</div>
+					<div class="main_area">
+						<h3>AJAX - XMLHttpRequest 对象</h3>
+						<p>XMLHttpRequest 是 AJAX 的基础。</p>
+						<p>所有现代浏览器均支持 XMLHttpRequest 对象（IE5 和 IE6 使用 ActiveXObject）。</p>
+						<p>XMLHttpRequest 用于在后台与服务器交换数据。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。</p>
+						<div class="eg-section">
+							<h5>AJAX - 向服务器发送请求并响应 示例</h5>
+							<div class="eg-box">
+								<pre>
+
+var xmlhttp;
+if (window.XMLHttpRequest){
+    //  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+    xmlhttp=new XMLHttpRequest();
+}else{
+    // IE6, IE5 浏览器执行代码
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+}
+xmlhttp.onreadystatechange=function(){
+    if (xmlhttp.readyState==4 &amp;&amp; xmlhttp.status==200){
+        document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+    }
+}
+xmlhttp.open("GET","ajax_info.txt",true);
+xmlhttp.send();									
+								</pre>
+							</div>
+						</div>
+					</div>
+					<div class="main_area">
+						<h3>GET 还是 POST？</h3>
+						<p>与 POST 相比，GET 更简单也更快，并且在大部分情况下都能用。</p>
+						<p>然而，在以下情况中，请使用 POST 请求：</p>
+						<div class="ul_llist">
+							<ul>
+								<li>无法使用缓存文件（更新服务器上的文件或数据库）</li>
+								<li>向服务器发送大量数据（POST 没有数据量限制）</li>
+								<li>发送包含未知字符的用户输入时，POST 比 GET 更稳定也更可靠</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div style="clear: both;"></div>
+
+		</div>
+	</body>
+	<script src="../js/jquery-2.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/learn.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/learnajax.js" type="text/javascript" charset="utf-8"></script>
+</html>

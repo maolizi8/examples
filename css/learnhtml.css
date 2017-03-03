@@ -57,3 +57,17 @@
 	margin-left: 55px;
 	margin-right: 41px;
 }
+
+.newinputtype form{
+	height: 40px;
+	line-height: 40px;
+}
+.newinputtype li{
+	
+}
+.newinputtype li input{
+	width: 200px;
+}
+.newinputtype li input[type=submit]{
+	width: 70px;
+}

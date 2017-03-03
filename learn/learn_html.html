@@ -13,11 +13,10 @@
 		<link href="../imgs/me.ico" type="image/x-icon" rel="shortcut icon">
 		<link rel="stylesheet" type="text/css" href="../css/comm.css" />
 		<link rel="stylesheet" type="text/css" href="../css/learn.css" />
-		<link rel="stylesheet" type="text/css" href="../css/learnhtml.css"/>
-		<script src="../js/jquery-2.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="../css/learnhtml.css" />
 	</head>
 
-	<body>
+	<body id="learnhtml">
 		<div class="container">
 			<div class="mainbody" id="m_html">
 				<div class="aside">
@@ -51,7 +50,7 @@
 									Canvas画图
 								</div>
 							</div>
-							
+
 						</div>
 					</div>
 					<div class="main_area">
@@ -62,7 +61,7 @@
 								<img src="../imgs/fangzi.png" draggable="true" id="drag1" ondragstart="dragimg(event)" />
 							</div>
 							<div id="dado_box2">
-								
+
 							</div>
 							<div class="clear"></div>
 						</div>
@@ -74,7 +73,8 @@
 							<video width="420px" height="240px" controls="controls" poster="../video/movie_start.png">
 								<source src="http://www.runoob.com/try/demo_source/movie.mp4" type="video/mp4"></source>
 								<source src="../files/mov_bbb.ogg" type="video/ogg"></source>
-								当前浏览器不支持 video直接播放，点击这里下载视频： <a href="http://www.runoob.com/try/demo_source/movie.mp4">下载视频</a>
+								当前浏览器不支持 video直接播放，点击这里下载视频：
+								<a href="http://www.runoob.com/try/demo_source/movie.mp4">下载视频</a>
 							</video>
 						</div>
 					</div>
@@ -83,36 +83,37 @@
 						<p>操作localStorage的内容</p>
 						<div class="lcst_box">
 							<table class="nomaltb">
-							<tr>
-								<th>序号</th>
-								<th>主题</th>
-								<th>作者</th>
-								<th>操作<button class="addls_btn">添加</button> </th>
-							</tr>
-							<tbody id="ls_tbody">
-							
-							</tbody>
-						</table>
-						<div class="addls_box fade">
-							<form name="addls_form">
-								<div class="row">
-									<label>主题：</label>
-									<input type="text" name="title" class="lsinput" />
-								</div>
-								<div class="row">
-									<label>作者：</label>
-									<input type="text" name="author" class="lsinput" />
-								</div>
-								<div class="row">
-									<input type="button" class="lsbtn" id="addnewbtn" value="添加" />
-									<input type="button" class="lsbtn" id="canceladd" value="取消" />
-								</div>
-								
-							</form>
+								<tr>
+									<th>序号</th>
+									<th>主题</th>
+									<th>作者</th>
+									<th>操作<button class="addls_btn">添加</button> </th>
+								</tr>
+								<tbody id="ls_tbody">
+
+								</tbody>
+							</table>
+							<div class="addls_box fade">
+								<form name="addls_form">
+									<div class="row">
+										<label>主题：</label>
+										<input type="text" name="title" class="lsinput" />
+									</div>
+									<div class="row">
+										<label>作者：</label>
+										<input type="text" name="author" class="lsinput" />
+									</div>
+									<div class="row">
+										<input type="button" class="lsbtn" id="addnewbtn" value="添加" />
+										<input type="button" class="lsbtn" id="canceladd" value="取消" />
+									</div>
+
+								</form>
+							</div>
 						</div>
-						</div>
-						
+
 					</div>
+
 				</div>
 				<div class="main fade" id="start_info">
 					<h2>HTML5 新特性</h2>
@@ -120,11 +121,11 @@
 						<p>HTML5 中的一些有趣的新特性：</p>
 						<div class="ul_llist">
 							<ul>
-								<li>用于绘画的 canvas 元素</li>
-								<li>用于媒介回放的 video 和 audio 元素</li>
-								<li>对本地离线存储的更好的支持</li>
-								<li>新的特殊内容元素，比如 article、footer、header、nav、section</li>
-								<li>新的表单控件，比如 calendar、date、time、email、url、search</li>
+								<li> 用于绘画的 canvas 元素</li>
+								<li> 用于媒介回放的 video 和 audio 元素</li>
+								<li> 对本地离线存储的更好的支持</li>
+								<li> 新的特殊内容元素，比如 article、footer、header、nav、section</li>
+								<li> 新的表单控件，比如 calendar、date、time、email、url、search</li>
 							</ul>
 						</div>
 					</div>
@@ -134,22 +135,141 @@
 						<p>不管是 localStorage，还是 sessionStorage，可使用的API都相同，常用的有如下几个（以localStorage为例）：</p>
 						<div class="ul_llist">
 							<ul>
-								<li>保存数据：localStorage.setItem(key,value);</li>
-								<li>读取数据：localStorage.getItem(key);</li>
-								<li>删除单个数据：localStorage.removeItem(key);</li>
-								<li>删除所有数据：localStorage.clear();</li>
-								<li>得到某个索引的key：localStorage.key(index);</li>
+								<li> 保存数据：localStorage.setItem(key,value);</li>
+								<li> 读取数据：localStorage.getItem(key);</li>
+								<li> 删除单个数据：localStorage.removeItem(key);</li>
+								<li> 删除所有数据：localStorage.clear();</li>
+								<li> 得到某个索引的key：localStorage.key(index);</li>
 							</ul>
+						</div>
+					</div>
+					<div class="main_area">
+						<h3>表单元素</h3>
+						<p>HTML5 有以下新的表单元素:</p>
+						<div class="ul_llist">
+							<ul>
+								<li> &lt;datalist&gt;</li>
+								<li> &lt;keygen&gt;</li>
+								<li> &lt;output&gt;</li>
+							</ul>
+						</div>
+					</div>
+					<div class="main_area">
+						<h3>HTML5 新的 Input 类型</h3>
+						<p>HTML5 拥有多个新的表单输入类型。这些新特性提供了更好的输入控制和验证。</p>
+						<div class="ul_llist">
+							<ul class="newinputtype">
+								<li> color
+									<form>
+										<input type="color" name="" />
+										<input type="submit" value="提交" />
+									</form>
+								</li>
+								<li> date
+									<form>
+										<input type="date" name="" />
+										<input type="submit" value="提交" />
+									</form>
+								</li>
+								<li> datetime
+									<form>
+										<input type="datetime" name="" />
+										<input type="submit" value="提交" />
+									</form>
+								</li>
+								<li> datetime-local
+									<form>
+										<input type="datetime-local" name="" />
+										<input type="submit" value="提交" />
+									</form>
+								</li>
+								<li> email
+									<form>
+										<input type="email" name="" />
+										<input type="submit" value="提交" />
+									</form>
+								</li>
+								<li> month
+									<form>
+										<input type="month" name="" />
+										<input type="submit" value="提交" />
+									</form>
+								</li>
+								<li> number
+									<form>
+										<input type="number" min="1" max="5" name="" />
+										<input type="submit" value="提交" />
+									</form>
+								</li>
+								<li> range
+									<form>
+										<input type="range" min="1" max="10" name="" />
+										<input type="submit" value="提交" />
+									</form>
+								</li>
+								<li> search
+									<form>
+										<input type="search" name="" />
+										<input type="submit" value="提交" />
+									</form>
+								</li>
+								<li> tel
+									<form>
+										<input type="tel" name="" />
+										<input type="submit" value="提交" />
+									</form>
+								</li>
+								<li> time
+									<form>
+										<input type="time" name="" />
+										<input type="submit" value="提交" />
+									</form>
+								</li>
+								<li> url
+									<form>
+										<input type="url" name="" />
+										<input type="submit" value="提交" />
+									</form>
+								</li>
+								<li> week
+									<form>
+										<input type="week" name="" />
+										<input type="submit" value="提交" />
+									</form>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="main_area">
+						<h3>HTML5 Geolocation（地理定位）</h3>
+						<p>HTML5 Geolocation API 用于获得用户的地理位置。</p>
+						<p>鉴于该特性可能侵犯用户的隐私，除非用户同意，否则用户位置信息是不可用的。</p>
+
+						<div class="eg-section" id="geolo_demo">
+							<h5 onclick="getLocation()">点击我获取位置信息（可能需要比较长的时间获取）</h5>
+							<div class="eg-box" id="geolo_value">
+								点击上方标题获取位置信息&uarr;
+							</div>
+						</div>
+					</div>
+					<div class="main_area">
+						<h3>HTML5 Web Workers</h3>
+						<p>web worker 是运行在后台的 JavaScript，不会影响页面的性能。</p>
+					</div>
+					<div class="main_area">
+						<h3>HTML5 WebSocket</h3>
+						<p>WebSocket是HTML5开始提供的一种在单个 TCP 连接上进行全双工通讯的协议。</p>
+						<div class="eg-section" onclick="WebSocketTest()">
+							点击我测试
 						</div>
 					</div>
 				</div>
 			</div>
-			
+
 			<div style="clear: both;"></div>
 		</div>
 	</body>
+	<script src="../js/jquery-2.0.0.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="../js/learn.js" type="text/javascript" charset="utf-8"></script>
-	<script src="../js/pagetransf.js" type="text/javascript" charset="utf-8"></script>
 	<script src="../js/learnhtml.js" type="text/javascript" charset="utf-8"></script>
-
 </html>
