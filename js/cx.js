@@ -1,4 +1,4 @@
-var list = {
+var cityList = {
 			"A": ["鞍山", "安庆", "安阳", "安顺", "安康", "阿克苏"],
 			"B": ["北京", "保定", "包头", "巴彦淖尔", "本溪", "蚌埠", "亳州", "滨州", "北海", "百色", "巴中", "毕节", "保山", "宝鸡", "白银", "巴音郭楞"],
 			"C": ["承德", "沧州", "长治", "赤峰", "朝阳", "长春", "常州", "滁州", "池州", "长沙", "常德", "郴州", "潮州", "重庆", "成都", "楚雄", "昌吉"],
@@ -28,7 +28,7 @@ var list = {
 
 var a1, a2, text1, text2, text3, div1, div2, div3;
 window.onload = function() {
-	for(key in list) {
+	for(key in cityList) {
 		a1 = document.createElement("a");
 		a1.href = "javascript:void(0)";
 		a1.onclick = selectCities;
@@ -42,10 +42,10 @@ window.onload = function() {
 		div1.classList.add("lc_section");
 		div2.classList.add("letter");
 		div3.classList.add("lc_names");
-		for(var i = 0, len = list[key].length; i < len; i++) {
+		for(var i = 0, len = cityList[key].length; i < len; i++) {
 			a2 = document.createElement("a");
 			a2.href = "javascript:void(0)";
-			text2 = document.createTextNode(list[key][i].toString());
+			text2 = document.createTextNode(cityList[key][i].toString());
 			a2.appendChild(text2);
 			a2.onclick = changeCityname;
 			div3.appendChild(a2);
@@ -134,7 +134,7 @@ function hd_nav_down_hide() {
 /*将城市拼音的首字母、城市名称渲染至下方浮动块中*/
 //var a1, a2, div1, div2, div3;
 //window.onload = function() {
-//	for(key in list) {
+//	for(key in cityList) {
 //		a1 = $("<a></a>").attr("href", "javascript:void(0)").text(key.toString()).click(selectCities);
 //		$("#lc_leters").append(a1);
 //		div1 = $("<div></div>").attr({
@@ -143,8 +143,8 @@ function hd_nav_down_hide() {
 //		});
 //		div2 = $("<div></div>").attr("class", "letter");
 //		div3 = $("<div></div>").attr("class", "lc_names");
-//		for(var i = 0, len = list[key].length; i < len; i++) {
-//			a2 = $("<a></a>").attr("href", "javascript:void(0)").text(list[key][i].toString()).click(changeCityname);
+//		for(var i = 0, len = cityList[key].length; i < len; i++) {
+//			a2 = $("<a></a>").attr("href", "javascript:void(0)").text(cityList[key][i].toString()).click(changeCityname);
 //			div3.append(a2);
 //		}
 //		div2.text(key.toString());
