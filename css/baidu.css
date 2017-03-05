@@ -163,8 +163,8 @@ ul.topmenu li:last-child a{
 @media only screen and (min-height: 900px){
 	.main{height: 450px;}
 }
-@media only screen (max-height: 900px) {
-	.main{height: 350px;}
+@media only screen and (max-height: 900px) {
+	.main{height: 370px;}
 }
 
 .bdimg{
@@ -368,7 +368,7 @@ ul.topmenu li:last-child a{
 	line-height: 25px;
 	width: 700px;
 	margin: 0 auto;
-	text-align: left;
+	text-align: center;
 }
 .zhenghao{
 	margin-right: 20px;
@@ -376,7 +376,7 @@ ul.topmenu li:last-child a{
 .zhenghao:after{
 	content: "";
 	position: absolute;
-	left: 331px;
+	left: 411px;
 	top: 0;
 	width: 18px;
 	height: 20px;
@@ -386,7 +386,7 @@ ul.topmenu li:last-child a{
 .beianhao:after{
 	content: "";
 	position: absolute;
-	left: 549px;
+	left: 625px;
 	top: 0;
 	width: 18px;
 	height: 20px;
