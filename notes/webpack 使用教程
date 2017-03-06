@@ -1,0 +1,50 @@
+链接：http://www.jianshu.com/p/b95bbcfc590d
+===========================================
+步骤
+===========================================
+>>>WebPack的安装
+1.安装命令：
+  $ npm install webpack -g
+2.使用webpack
+  $ npm init  # 会自动生成一个package.json文件
+  $ npm install webpack --save-dev #将webpack增加到package.json文件中
+
+>>>WebPack的配置
+每个项目下都必须配置有一个 webpack.config.js ，它的作用如同常规的 gulpfile.js/Gruntfile.js ，就是一个配置项，告诉 webpack 它需要做什么。
+下面是一个例子：
+var webpack = require('webpack');
+var commonsPlugin = new webpack.optimize.CommonsChunkPlugin('common.js');
+module.exports = {
+    //插件项
+    plugins: [commonsPlugin],
+    //页面入口文件配置
+    entry: {
+        index : './src/js/page/index.js'
+    },
+    //入口文件输出配置
+    output: {
+        path: 'dist/js/page',
+        filename: '[name].js'
+    },
+    module: {
+        //加载器配置
+        loaders: [
+            { test: /\.css$/, loader: 'style-loader!css-loader' },
+            { test: /\.js$/, loader: 'jsx-loader?harmony' },
+            { test: /\.scss$/, loader: 'style!css!sass?sourceMap'},
+            { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192'}
+        ]
+    },
+    //其它解决方案配置
+    resolve: {
+        root: 'E:/github/flux-example/src', //绝对路径
+        extensions: ['', '.js', '.json', '.scss'],
+        alias: {
+            AppStore : 'js/stores/AppStores.js',
+            ActionType : 'js/actions/ActionType.js',
+            AppAction : 'js/actions/AppAction.js'
+        }
+    }
+};
+
+>>>WebPack开始使用
