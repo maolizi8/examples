@@ -190,19 +190,19 @@ function hd_nav_down_hide() {
 //});
 
 /* 鼠标移动到轮播图时，动画暂停*/
-$("[class*='pc_img']").hover(function() {
-	$("[class*='pc_img']").css("animation-play-state", "paused");
-	$('[class*="pcimg_jindu_sub"]').css("animation-play-state", "paused");
+$(".picture_show").hover(function() {
+	$(".picture_show").css("animation-play-state", "paused");
+	$('pc_jindutiao').css("animation-play-state", "paused");
 }, function() {
-	$("[class*='pc_img']").css("animation-play-state", "running");
-	$('[class*="pcimg_jindu_sub"]').css("animation-play-state", "running");
+	$(".picture_show").css("animation-play-state", "running");
+	$('pc_jindutiao').css("animation-play-state", "running");
 });
-$('[class*="pcimg_jindu_sub"]').hover(function() {
-	$("[class*='pc_img']").css("animation-play-state", "paused");
-	$('[class*="pcimg_jindu_sub"]').css("animation-play-state", "paused");
+$('pc_jindutiao').hover(function() {
+	$(".picture_show").css("animation-play-state", "paused");
+	$('pc_jindutiao').css("animation-play-state", "paused");
 }, function() {
-	$("[class*='pc_img']").css("animation-play-state", "running");
-	$('[class*="pcimg_jindu_sub"]').css("animation-play-state", "running");
+	$(".picture_show").css("animation-play-state", "running");
+	$('pc_jindutiao').css("animation-play-state", "running");
 });
 /* 鼠标移动到轮播图的进度条时，动画暂停*/
 $(".mn_down_section_one").hover(mn_detail_disp, mn_detail_hide);

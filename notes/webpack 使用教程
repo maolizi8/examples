@@ -1,50 +1,89 @@
-链接：http://www.jianshu.com/p/b95bbcfc590d
+链接：
+=>  http://www.jianshu.com/p/b95bbcfc590d
+=>  http://www.runoob.com/w3cnote/webpack-tutorial.html
 ===========================================
 步骤
 ===========================================
->>>WebPack的安装
+>>>  WebPack的安装
+在安装 Webpack 前，你本地环境需要支持 node.js。
+
 1.安装命令：
   $ npm install webpack -g
 2.使用webpack
   $ npm init  # 会自动生成一个package.json文件
   $ npm install webpack --save-dev #将webpack增加到package.json文件中
 
->>>WebPack的配置
-每个项目下都必须配置有一个 webpack.config.js ，它的作用如同常规的 gulpfile.js/Gruntfile.js ，就是一个配置项，告诉 webpack 它需要做什么。
-下面是一个例子：
-var webpack = require('webpack');
-var commonsPlugin = new webpack.optimize.CommonsChunkPlugin('common.js');
+>>> 创建项目
+1.接下来我们创建一个目录 proj： 
+	mkdir proj
+2.在 proj 目录下添加 entry.js 文件，代码如下：
+	document.write("It works.");
+3.在 proj 目录下添加 index.html 文件，代码如下：
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script type="text/javascript" src="bundle.js" charset="utf-8"></script>
+    </body>
+</html>
+
+4.接下来我们使用 webpack 命令来打包：
+	webpack entry.js bundle.js
+5.执行以上命令会编译 entry.js 文件并生成bundle.js 文件，成功后输出信息如下所示：
+Hash: a41c6217554e666594cb
+Version: webpack 1.12.13
+Time: 50ms
+    Asset     Size  Chunks             Chunk Names
+bundle.js  1.42 kB       0  [emitted]  main
+   [0] ./entry.js 29 bytes {0} [built]
+6.在浏览器中打开 index.html，输出结果
+
+
+>>> WebPack的配置
+1.我们可以将一些编译选项放在配置文件中，以便于统一管理：
+2.每个项目下都必须配置有一个 webpack.config.js ，它的作用如同常规的 gulpfile.js/Gruntfile.js，就是一个配置项，告诉 webpack 它需要做什么。
+3.下面是一个例子：
+var webpack=require('webpack');
 module.exports = {
-    //插件项
-    plugins: [commonsPlugin],
     //页面入口文件配置
-    entry: {
-        index : './src/js/page/index.js'
-    },
+    entry: './proj/entry.js',
     //入口文件输出配置
     output: {
-        path: 'dist/js/page',
-        filename: '[name].js'
+        path: './proj/', 
+        filename: 'bundle.js'
+		//filename: '[name].js'
     },
     module: {
         //加载器配置
         loaders: [
-            { test: /\.css$/, loader: 'style-loader!css-loader' },
-            { test: /\.js$/, loader: 'jsx-loader?harmony' },
-            { test: /\.scss$/, loader: 'style!css!sass?sourceMap'},
-            { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192'}
+            { test: /\.css$/, loader: 'css-loader!style-loader' }
+			//,
+            //{ test: /\.js$/, loader: 'jsx-loader?harmony' },
+           // { test: /\.scss$/, loader: 'style!css!sass?sourceMap'},
+            //{ test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192'}
         ]
     },
-    //其它解决方案配置
-    resolve: {
-        root: 'E:/github/flux-example/src', //绝对路径
-        extensions: ['', '.js', '.json', '.scss'],
-        alias: {
-            AppStore : 'js/stores/AppStores.js',
-            ActionType : 'js/actions/ActionType.js',
-            AppAction : 'js/actions/AppAction.js'
-        }
-    }
+	//插件项
+    plugins:[
+    new webpack.BannerPlugin('liz学习webpack')
+    ]
 };
 
->>>WebPack开始使用
+4.接下来我们只需要执行 webpack 命令即可生成 bundle.js 文件.
+
+>>> LOADER
+1.接下来我们使用以下命令来安装 css-loader 和 style-loader(全局安装需要参数 -g)。
+	npm install css-loader style-loader
+2.接下来创建一个 style.css 文件，代码如下：
+
+body {
+    background: yellow;
+}
+3.修改 entry.js 文件，代码如下：
+require("!style-loader!css-loader!./style.css");
+document.write(require("./test2.js"));
+4.使用webpack打包，查看输出结果
+
+>>> 插件
+npm install webpack --save-dev
