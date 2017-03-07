@@ -468,9 +468,9 @@ body{
 }
 .menu_down_list,.menu_down_server{
 	position: absolute;
-	top: 38px;
+	top: 36px;
 	width: 220px;
-	height: 432px;
+	height: 430px;
 	z-index: 9;
 }
 .menu_down_list{
@@ -532,9 +532,10 @@ body{
 	z-index: 10;
 	background: white;
 	border-right: 1px solid #2E2D3C;
+	border-top: 1px solid #2E2D3C;
 	color: #333;
 	width: 618px;
-	height: 402px;
+	height: 400px;
 	display: none;
 }
 
@@ -700,7 +701,7 @@ body{
 .md_picture_show{
 	position: relative;
 	width: 100%;
-	height: 432px;
+	height: 430px;
 	border-top: 1px solid #333;
 	border-bottom: 1px solid #333;
 	overflow: hidden;
@@ -710,29 +711,25 @@ body{
 	position: absolute;
 	top: 0;
 	left: 100%;
-	height: 432px;
+	height: 430px;
 	width: 100%;
 	-webkit-animation:picshowlefttoright 6s linear infinite;
 	animation: picshowlefttoright 6s linear infinite;
 }
 
 .picture_show  a{
-	height: 432px;
+	height: 430px;
 	width: 100%;
 	display: block;
 }
 .pc_img_one a{
 	background: url(../imgs/cx_imgs/pc_show1.jpg) no-repeat;
-	background-repeat: no-repeat;
-	background-size: cover;
 }
 .pc_img_two a{
 	background: url(../imgs/cx_imgs/pc_show2.jpg) no-repeat;
-	background-size: cover;
 }
 .pc_img_three a{
 	background: url(../imgs/cx_imgs/pc_show3.jpg) no-repeat;
-	background-size: cover;
 }
 
 .pc_img_one{
@@ -977,7 +974,7 @@ body{
 	margin-top: 10px;
 }
 
-[class*="ic_img_"]{
+.icon_img{
 	margin: 0 auto;
 	width: 60px;
 	height: 58px;
