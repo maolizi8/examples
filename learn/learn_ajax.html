@@ -23,11 +23,64 @@
 						<li> AJAX 学习</li>
 					</ul>
 					<ul class="h_aside_list">
-						<li data-target="examples" class="li_active"> Ajax 实例</li>
+						<li data-target="ajax_obj" class="li_active"> Ajax 封装</li>
+						<li data-target="examples"> Ajax 实例</li>
 						<li data-target="start_info"> Ajax 笔记</li>
 					</ul>
 				</div>
-				<div class="main" id="examples">
+				<div class="main" id="ajax_obj">
+					<h2>封装Ajax 方法</h2>
+					<div class="main_area">
+						<h3>ajax异步请求方法的封装</h3>
+						<p>实现一个ajax函数，设置url、method、data等参数，回调函数实现成功后失败的执行任务</p>
+					</div>
+					<div class="main_area">
+						<div class="eg-section">
+							<h5>相关代码如下：</h5>
+							<div class="eg-box">
+								<pre>
+//封装ajax方法									
+function ajax(o) { 
+	var xmlhttp; 
+	if(window.XMLHttpRequest) { 
+		xmlhttp = new XMLHttpRequest(); 
+	} else { 
+		xmlhttp = new ActiveXObject(); 
+	} 
+	xmlhttp.onreadystatechange = function() { 
+		if(xmlhttp.readyState==4 &amp;&amp; xmlhttp.status==200) { 
+			o.success(xmlhttp.responseText);
+		} else if(xmlhttp.status==404){ 
+			o.error(xmlhttp.response);
+		} 
+	} 
+	xmlhttp.open(o.method,o.url,true); 
+	if (o.method=="get") { 
+		xmlhttp.send(); 
+	} else if(o.method=="post"){ 
+		xmlhttp.send(o.data); 
+	} 
+} 
+
+//调用ajax方法：
+ajax({ 
+	url:"files/englishnames.json", 
+	method:"get", 
+	//data:"fname=Bill&lname=Gates", 
+	success:function(data){ 
+		var jsdata=JSON.parse(data); 
+		console.log(jsdata); 
+	}, 
+	error:function(e){ 
+		console.log(e); 
+	} 
+});								
+								</pre>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="main fade" id="examples">
 					<h2>Ajax 实例</h2>
 					<div class="main_area">
 						<h3>在 HTML 页面中显示 XML 数据</h3>
