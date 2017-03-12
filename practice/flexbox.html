@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>flexbox练习</title>
+		<meta name="keywords" content="HTML, CSS, JavaScript">
+		<meta name="description" content="geqiuli learn HTML, CSS, JS, etc.">
+		<meta name="author" content="geqiuli">
+		<!--[if lt IE 9]> <script src="js/html5shiv.js"></script> <![endif]-->
+		<style type="text/css">
+			.flexbox{
+				display: flex;
+				width: 800px;
+				height: 300px;
+				border: 1px solid #666;
+				background: #EFE1AF;
+			}
+			.items{
+				background: lightblue;
+				flex-direction: row;
+				flex-wrap: wrap;
+				justify-content: center;
+				align-items: stretch;
+				align-content: flex-end;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="flexbox">
+			<div class="items">
+				 justify-content: flex-start | flex-end | center | space-between | space-around;
+			</div>
+			<div class="items">
+				flex-wrap: nowrap | wrap | wrap-reverse;
+			</div>
+			<div class="items">
+				采用Flex布局的元素，称为Flex容器（flex container），简称"容器"。它的所有子元素自动成为容器成员，称为Flex项目（flex item），简称"项目"。
+			</div>
+			<div class="items">
+				items3  items3i tems3 items3 items3
+			</div>
+			<div class="items">
+				items4 items items items items items items
+			</div>
+			<div class="items">
+				items5 items items items items items
+			</div>
+			<div class="items">
+				items6 items items
+			</div>
+		</div>
+	</body>
+</html>

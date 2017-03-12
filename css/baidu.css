@@ -160,10 +160,10 @@ ul.topmenu li:last-child a{
 }
 
 .main{height: 450px;}
-@media only screen and (min-height: 900px){
+@media only screen and (min-height: 750px){
 	.main{height: 450px;}
 }
-@media only screen and (max-height: 900px) {
+@media only screen and (max-height: 750px) {
 	.main{height: 370px;}
 }
 
