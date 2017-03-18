@@ -8,64 +8,25 @@
 		<meta name="author" content="geqiuli">
 		<title>liz练习</title>
 		<!--[if lt IE 9]> <script src="js/html5shiv.js"></script> <![endif]-->
+		<link rel="stylesheet" type="text/css" href="css/carousel.css"/>
 		<style type="text/css">
+			.gql {
+				width: 500px;
+				height: 312px;
+				border: 1px solid #000;
+			}
+			
 			
 		</style>
 	</head>
 
-	<body id="bd">
+	<body>
 		<div class="gql">
-			<canvas id="lxl" width="200px" height="200px"></canvas>
-		</div>
-		<div class="gql">
-			<table border="1px" cellspacing="1" cellpadding="1">
-				<thead>
-					<th>号</th>
-					<th>弧度</th>
-					<th>sin x</th>
-					<th>cos y</th>
-					<th>x轴</th>
-					<th>y轴</th>
-				</thead>
-				<tbody id="lxy">
-					
-				</tbody>
-			</table>
 		</div>
 	</body>
+	<script src="js/carousel.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
-	
-            var canvas = document.getElementById("lxl");
-            var context = canvas.getContext("2d");
-            context.fillStyle = "#EEEEFF";
-            context.fillRect(0, 0, 200, 200);
-            var dx = 100;
-            var dy = 100;
-            var s = 100;
-            context.beginPath();
-            //context.fillStyle = 'rgb(100,255,100)';
-            context.strokeStyle = 'rgb(0,0,100)';
-            var dig = Math.PI / 30 * (2*11);
-            console.log(dig);
-            var lxy="";
-            for (var i = 0; i < 31; i++) {
-                var x = Math.sin(i * dig);
-                var y = Math.cos(i * dig);
-                context.lineTo(dx + x * s, dy + y * s);
-                lxy+="<tr>";
-                lxy+="<td>"+i+"</td>";
-                lxy+="<td>"+(i*dig)+"</td>";
-               	lxy+="<td>"+x+"</td>";
-               	lxy+="<td>"+y+"</td>";
-                lxy+="<td>"+(dx + x * s)+"</td>";
-                lxy+="<td>"+(dy + y * s)+"</td>";
-                lxy+="</tr>";
-            }
-            document.querySelector("#lxy").innerHTML=lxy;
-            //context.closePath();
-            context.fill();
-            context.stroke();
-
+		carouselFigure(".gql","imgs/learn_jquery/balidao.jpg","imgs/learn_jquery/dabenzhong.jpg","imgs/learn_jquery/guilin.jpg")
 	</script>
 
 </html>
