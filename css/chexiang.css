@@ -733,31 +733,31 @@ body{
 }
 
 .pc_img_one{
-	-webkit-animation-delay: -0.6s;
-	animation-delay: -0.6s;
+	-webkit-animation-delay: -0.4s;
+	animation-delay: -0.4s;
 }
 .pc_img_two{
-	-webkit-animation-delay: 1.4s;
-	animation-delay: 1.4s;
+	-webkit-animation-delay: 1.6s;
+	animation-delay: 1.6s;
 }
 .pc_img_three{
-	-webkit-animation-delay: 3.4s;
-	animation-delay: 3.4s;
+	-webkit-animation-delay: 3.6s;
+	animation-delay: 3.6s;
 }
 
 @keyframes picshowlefttoright{
 	0%{transform: translate3d(0,0,0);}
-	10%{transform: translate3d(-100%,0,0);}
+	6.67%{transform: translate3d(-100%,0,0);}
 	33.33%{transform: translate3d(-100%,0,0);}
-	43.33%{transform: translate3d(-200%,0,0);}
+	40%{transform: translate3d(-200%,0,0);}
 	100%{transform: translate3d(-200%,0,0);}
 	
 }
 @-webkit-keyframes picshowlefttoright{
 	0%{-webkit-transform: translate3d(0);}
-	10%{-webkit-transform: translate3d(-100%,0,0);}
+	6.67%{-webkit-transform: translate3d(-100%,0,0);}
 	33.33%{-webkit-transform: translate3d(-100%,0,0);}
-	43.33%{-webkit-transform:translate3d(-200%,0,0);}
+	40%{-webkit-transform:translate3d(-200%,0,0);}
 	100%{-webkit-transform: translate3d(-200%,0,0);}
 	
 }
@@ -783,25 +783,25 @@ body{
 	animation: jindutiao 6s linear infinite;
 }
 .pcimg_jindu_sub1{
-	-webkit-animation-delay: -4.6s;
-	animation-delay: -4.6s;
+	-webkit-animation-delay: -4.4s;
+	animation-delay: -4.4s;
 }
 .pcimg_jindu_sub2{
-	-webkit-animation-delay: -2.6s;
-	animation-delay: -2.6s;
+	-webkit-animation-delay: -2.4s;
+	animation-delay: -2.4s;
 }
 .pcimg_jindu_sub3{
-	-webkit-animation-delay: -0.6s;
-	animation-delay: -0.6s;
+	-webkit-animation-delay: -0.4s;
+	animation-delay: -0.4s;
 }
 @keyframes jindutiao{
 	0%{width: 0;}
-	76.66%{width: 0;}
+	73.33%{width: 0;}
 	100%{width: 30px;}
 }
 @-webkit-keyframes jindutiao{
 	0%{width: 0;}
-	76.66%{width: 0;}
+	73.33%{width: 0;}
 	100%{width: 30px;}
 }
 
