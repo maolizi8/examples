@@ -235,16 +235,14 @@
 		<script src="js/jquery-2.0.0.min.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
 	$(".aside_list li").click(function(){
-		$(".aside_list li").css({"background-color":"#fff","color": "#000"});
-		//this.style="color: #fff;background-color: cornflowerblue;";
-		$(this).css({"background-color":"cornflowerblue","color": "#fff"});
+		$(".aside_list li").removeClass("aside_li_active");
+		$(this).addClass("aside_li_active");
 		$(".section").hide();
-		$("#"+$(this).attr("data-target")).css("display","block");
+		$("#"+$(this).attr("data-target")).show();
 	});
 	$(".aside_all li").click(function(){
-		console.log(this)
 		$(".section").show();
-		$(".aside_list li").css({"background-color":"#fff","color": "#000"});
+		$(".aside_list li").removeClass("aside_li_active");
 	});
 		
 	</script>
