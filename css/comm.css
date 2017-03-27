@@ -141,7 +141,14 @@ body {
 .aside ul.aside_all li:hover {
 	cursor: pointer;
 }
-
+.aside_li{
+	color: #000;
+	background-color: #fff;
+}
+.aside_li_active{
+	color: #fff;
+	background-color: cornflowerblue;
+}
 .aside ul.aside_list li:hover {
 	color: #fff;
 	background-color: cornflowerblue;
