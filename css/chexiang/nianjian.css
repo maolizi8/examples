@@ -1,0 +1,170 @@
+.nav_links{
+	height: 35px;
+	line-height: 35px;
+}
+.nav_links a{
+	color: #666;
+	font-size: 13px;
+	text-decoration: none;
+}
+/*.nav_links a+a:before{
+	content: " > ";
+}*/
+
+
+/*
+ 年检预约表单
+ 宣传图
+ * */
+.nianjian_section,.nianjian_picture{
+	float: left;
+	height: 400px;
+}
+.nianjian_section{
+	background: white;
+	width: 290px;
+}
+#nj_form{
+	margin: 27px;
+}
+#nj_form input{
+	display: block;
+	width: 226px;
+	height: 37px;
+	margin: 10px 0;
+	padding-left: 10px;
+}
+#nj_form input[type='text']{
+	border: 1px solid #E5E5E5;
+}
+#nj_form input[type='button']{
+	background: rgb(3,169,245);
+	color: white;
+	font-size: 22px;
+	text-align: center;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	width: 236px;
+	border-radius: 3px;
+}
+.nianjian_picture{
+	width: 810px;
+}
+.nianjian_picture img{
+	width: 810px;
+	height: 400px;
+}
+#fees_desc{
+	margin-top: 20px;
+	font-size: 15px;
+	color: #999;
+	height: 25px;
+	line-height: 25px;
+}
+.serv_desc{
+	font-size: 12px;
+	color: #666;
+	height: 20px;
+	line-height: 20px;
+}
+#nj_form a{
+	color: rgb(3,169,245);
+	font-size: 14px;
+	text-decoration: none;
+}
+#nj_form a:after{
+	content: " >";
+	font-weight: bold;
+}
+
+/*
+ 年检图文说明
+ * */
+.section_title{
+	height: 50px;
+	line-height: 50px;
+	font-weight: bold;
+	margin: 20px 0;
+}
+.midsection{
+	background: white;
+	width: 100%;
+}
+.midsection:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.midsection h3{
+	height: 40px;
+	line-height: 40px;
+}
+.midsection p{
+	font-size: 14px;
+	height: 30px;
+	line-height: 30px;
+	color: #999;
+}
+
+.desc_box_bg,.desc_box_sm{
+	float: left;
+	text-align: center;
+	margin: 30px auto;
+}
+
+.desc_box_bg{
+	width: 33.33%;
+}
+.icons_bg{
+	width: 100px;
+	height: 100px;
+	background:url(../../imgs/cx_imgs/nianjian/icons.png) no-repeat;
+	background-position-y: 0;
+	border-radius: 50%;
+	margin: 0 auto;
+}
+.desc_box_bg:nth-child(1) .icons_bg{
+	background-position-x: 0;
+}
+.desc_box_bg:nth-child(2) .icons_bg{
+	background-position-x: -100px;
+}
+.desc_box_bg:nth-child(3) .icons_bg{
+	background-position-x: -200px;
+}
+
+.desc_box_sm{
+	width: 16.66%;
+}
+.icons_sm{
+	width: 57px;
+	height: 42px;
+	background:url(../../imgs/cx_imgs/nianjian/icons2.png) no-repeat;
+	background-position-x: 0;
+	margin: 0 auto;
+}
+.desc_box_sm:nth-child(1) .icons_sm{
+	background-position-y: 0;
+}
+.desc_box_sm:nth-child(2) .icons_sm{
+	background-position-y: -41px;
+}
+.desc_box_sm:nth-child(3) .icons_sm{
+	background-position-y: -84px;
+}
+.desc_box_sm:nth-child(4) .icons_sm{
+	background-position-y: -122px;
+}
+.desc_box_sm:nth-child(5) .icons_sm{
+	background-position-y: -165px;
+}
+.desc_box_sm:nth-child(6) .icons_sm{
+	background-position-y: -202px;
+}
+
+/*使用说明*/
+.desc_hang{
+	margin: 10px 20px;
+}

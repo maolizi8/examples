@@ -1,0 +1,775 @@
+@font-face {
+	font-family: iconFont;
+	src: url("../fonts/fontawesome-webfont.woff2") format('woff'), url("../fonts/fontawesome-webfont.woff") format('woff'), url("../fonts/fontawesome-webfont.eot") format('embedded-opentype'), url("../fonts/fontawesome-webfont.ttf") format('truetype');
+}
+.md_menu_down{
+	position: relative;
+}
+.menu_down_list,.menu_down_server{
+	position: absolute;
+	top: 0;
+	width: 220px;
+	height: 432px;
+	z-index: 9;
+}
+.menu_down_list{
+	left: 0;
+	background: rgba(21,21,24,.8);
+	color: white;
+}
+.menu_down_list h4{
+	line-height: 50px;
+}
+.menu_down_list a{
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+}
+.menu_down_list p a{
+	font-size: 14px;
+	line-height: 24px;
+	padding-right: 7.5px;
+}
+.menu_down_list a:hover{
+	text-decoration: underline;
+	color: #03A9F4;
+}
+[class*="mn_down_section_"]{
+	padding: 15px;
+	border-bottom: 1px solid #303131;
+}
+.mn_down_section_one{
+	height: 122px; 
+}
+.mn_down_section_one a{
+	word-break: keep-all;
+}
+.mn_down_section_two{
+	height: 122px;
+}
+.mn_down_section_three{
+	height: 94px;
+}
+.icon_to_right{
+	position: absolute;
+	right: 20px;
+	width: 5px;
+	height: 7px;
+	background: url(../../imgs/cx_imgs/icon_nav_list.png) no-repeat;
+	background-position: 0 -57px;
+}
+.mn_down_section_one i.icon_to_right{
+	top:35px;
+}
+.mn_down_section_three i.icon_to_right{
+	top:340px;
+}
+.mn_down_section_detal1,.mn_down_section_detal2{
+	position: absolute;
+	top: 0;
+	left: 220px;
+	z-index: 10;
+	background: white;
+	border-right: 1px solid #2E2D3C;
+	border-top: 1px solid #2E2D3C;
+	color: #333;
+	width: 618px;
+	height: 400px;
+	display: none;
+}
+
+.mn_down_section_detal1:before,
+.mn_down_section_detal2:before{
+	content: "";
+	display: block;
+	width: 0;
+	height: 0;
+	border-top: 5px solid transparent;
+	border-left: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	border-right: 5px solid #fff;
+	position: absolute;
+	left: -10px;
+}
+.mn_down_section_detal1:before{
+	top: 33px;
+}
+.mn_down_section_detal2:before{
+	top: 338px;
+}
+.mn_detail_left,.mn_detail_right{
+	float: left;
+	height: 402px;
+}
+.mn_detail_left{
+	width: 370px;
+	margin:0 15px;
+}
+.mn_detail_box{
+	margin-top: 15px;
+}
+.mn_detail_box h3{
+	font-weight: bold;
+	line-height: 40px;
+}
+.mn_detail_box ul{
+	border-top: 1px solid #e3e3e3
+}
+.mn_detail_box ul li{
+	margin-top: 10px;
+	padding:0 15px;
+	display: inline-block;
+	/*width: 80px;*/
+	height: 20px;
+	line-height: 20px;
+	border-right: 1px solid #e3e3e3;
+}
+.mn_detail_box ul li:first-child{
+	padding-left: 0;
+}
+.mn_detail_box ul li:last-child{
+	border: none;
+}
+.mn_down_section_detal1 a,
+.mn_down_section_detal2 a{
+	color: #333;
+	font-size: 13px;
+	font-weight: 500;
+}
+.mn_down_section_detal1 a:hover,
+.mn_down_section_detal2 a:hover{
+	color: #03A9F4;
+	text-decoration: none;
+}
+.mn_detail_right{
+	width: 200px;
+	text-align: center;
+}
+.mn_detail_right a{
+	display: block;
+}
+.mn_detail_right h3{
+	font-size: 16px;
+	line-height: 35px;
+	font-weight: bold;
+}
+.mn_detail_right img{
+	width: 222px;
+	height: 148px;
+}
+.mn_detail_right hr{
+	height: 1px;
+	border: none;
+	border-top:1px solid #e3e3e3;
+}
+
+/*"有惊无险区域"*/
+.menu_down_server{
+	right: 10px;
+	background: rgba(255,255,255,.8);
+	color: #333;
+}
+.menu_down_server a{
+	color: #333;
+	text-decoration: none;
+	font-size: 13px;
+	text-align: center;
+}
+.mn_top_show{
+	margin-bottom: 15px;
+}
+.mn_top_show img{
+	width: 220px;
+	height: 148px;
+}
+.mn_top_show P:first-child{
+	font-size: 16px;
+}
+.mn_top_show P:last-child{
+	font-size: 13px;
+}
+.mn_server_list{
+	border-top: 1px solid #CFCFCF;
+	height: 60px;
+}
+.mn_server_list a{
+	display: block;
+	float: left;
+	position: relative;
+	width: 70px;
+	height: 85px;
+	margin-top: 20px;
+}
+
+.mn_server_list span{
+	position: absolute;
+	left: 12px;
+	top: 0;
+	width: 42px;
+	height: 42px;
+	background: url(../../imgs/cx_imgs/icon_nav_list.png) no-repeat;
+}
+.mn_server_list span.sv_one{
+	background-position: 0 -199px;
+}
+.mn_server_list span.sv_two{
+	background-position: 0 -66px;
+}
+.mn_server_list span.sv_three{
+	background-position: 0 -134px;
+}
+.mn_server_list p{
+	margin-top: 56px;
+}
+
+.mn_server_links{
+	margin: 15px;
+	border-top: 1px dashed #CFCFCF;
+	padding-top: 15px;
+}
+.mn_server_links a{
+	display: inline-block;
+	width: 60px;
+	height: 25px;
+}
+.mn_server_links a:hover{
+	color: #03A9F4;
+}
+
+/*轮播图*/
+.md_picture_show{
+	position: relative;
+	width: 100%;
+	height: 430px;
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #333;
+	overflow: hidden;
+	
+}
+.picture_show{
+	position: absolute;
+	top: 0;
+	left: 100%;
+	height: 430px;
+	width: 100%;
+	-webkit-animation:picshowlefttoright 6s linear infinite;
+	animation: picshowlefttoright 6s linear infinite;
+}
+
+.picture_show  a{
+	height: 430px;
+	width: 100%;
+	display: block;
+}
+.pc_img_one a{
+	background: url(../../imgs/cx_imgs/pc_show1.jpg) no-repeat;
+}
+.pc_img_two a{
+	background: url(../../imgs/cx_imgs/pc_show2.jpg) no-repeat;
+}
+.pc_img_three a{
+	background: url(../../imgs/cx_imgs/pc_show3.jpg) no-repeat;
+}
+
+.pc_img_one{
+	-webkit-animation-delay: -0.4s;
+	animation-delay: -0.4s;
+}
+.pc_img_two{
+	-webkit-animation-delay: 1.6s;
+	animation-delay: 1.6s;
+}
+.pc_img_three{
+	-webkit-animation-delay: 3.6s;
+	animation-delay: 3.6s;
+}
+
+@keyframes picshowlefttoright{
+	0%{transform: translate3d(0,0,0);}
+	6.67%{transform: translate3d(-100%,0,0);}
+	33.33%{transform: translate3d(-100%,0,0);}
+	40%{transform: translate3d(-200%,0,0);}
+	100%{transform: translate3d(-200%,0,0);}
+	
+}
+@-webkit-keyframes picshowlefttoright{
+	0%{-webkit-transform: translate3d(0);}
+	6.67%{-webkit-transform: translate3d(-100%,0,0);}
+	33.33%{-webkit-transform: translate3d(-100%,0,0);}
+	40%{-webkit-transform:translate3d(-200%,0,0);}
+	100%{-webkit-transform: translate3d(-200%,0,0);}
+	
+}
+.pcimg_jindu{
+	position: absolute;
+	z-index: ;
+	top: 380px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color:transparent;
+}
+.pcimg_jindutiao{
+	float: left;
+	margin-left: 5px;
+	width: 30px;
+	height: 5px;
+	background: #EFEFEF;
+}
+.pc_jindutiao{
+	width: 0;
+	height: 5px;
+	background: #c90c41;
+	animation: jindutiao 6s linear infinite;
+}
+.pcimg_jindu_sub1{
+	-webkit-animation-delay: -4.4s;
+	animation-delay: -4.4s;
+}
+.pcimg_jindu_sub2{
+	-webkit-animation-delay: -2.4s;
+	animation-delay: -2.4s;
+}
+.pcimg_jindu_sub3{
+	-webkit-animation-delay: -0.4s;
+	animation-delay: -0.4s;
+}
+@keyframes jindutiao{
+	0%{width: 0;}
+	73.33%{width: 0;}
+	100%{width: 30px;}
+}
+@-webkit-keyframes jindutiao{
+	0%{width: 0;}
+	73.33%{width: 0;}
+	100%{width: 30px;}
+}
+
+/*图片廊*/
+.car_show{
+	display: block;
+	float: left;
+	width: 210px;
+	/*height: 300px;*/
+	margin:0 10px 10px 0;
+	padding-top: 15px;
+	background: white;
+	cursor: pointer;
+	text-decoration: none;
+}
+.pc_show{
+	background: #F5F5F5;
+	height: 280px;
+	transition: all 0.4s;
+	color: #333;
+	margin:20px 10px 20px 0;
+}
+.pc_show:hover{
+	box-shadow: 1px 1px 6px #cfcfcf;
+	transform: translateY(-3px);
+}
+
+.pc_show h3{
+	color: #333;
+	line-height: 40px;
+	margin-left: 15px;
+	font-weight: 500;
+}
+.pc_show p{
+	line-height: 30px;
+	margin-left: 15px;
+}
+.pc_show p span{
+	color: #c71444;
+	font-size: 18px;
+}
+.pc_show p span.hot_font{
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.pc_show img{
+	width: 210px;
+	height: 140px;
+	margin-top: 20px;
+}
+.smal_link{
+	font-size: 12px;
+}
+
+[class*="md_car_"]{
+	position: relative;
+	padding-top: 20px;
+}
+[class*="md_car_"]>h3{
+	padding-left: 20px;
+	padding-bottom: 10px;
+}
+[class*="md_car_"]>h3:before{
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 24px;
+	width: 5px;
+	height: 18px;
+}
+.md_car_new h3:before{
+	background: #c71444;
+}
+.md_car_used h3:before{
+	background: #ff6702;
+}
+.md_car_blog h3:before{
+	background: #03a9f4;
+}
+
+/*中间部分，包含：买新车、买卖二手车、车知道*/
+.middle_bkcolor{
+	background-color: #F2F2F2;
+	padding-bottom: 40px;
+}
+.middle_bkcolor h3{
+	line-height: 25px;
+}
+.md_car_new a{
+	text-align: center;
+	height: 280px;
+}
+.new_car_info{
+	padding: 0;
+	margin-right: 10px;
+}
+.new_car_info img{
+	width: 210px;
+	height: 295px;
+}
+
+.new_car img{
+	width: 210px;
+	height: 140px;
+	margin-top: 30px;
+}
+.new_car h4{
+	color: #333;
+}
+.new_car h4:hover{
+	color: #03A9F4;
+}
+.new_car p{
+	font-size: 13px;
+	line-height: 30px;
+	margin-top: 20px;
+}
+.new_car p span:first-child{
+	color: #e51c23;
+}
+.new_car p span:last-child{
+	margin-left: 10px;
+	color: #999;
+	text-decoration: line-through;
+}
+
+/*买卖二手车*/
+.mdcar_leftside,.mdcar_rightside{
+	float: left;
+}
+.mdcar_leftside{
+	padding: 0 15px 25px 15px;
+	background: white;
+	width: 400px;
+	margin-right: 10px;
+	color: #2C2C2C;
+}
+.nc_leftside_top{
+	padding: 10px 0;
+	border-bottom: 1px dashed #F2F2F2;
+}
+.nc_leftside_top span{
+	/*display: inline-block;*/
+}
+.lg_font{
+	font-size: 50px;
+	color: #ff6702;
+}
+.leftside_top span:last-child{
+	/*margin-left: 190px;*/
+	float: right;
+	margin: 40px 10px 0;
+	vertical-align: bottom;
+}
+.nc_leftside_top strong{
+	color: #03A9F4;
+}
+.nc_leftside_middle{
+	padding-top: 15px;
+}
+.nc_leftside_middle>div{
+	float: left;
+}
+.icon_steps{
+	width: 67px;
+	height: 78px;
+	text-align: center;
+	font-size: 13px;
+	margin-top: 10px;
+}
+
+.icon_img{
+	margin: 0 auto;
+	width: 60px;
+	height: 58px;
+	background: url(../../imgs/cx_imgs/used_car_icon.png) no-repeat;
+}
+.ic_img_one{
+	background-position: 0 -285px;
+}
+.ic_img_two{
+	background-position: 0 -129px;
+}
+.ic_img_three{
+	background-position: 0 -17px;
+}
+.ic_img_four{
+	background-position: 0 -348px;
+}
+.icon_steps p{
+	margin-top: 10px;
+}
+.ic_tonext{
+	width: 42px;
+	height: 58px;
+}
+.ic_tonext_img{
+	width: 9px;
+	height: 12px;
+	margin: 32px auto;
+	background: url(../../imgs/cx_imgs/used_car_icon.png) no-repeat;
+}
+
+.nc_leftside_bottom{
+	margin-top: 40px;
+}
+.nc_leftside_bottom h4{
+	line-height: 55px;
+	font-weight: 500;
+}
+.nc_leftside_bottom p{
+	color: #999;
+	margin-bottom: 40px;
+}
+.nc_leftside_bottom a{
+	color: white;
+	background: #368df8;
+	padding: 10px 25px;
+	border-radius: 4px;
+	text-decoration: none;
+}
+.nc_leftside_bottom a:hover{
+	background: #03A9F4;
+}
+.mdcar_rightside{
+	
+}
+.nc_rightside_top{
+	height: 65px;
+	width: 630px;
+	background: white;
+	color: #2C2C2C;
+	padding: 10px;
+}
+.rightside_links{
+	float: right;
+	width: 550px;
+}
+.rightside_row{
+	padding-left: 25px;
+	position: relative;
+}
+.lnks_before_one,.lnks_before_two{
+	position: absolute;
+	top: 7px;
+	left: 0;
+	width: 16px;
+	height: 19px;
+	background: url(../../imgs/cx_imgs/used_car_icon.png) no-repeat;
+	
+}
+.lnks_before_one{
+	background-position: 0 -262px;
+}
+.lnks_before_two{
+	background-position: 0 -191px;
+}
+.rightside_row a{
+	display: inline-block;
+	line-height: 35px;
+	text-decoration: none;
+	color: #999;
+	font-size: 14px;
+	margin-right: 8px;
+}
+.rightside_row a:hover{
+	color: #03A9F4;
+}
+.nc_rightside_main{
+	margin-top: 10px;
+	display: flex;
+	justify-content:space-between;
+}
+.rightside_box{
+	background: white;
+	padding: 10px 2px;
+	position: relative;
+}
+.rightside_box img{
+	width: 200px;
+	height: 130px;
+}
+.rightside_box h4{
+	margin:10px 10px 5px 10px;
+	text-overflow: ellipsis;
+}
+.rightside_box h4 a{
+	text-decoration: none;
+	color: #2C2C2C;
+}
+.rightside_box h4 a:hover{
+	color: #03A9F4;
+}
+.rightside_box p{
+	font-size: 12px;
+	margin-left: 10px;
+	line-height: 20px;
+}
+.rightside_box p.uc_price{
+	font-size: 18px;
+	margin-left: 10px;
+	color: #e51c23;
+	font-weight: bold;
+	margin-top: 15px;
+	line-height: 25px;
+}
+.rightside_box span.uc_place{
+	float: right;
+	margin-right: 10px;
+}
+.rightside_box span.uc_hotfont{
+	margin-left: 10px;
+	color: white;
+	background: #e51c23;
+	font-size: 13px;
+	font-weight: 500;
+	padding: 2px 0 2px 5px;
+}
+.rightside_box span.uc_hotfont:after{
+	position: relative;
+	top: -5px;
+	content: "";
+	width: 0;
+	height: 0;
+	font-size: 0;
+	border-bottom: 9.9899px solid #e51c23;
+	border-top: 9.9899px solid #e51c23;
+	border-left: 10px solid #e51c23;
+	border-right: 10px solid white;
+}
+
+.mduc_leftside,.mduc_rightside{
+	float: left;
+}
+.mduc_leftside{
+	padding: 15px 15px 25px 15px;
+	background: white;
+	width: 400px;
+	height: 370px;
+	margin-right: 10px;
+	color: #999;
+}
+.mduc_leftside h3{
+	line-height: 40px;
+	font-weight: bold;
+}
+.blog_list{
+	border-top: 1px dashed #C2C2C2;
+	padding-top: 15px;
+	margin-top: 5px;
+}
+.blog_list ul{
+	list-style: none;
+	font-size: 13px;
+}
+.blog_list ul li{
+	color: #999;
+	line-height: 30px;
+}
+.blog_list ul li a{
+	color: #333;
+	text-decoration: none;
+}
+.blog_list ul li a:hover{
+	color: #03A9F4;
+}
+.blog_list ul li span,.blog_list ul li a{
+	display: inline-block;
+}
+.blog_number{
+	font-size: 17px;
+}
+.blog_category{
+	margin: 0 10px;
+}
+.mduc_rightside{
+	
+}
+.mduc_blog_section{
+	background: white;
+	width: 650px;
+	height: 200px;
+	vertical-align: text-top;
+}
+.mduc_blog_section:first-child{
+	margin-bottom: 10px;
+}
+.ucblog_img,.ucblog_desc{
+	float: left;
+}
+.ucblog_img{
+	width: 230px;
+	height: 200px;
+}
+.ucblog_img img{
+	width: 216px;
+	height: 200px;
+}
+.ucblog_desc{
+	margin-left: 10px;
+	padding-top: 15px;
+	width: 380px;
+	height: 185px;
+	color: #999;
+	max-width: 380px;
+	text-overflow: ellipsis;
+}
+.ucblog_desc a{
+	color: #999;
+	text-decoration: none;
+}
+.ucblog_desc a:hover{
+	color: #03A9F4;
+}
+.ucblog_desc h2{
+	font-size: 20px;
+	line-height: 50px;
+}
+.ucblog_desc p{
+	font-size: 13px;
+	line-height: 20px;
+}
+.ucblog_desc_p a:before{
+	content: "\00a0\00a0\00a0\00a0";
+}
+.ucblog_desc p:last-child{
+	margin-top: 15px;
+}
+
+
+

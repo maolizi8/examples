@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>车辆年检</title>
+		<link rel="stylesheet" type="text/css" href="../css/chexiang/cxpublic.css" />
+		<link rel="stylesheet" type="text/css" href="../css/chexiang/nianjian.css" />
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="header">
+				<!--页面顶部面包屑-->
+				<div class="hd_main main" id="header_main">
+					<div class="hd_sign">
+						<div class="hd_location" id="hd_location">
+							<span class="icon_location">
+							</span>
+							<span id="lc_name">
+								上海
+							</span>
+						</div>
+						<div class="shuxian"></div>
+						<div class="lc_choices">
+							<div class="lc_letters" id="lc_leters">
+							</div>
+							<div class="lc_cities" id="lc_cities">
+
+							</div>
+						</div>
+						<div class="user_sign">
+							<a href="">亲，请登录</a>
+							<a href="">免费注册</a>
+						</div>
+					</div>
+					<div class="hd_navbar">
+						<div class="hd_nav" data-target="mycx">
+							<a href="">我的车享</a>
+						</div>
+						<div class="shuxian"></div>
+						<div class="hd_nav" data-target="viewcx">关注车享</div>
+						<div class="shuxian"></div>
+						<div class="hd_nav" id="hd_nav_myapp" data-target="myapp">我的APP</div>
+						<div class="shuxian"></div>
+						<div class="hd_nav" data-target="supplier">商户中心</div>
+						<div class="nav_down" id="mycx">
+							<div class="me_photo">
+								<img src="../imgs/cx_imgs/default_user.png" />
+							</div>
+							<div class="me_info">
+								<a href="">亲，请登录</a>
+								<p>
+									<a href="">我的订单</a>
+									<a href="">优惠券</a>
+								</p>
+								<p>
+									<a href="">我的消息</a>
+									<a href="">我的权益</a>
+								</p>
+							</div>
+						</div>
+						<div class="nav_down" id="viewcx">
+							<div class="erweima">
+								<img src="../imgs/cx_imgs/cx_ewm1.jpg" />
+								<p>车享</p>
+							</div>
+							<div class="erweima">
+								<img src="../imgs/cx_imgs/cx_ewm2.jpg" />
+								<p>车享新车</p>
+							</div>
+							<div class="erweima">
+								<img src="../imgs/cx_imgs/cx_ewm3.jpg" />
+								<p>上汽车享家</p>
+							</div>
+							<div class="erweima">
+								<img src="../imgs/cx_imgs/cx_ewm4.jpg" />
+								<p>车享招聘</p>
+							</div>
+						</div>
+						<div class="nav_down" id="myapp">
+							<div class="erweima">
+								<img src="../imgs/cx_imgs/cx_ewm5.jpg" />
+								<p>车享家APP</p>
+							</div>
+						</div>
+						<div class="nav_down" id="supplier">
+							<p>
+								<a href="">合作商登录</a>
+							</p>
+							<p>
+								<a href="">二手商户登录</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="middle">
+				<div class="main">
+					<div class="md_top">
+						<div class="cx_logo">
+							<img src="../imgs/cx_imgs/cx-logo.png" />
+						</div>
+						<div class="cx_search">
+							<input type="text" id="search_value" value="" placeholder="请输入你要购买的车型、品牌" />
+							<input type="button" id="search_btn" value="搜索" />
+						</div>
+						<div class="cx_service">
+							<div class="sv_info">
+								<p>4008 020 666</p>
+								<p>服务时段：周一至周日9:00~21:00</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--菜单栏-->
+				<div class="main">
+					<div class="md_menu">
+						<div class="menu_down">
+							车享服务
+						</div>
+						<div class="menu_list">
+							<a href="">新车<span class="mn_hot_icon">省</span></a>
+							<a href="">二手车</a>
+							<a href="">会员商城</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="middle_bkcolor middle_topborder">
+				<div class="main">
+					<div class="nav_links">
+						<a href="chexiang.html" target="_blank">首页</a> &gt;
+						<a href="chexiang.html" target="_blank">车务</a> &gt;
+						<a href="chexiang.html" target="_blank">车辆年检</a>
+					</div>
+				</div>
+				<div class="main">
+					<div class="nianjian_section">
+						<form id="nj_form">
+							<input type="text" id="car_haoma" value="" placeholder="输入车牌号" />
+							<input type="text" id="zhuce_time" value="" placeholder="输入注册日期" />
+							<input type="text" id="user_name" value="" placeholder="输入联系人姓名" />
+							<input type="text" id="user_phone" value="" placeholder="输入联系号码" />
+							<p id="fees_desc">费用说明</p>
+							<p class="serv_desc">6年内免检：200元</p>
+							<p class="serv_desc">非免检：400元（包含检测费和服务费）</p>
+							<input type="button" id="nj_tijiao" value="预约年检" />
+							<p>
+								<a href="chexiang.html">查看我的预约</a>
+							</p>
+						</form>
+
+					</div>
+					<div class="nianjian_picture">
+						<img src="../imgs/cx_imgs/nianjian/nianjian_03.png" />
+					</div>
+				</div>
+				<div class="main">
+					<h3 class="section_title">我们的优势</h3>
+					<div class="midsection">
+						<div class="desc_box_bg">
+							<div class="icons_bg"></div>
+							<h3>在线预约</h3>
+							<p>线上预约，线下服务，方便快捷</p>
+						</div>
+						<div class="desc_box_bg">
+							<div class="icons_bg"></div>
+							<h3>在线预约</h3>
+							<p>线上预约，线下服务，方便快捷</p>
+						</div>
+						<div class="desc_box_bg">
+							<div class="icons_bg"></div>
+							<h3>在线预约</h3>
+							<p>线上预约，线下服务，方便快捷</p>
+						</div>
+					</div>
+				</div>
+				<div class="main">
+					<h3 class="section_title">使用流程</h3>
+					<div class="midsection">
+						<div class="desc_box_sm">
+							<h3>预约申请</h3>
+							<p>在线填写车辆信息</p>
+							<div class="icons_sm"></div>
+						</div>
+						<div class="desc_box_sm">
+							<h3>电话沟通</h3>
+							<p>客服主动联系</p>
+							<div class="icons_sm"></div>
+						</div>
+						<div class="desc_box_sm">
+							<h3>上门取车</h3>
+							<p>代办员上门取爱车</p>
+							<div class="icons_sm"></div>
+						</div>
+						<div class="desc_box_sm">
+							<h3>办理业务</h3>
+							<p>无需亲临现场排队</p>
+							<div class="icons_sm"></div>
+						</div>
+						<div class="desc_box_sm">
+							<h3>上门还车</h3>
+							<p>代办员将爱车交到手上</p>
+							<div class="icons_sm"></div>
+						</div>
+						<div class="desc_box_sm">
+							<h3>验车完成</h3>
+							<p>给个评价吧</p>
+							<div class="icons_sm"></div>
+						</div>
+					</div>
+				</div>
+				<div class="main">
+					<h3 class="section_title">使用说明</h3>
+					<div class="midsection">
+						<div class="desc_hang">
+							<div class="hang_left">
+								服务对象：
+							</div>
+							<div class="hang_right">
+								<p>7座以下车辆</p>
+								<table class="table_bordered">
+									<tr>
+										<td rowspan="3">2010年9月1日前</td>
+										<td>6年以内注册登记的</td>
+										<td>每两年一次验车</td>
+									</tr>
+									<tr>
+										<td>6年以上注册登记的</td>
+										<td>一年一次验车</td>
+									</tr>
+									<tr>
+										<td>10年以上的</td>
+										<td>半年一次领取环保标志，一年一次验车</td>
+									</tr>
+									<tr>
+										<td rowspan="2">2010年9月1日后</td>
+										<td>6年以内</td>
+										<td>每两年一次验车</td>
+									</tr>
+									<tr>
+										<td>6年以上</td>
+										<td>一年一次验车</td>
+									</tr>
+								</table>
+								<p>8、9座车辆：两年一次验车，每两年申领检验标志</p>
+							</div>
+						</div>
+						<div class="desc_hang">
+							<div class="hang_left">
+								服务地区：
+							</div>
+							<div class="hang_right">
+								上海
+							</div>
+						</div>
+						<div class="desc_hang">
+							<div class="hang_left">
+								服务流程：
+							</div>
+							<div class="hang_right">
+								登录车享汇微信，点击“办车务” &gt; 下单预约 &gt; 取车完成 &gt; 验车/验证服务 &gt; 还车成功 &gt; 订单结束（全程共计约4-5小时）
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="main">
+					<h3 class="section_title">如何预约</h3>
+					<div class="midsection">
+						<h3>内容</h3>
+					</div>
+				</div>
+			</div>
+
+			<!--其他合作商-->
+			<div class="bottom">
+				<div class="main bt_main">
+					<div class="bt_links_section">
+						<div class="bt_category">
+							战略合作
+						</div>
+						<div class="bt_links_list">
+							<span><img src="../imgs/cx_imgs/corporate/bailian.jpg" alt="bailian"/></span>
+							<span><img src="../imgs/cx_imgs/corporate/lotus.jpg" alt="lotus"/></span>
+							<span><img src="../imgs/cx_imgs/corporate/bailian.jpg" alt="bailian"/></span>
+							<span><img src="../imgs/cx_imgs/corporate/bailian.jpg" alt="bailian"/></span>
+							<span><img src="../imgs/cx_imgs/corporate/bailian.jpg" alt="bailian"/></span>
+							<span><img src="../imgs/cx_imgs/corporate/bailian.jpg" alt="bailian"/></span>
+							<span><img src="../imgs/cx_imgs/corporate/bailian.jpg" alt="bailian"/></span>
+							<span><img src="../imgs/cx_imgs/corporate/bailian.jpg" alt="bailian"/></span>
+							<span><img src="../imgs/cx_imgs/corporate/bailian.jpg" alt="bailian"/></span>
+							<span><img src="../imgs/cx_imgs/corporate/bailian.jpg" alt="bailian"/></span>
+						</div>
+					</div>
+
+					<div class="bt_links_section">
+						<div class="bt_category">
+							快捷导航
+						</div>
+						<div class="bt_links_list">
+							<a href="">新车报价</a>
+							<a href="">贷款购车</a>
+							<a href="">热搜汽车</a>
+							<a href="">分期付款买车</a>
+							<a href="">车享团购</a>
+							<a href="">汽车降价排行榜</a>
+							<a href="">买车送礼包</a>
+							<a href="">汽车促销活动</a>
+							<a href="">车展买车</a>
+							<a href="">免息购车</a>
+							<a href="">清仓甩卖</a>
+							<a href="">限时促销</a>
+							<a href="">按揭买车</a>
+							<a href="">新车钜惠</a>
+							<a href="">年底促销</a>
+							<a href="">金融方案</a>
+							<a href="">大众优惠</a>
+							<a href="">凯迪拉克降价</a>
+							<a href="">别克促销</a>
+							<a href="">雪佛兰特价</a>
+							<a href="">车型大全</a>
+						</div>
+					</div>
+				</div>
+				<div style="clear: both;"></div>
+				<div class="bt_footer main">
+					<p>CopyRight © 2014-2016, All Rights Reserved 版权所有 车享 沪ICP备14000481号</p>
+					<p><i class="bt_foot_cion"></i>沪公网备31010502000356号</p>
+				</div>
+			</div>
+
+			<!--右侧联系客服按钮-->
+			<div class="custome_services">
+				<div class="icon_cust_sv"></div>
+				<div class="icon_cust_desc">
+					客服
+				</div>
+			</div>
+			<div class="custome_sv_popup">
+				<div class="ctsv_right_tc"></div>
+				<div class="ctsv_main">
+					<p class="pop_title">
+						客服<span class="close_btn">&times;</span>
+					</p>
+					<div class="ctsv_popup_content">
+						<p>客服热线</p>
+						<p class="pop_number">4008 020 666</p>
+						<p>每天 : 9:00~21:00</p>
+					</div>
+					<button class="popsv_btn">在线客服&nbsp;&nbsp;&#62</button>
+				</div>
+			</div>
+
+			<!--返回顶部按钮-->
+			<div class="tothetop">
+				<div class="icon_tothetop"></div>
+				<div class="icon_tothetop_desc">
+					返回顶部
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../js/jquery-2.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/cx.js" type="text/javascript" charset="utf-8"></script>
+
+</html>
